@@ -1,1 +1,61 @@
 header
+	.header__after
+	.container
+		.header__wrapper
+			.header__logo
+				a.headerLogo__link(href="index.html")
+					img.dekstop(src="./assets/logo.png", alt="")
+					//- img.lazyload.blur-up.mobile(data-src="./assets/logo-mobile.png", alt="")
+			.header__nav--top
+				.navTop__wrapper
+					.header__information
+						.information__item
+							.item__icon
+								img(src="./assets/icons/phone.png", alt="phone")
+							.item__text
+								a.information__link(href="") chamsochoivien@hrec.vn
+						.information__item
+							.item__icon
+								img(src="./assets/icons/phone.png", alt="phone")
+							.item__text
+								a.information__link(href="") 0906 999 780
+					.header__login
+						.login__icon
+							img(src="./assets/icons/acc.png", alt="acc")
+						.login__text
+							a.login__link(href="") Đăng nhập
+					.header__languages
+						.languages__item.item(data-language="vi")
+							a.languages__link(data_content--pc="Vietnamese" data_content--mobile="VIE" href="#") Vietnamese
+						.languages__item.item(data-language="en")
+							a.languages__link(data_content--pc="English" data_content--mobile="ENG" href="#") English
+					.header__search
+						.navSearch__btn
+							.icon-search
+								img(src="./assets/icons/search.png", alt="BUTTON SEARCH")
+							//- .icon-close
+							//- 	img.svg(data-src="./assets/icons/close.svg", alt="BUTTON SEARCH")
+						//- .navSearch__input
+						//- 	form(action="#")
+						//- 		.search-input
+						//- 			input(type="search" placeholder="Nhập để tìm kiếm")
+						//- 		.search-submit
+						//- 			button
+						//- 				img.svg(data-src="./assets/icons/search.svg", alt="BUTTON SEARCH")
+			.header__nav--bottom
+				.navBottom__wrapper
+					.navBar(data-btn-back-content="Trở về")
+						.navBar__item
+							a.navBar__link(href="#") GIỚI THIỆU
+						.navBar__item
+							a.navBar__link(href="#") TIN TỨC - SỰ KIỆN
+						.navBar__item
+							a.navBar__link(href="#") CỘNG ĐỒNG
+						.navBar__item
+							a.navBar__link(href="#") HỘI VIÊN
+						.navBar__item
+							a.navBar__link(href="#") KẾT NỐI
+						.navBar__item
+							a.navBar__link(href="#") THƯ VIỆN
+						.navBar__item
+							a.navBar__link(href="#") BAN CHUYÊN ĐỀ
