@@ -1,0 +1,102 @@
+header {
+    .header__wrapper {
+        position: relative;
+        height: 137px;
+    }
+    .header__logo {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(-50%, -50%);
+    }
+    // .header__nav--top {}
+    .navTop__wrapper {
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    //HEADER INFORMATION
+    .header__information {
+        display: flex;
+        margin-right: 40px;
+    }
+    .information__item {
+        display: flex;
+        margin-right: 40px;
+        &:last-child {
+            margin-right: 0px;
+        }
+        .item__icon {
+            margin-right: 10px;
+        }
+        .item__text {
+            color: map-get($mau, main-2);
+        }
+    }
+    //HEADER LOGIN
+    .header__login {
+        display: flex;
+        margin-right: 40px;
+        .login__icon {
+            margin-right: 10px;
+        }
+        .login__text {
+            position: relative;
+            &::before {
+                position: absolute;
+                content: "";
+            }
+        }
+    }
+    //HEADER LANGUAGE
+    .header__languages {
+        display: flex;
+        margin-right: 40px;
+        .languages__item {
+            position: relative;
+            margin-right: 5px;
+            padding-right: 5px;
+            &::before {
+                content: '';
+                position: absolute;
+                top: 100%;
+                right: -10px;
+                transform: rotate(90deg) translate(-50%, -50%);
+                height: 0.25px;
+                width: 25%;
+                background: map-get($mau, main);
+            }
+            &:last-child {
+                margin-right: 0;
+                padding-right: 0;
+                &::before {
+                    content: none;
+                }
+            }
+        }
+    }
+    //HEADER SEARCH
+    .navSearch__btn {
+        cursor: pointer;
+    }
+    // -------------------------------------------------
+    //BOTTOM HEADER
+    .navBottom__wrapper {
+        height: 87px;
+        background: map-get($mau, main-2);
+    }
+    .navBar {
+        display: flex;
+        justify-content: flex-end;
+        .navBar__item {
+            margin-right: 45px;
+            &:last-child {
+                margin-right: 0;
+            }
+            .navBar__link {
+                color: white;
+            }
+        }
+    }
+}
