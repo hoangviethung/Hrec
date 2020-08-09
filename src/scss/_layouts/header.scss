@@ -1,13 +1,63 @@
 header {
+    height: 137px;
+    padding-bottom: 10px;
+    position: relative;
+    &::before {
+        position: absolute;
+        width: 100%;
+        height: 10px;
+        background: #ffffff;
+        box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.35);
+        bottom: 0;
+        left: 0;
+        content: '';
+        opacity: .5;
+    }
+    &::after {
+        position: absolute;
+        content: '';
+        background: map-get($mau, cam);
+        width: 65%;
+        height: 77px;
+        bottom: 10px;
+        right: 0;
+        z-index: -10;
+    }
+    .header__after {
+        position: absolute;
+        left: 12%;
+        &::before {
+            position: absolute;
+            width: 230px;
+            height: 77px;
+            border-top-left-radius: 50%;
+            background: map-get($mau, cam);
+            content: '';
+            left: 100px;
+            top: 0px;
+        }
+        &::after {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-right: 96px solid transparent;
+            border-bottom: 56px solid map-get($mau, cam);
+            border-left: 66px solid transparent;
+            content: '';
+            top: 21px;
+            left: 45px;
+        }
+    }
     .header__wrapper {
         position: relative;
-        height: 137px;
+        width: 100%;
     }
     .header__logo {
         position: absolute;
         top: 50%;
         left: 0;
-        transform: translate(-50%, -50%);
+        transform: translateY(-50%);
+        z-index: 1;
     }
     // .header__nav--top {}
     .navTop__wrapper {
@@ -15,6 +65,10 @@ header {
         display: flex;
         align-items: center;
         justify-content: flex-end;
+        a {
+            font-size: 20px;
+            color: map-get($mau, cam);
+        }
     }
     //HEADER INFORMATION
     .header__information {
@@ -31,7 +85,7 @@ header {
             margin-right: 10px;
         }
         .item__text {
-            color: map-get($mau, main-2);
+            color: map-get($mau, cam);
         }
     }
     //HEADER LOGIN
@@ -45,7 +99,14 @@ header {
             position: relative;
             &::before {
                 position: absolute;
+                top: 60%;
+                right: -18px;
+                width: 10px;
+                height: 10px;
+                background: url(../assets/icons/ar-b.png);
+                background-repeat: no-repeat;
                 content: "";
+                transform: translate(-50%, -50%);
             }
         }
     }
@@ -61,7 +122,7 @@ header {
                 content: '';
                 position: absolute;
                 top: 100%;
-                right: -10px;
+                right: -15px;
                 transform: rotate(90deg) translate(-50%, -50%);
                 height: 0.25px;
                 width: 25%;
@@ -83,19 +144,24 @@ header {
     // -------------------------------------------------
     //BOTTOM HEADER
     .navBottom__wrapper {
-        height: 87px;
-        background: map-get($mau, main-2);
+        position: relative;
+        height: 77px;
     }
     .navBar {
         display: flex;
         justify-content: flex-end;
+        height: 100%;
+        align-items: center;
         .navBar__item {
             margin-right: 45px;
             &:last-child {
                 margin-right: 0;
             }
-            .navBar__link {
+            a.navBar__link {
                 color: white;
+                //  font-family: Lato-Heavy;
+                font-size: 25px;
+                font-weight: 700;
             }
         }
     }
