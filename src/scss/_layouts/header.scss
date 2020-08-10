@@ -22,12 +22,56 @@ header {
         position: absolute;
         content: '';
         background: #B69256;
-        width: 66%;
+        width: 100%;
         height: 77px;
         bottom: 10px;
         right: 0;
         z-index: -10;
         opacity: .3;
+    }
+    .header__before {
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            height: 50px;
+            width: 100%;
+            background: white;
+            top: 0;
+            box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.35);
+        }
+        &::after {
+            position: absolute;
+            content: '';
+            width: 17%;
+            height: 127px;
+            background: white;
+            z-index: 1;
+        }
+    }
+    .header__before01 {
+        position: relative;
+        &::before {
+            position: absolute;
+            top: 51px;
+            left: 50px;
+            width: 0;
+            height: 0;
+            border-right: 86px solid transparent;
+            border-top: 76px solid white;
+            border-left: 259px solid transparent;
+            content: '';
+            // box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.35);
+        }
+        &::after {
+            position: absolute;
+            top: 21px;
+            left: 335px;
+            width: 154px;
+            height: 65px;
+            background: url(../../assets/images/layout/bg.png);
+            content: "";
+        }
     }
     .header__after {
         position: absolute;
@@ -35,7 +79,7 @@ header {
         opacity: .3;
         &::before {
             position: absolute;
-            width: 241px;
+            width: 184px;
             height: 77px;
             border-top-left-radius: 50%;
             background: #B69256;
@@ -66,7 +110,6 @@ header {
         transform: translateY(-50%);
         z-index: 1;
     }
-    // .header__nav--top {}
     .navTop__wrapper {
         height: 50px;
         display: flex;
