@@ -1,7 +1,12 @@
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 500;
     height: 137px;
     padding-bottom: 10px;
-    position: relative;
+    // background: white;
     &::before {
         position: absolute;
         width: 100%;
@@ -16,22 +21,24 @@ header {
     &::after {
         position: absolute;
         content: '';
-        background: map-get($mau, cam);
-        width: 65%;
+        background: #B69256;
+        width: 66%;
         height: 77px;
         bottom: 10px;
         right: 0;
         z-index: -10;
+        opacity: .3;
     }
     .header__after {
         position: absolute;
-        left: 12%;
+        left: 10%;
+        opacity: .3;
         &::before {
             position: absolute;
-            width: 230px;
+            width: 241px;
             height: 77px;
             border-top-left-radius: 50%;
-            background: map-get($mau, cam);
+            background: #B69256;
             content: '';
             left: 100px;
             top: 0px;
@@ -41,11 +48,11 @@ header {
             width: 0;
             height: 0;
             border-right: 96px solid transparent;
-            border-bottom: 56px solid map-get($mau, cam);
+            border-bottom: 56px solid #B69256;
             border-left: 66px solid transparent;
             content: '';
             top: 21px;
-            left: 45px;
+            left: 48px;
         }
     }
     .header__wrapper {
@@ -159,9 +166,9 @@ header {
             }
             a.navBar__link {
                 color: white;
-                //  font-family: Lato-Heavy;
+                font-family: Lato-Heavy;
                 font-size: 25px;
-                font-weight: 700;
+                // font-weight: 700;
             }
         }
     }
