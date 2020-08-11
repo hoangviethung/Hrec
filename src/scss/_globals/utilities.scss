@@ -136,6 +136,12 @@ textarea {
 			span {
 				color: map-get($mau, main-3);
 			}
+			svg {
+				path {
+					fill : map-get($mau, main-3);
+					stroke : map-get($mau, main-3);
+				}
+			}
 		}
 	}
 }

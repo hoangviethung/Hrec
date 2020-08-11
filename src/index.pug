@@ -3,10 +3,12 @@ extends _templates/_layout/_layout.pug
 block var
 	- let title = 'Page | Index';
 	- let bodyClass = 'index-page';
-
+	- let linkBanner = './assets/images/banner/index.png';
+	- let titleBanner = 'TRANG CHỦ';
 block loading
 	include _templates/_layout/_loading
 block banner,breadcrumb
+	include _templates/_layout/_mainbanner
 block main
 	.block__index
 		include _templates/index/i-1

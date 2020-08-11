@@ -1,0 +1,19 @@
+extends _templates/_layout/_layout.pug
+
+block var
+	- let title = 'Page | Introduce';
+	- let bodyClass = 'introduce-page';
+	- let linkBanner = './assets/images/banner/index.png';
+	- let titleBanner = 'Giới Thiệu';
+block loading
+	include _templates/_layout/_loading
+block banner,breadcrumb
+	include _templates/_layout/_mainbanner
+block main
+	.block__index
+		include _templates/introduce/i-1
+		include _templates/introduce/i-2
+		include _templates/introduce/i-3
+		include _templates/introduce/i-4
+		include _templates/introduce/i-5
+block scripts

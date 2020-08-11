@@ -134,6 +134,59 @@ const swiperMemberHome = () => {
 	  });
 }
 
+// MAIN BANNER WEBSITE
+const initMainBanner = () => {
+	const namePage = document.querySelector('#js-page-verify');
+	const mainBanner = document.querySelector('.MainSlider__Banners');
+	if (namePage.className == 'index-page') {
+		mainBanner.classList.add('isIndex');
+		return new Swiper('.MainSlider__Banners .swiper-container', {
+			effect: 'fade',
+			fadeEffect: {
+				crossFade: true,
+			},
+			speed: 1000,
+			autoplay: {
+				delay: 5000,
+				disableOnInteraction: false,
+			},
+			pagination: {
+				el: '.MainSlider__Banners .swiper-pagination',
+				type: 'bullets',
+				clickable: true,
+			},
+		});
+	}
+};
+
+//get title breadcrum
+const getBreadcrumbTitle = () => {
+	let title = $('#breadcrumb-wrapper ul li').eq(1).text();
+	$('#breadcrumb-wrapper ul li').last().addClass('active');
+	$('.pagesBanner__title h1').text(title);
+};
+
+const swipeIntroducePurpose = () => {
+	var swiper = new Swiper('.introduce__purpose__wrapper .swiper-container', {
+		slidesPerView: 3,
+		spaceBetween: 60,
+		slidesPerGroup: 1,
+		breakpoints: {
+			// 300: {
+			// 	slidesPerView: 1,
+			// 	spaceBetween: 45
+			// },
+			// 600: {
+			// 	slidesPerView: 2,
+			// 	spaceBetween: 45
+			// },
+			// 1024: {
+			// 	slidesPerView: 3,
+			// 	spaceBetween: 45
+			// }
+		},
+	  });
+}
 document.addEventListener("DOMContentLoaded", () => {
 	getSVGs();
 	Loading();
@@ -146,5 +199,11 @@ document.addEventListener("DOMContentLoaded", () => {
 	//Swiper happy birthday
 	swiperHappyBirthday();
 	//Swiper home member
-	swiperMemberHome()
+	swiperMemberHome();
+	//Main banner
+	initMainBanner();
+	//get title breadcrum
+	getBreadcrumbTitle();
+	//swiper introduce struct
+	swipeIntroducePurpose();
 });

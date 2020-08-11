@@ -1,0 +1,29 @@
+.executive-committee {
+	margin-bottom: 130px;
+	.block__main--title {
+		margin-bottom: 60px;
+	}
+}
+.executive-committee__wrapper {
+	
+}
+.executive-committee-swiper__wrapper {
+	.block__main--model {
+		position: relative;
+		max-width: 327px;
+		height: 292px;
+		border: 1px solid map-get($mau, main-3);
+		.model--img {
+			max-height: 230px;
+		}
+		.model--desc {
+			padding: 10px;
+			position: absolute;
+			bottom: 22px;
+			max-height: 104px;
+			width: calc(100% - 44px);
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+}
