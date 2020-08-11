@@ -108,6 +108,11 @@ textarea {
         color: map-get($mau, main-1);
         margin-right: auto;
     }
+    &.bg_ {
+        h2 {
+            color: white;
+        }
+    }
 }
 
 .btn--readmore {
