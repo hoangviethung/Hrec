@@ -1,0 +1,57 @@
+section.home__partner
+	.container
+		.container-1385px.home__partner__wrapper
+				.partner.col-6
+					.block__main--title
+						h2.title Đối tác
+						a(href="#").btn.btn--readmore
+							span Xem thêm
+							img.svg(src="./assets/images/homepage/arrow-btn.svg", alt="something")
+				.partner__wrapper--content
+					.partner--logo
+						.img
+							img.logo-1(src="./assets/images/partner/logo-1.png", alt="something")
+					.partner--logo
+						.img
+							img.logo-1(src="./assets/images/partner/logo-1.png", alt="something")
+					.partner--logo
+						.img
+							img.logo-1(src="./assets/images/partner/logo-1.png", alt="something")
+					.partner--logo
+						.img
+							img.logo-1(src="./assets/images/partner/logo-1.png", alt="something")
+					.hot-news--banner
+						.swiper-container
+							.swiper-wrapper
+								.swiper-slide
+									img.ofcv(src="./assets/images/partner/banner-1.png", alt="")
+					.hot-news--banner
+						.swiper-container
+							.swiper-wrapper
+								.swiper-slide
+									img.ofcv(src="./assets/images/partner/banner-3.png", alt="")
+					.hot-news--banner
+						.swiper-container
+							.swiper-wrapper
+								.swiper-slide
+									img.ofcv(src="./assets/images/partner/banner-1.png", alt="")
+section.home__member
+	.container
+		.container-1385px.home__partner__wrapper
+			.block__main--title
+				h2.title Hội viên
+				a(href="#").btn.btn--readmore
+					span Xem thêm
+					img.svg(src="./assets/images/homepage/arrow-btn.svg", alt="something")
+			.home__member--swiper
+					.swiper-container
+						.swiper-wrapper
+							-for(var i =0; i < 5; i++)
+								.swiper-slide
+									.member-item
+										a(href="#")
+											.model--img
+												img.lazyload(data-src=`./assets/images/partner/logo-${i+ 1}.png`, alt="something")
+						.swiper-button-next
+						.swiper-button-prev
+			

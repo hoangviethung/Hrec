@@ -1,0 +1,28 @@
+section.home__news-event
+	.container
+		.container-1385px.home__news-event__wrapper
+			.home__news-event__wrapper--content.row
+				.block__HREC.col-6
+					.block__main--title
+						h2.title Tin tức HREC
+					//news list item	
+					.block__list--item
+						-for(var i = 0;i< 3;i++)
+							a(href="#").block__item
+								.img
+									img.lazayload.ofcv(src=`./assets/images/news-events/event-${i+1}.png`, alt="something")
+								.item--desc
+									h2.title.lcl.lcl-2 Lorem Ipsum is simply dummy text of the printing.
+									p.sub-title.lcl.lcl-3 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever…
+				.block__HREC.col-6
+					.block__main--title
+						h2.title Sự kiện HREC
+					//events list item
+					.block__list--item
+						-for(var i = 0;i< 3;i++)
+							a(href="#").block__item
+								.img
+									img.lazayload.ofcv(src=`./assets/images/news-events/news-${i+1}.png`, alt="something")
+								.item--desc
+									h2.title.lcl.lcl-2 Lorem Ipsum is simply dummy text of the printing.
+									p.sub-title.lcl.lcl-3 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever…

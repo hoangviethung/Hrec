@@ -1,0 +1,27 @@
+.home__news-event {
+	padding-top: 80px;
+	margin-bottom: 100px;
+	.block__main--title {
+		margin-bottom: 45px;
+	}
+}
+.block__HREC {
+	&:first-child {
+		padding-right: 39px;
+	}
+	&:last-child {
+		padding-left: 39px;
+	}
+}
+.home__news-event__wrapper--content.row {
+	@media (max-width: 767.98px) {
+		flex-direction: column;
+		& > div {
+			-ms-flex: 0 0 100%;
+			flex: 0 0 100%;
+			max-width: 100%;
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+	}
+}

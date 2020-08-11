@@ -1,0 +1,98 @@
+.home__partner__wrapper {
+	margin-bottom: 100px;
+	.block__main--title {
+		margin-bottom: 100px;
+	}
+}
+.partner__wrapper--content {
+	display: grid;
+	grid-gap: 20px;
+	grid-auto-flow: column;
+	grid-template-rows: repeat(2, auto);
+	& > div {
+		width: 325px;
+		height: 275px;
+		&:nth-last-child(2) {
+			grid-row-start: 2;
+			grid-column-start: 3;
+			grid-column-end: 5;
+			max-width: 672px;
+			width: 100%;
+		}
+	}
+	.partner--logo {
+		.img {
+			width: 100%;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: map-get($mau, main-2);
+			box-shadow: 0 3px 6px rgba($color: #000000, $alpha: .16);
+		}
+		&:hover {
+			padding: 18px;
+			border: 1px solid map-get($mau, main-3);
+		}
+	}
+}
+//section member
+.home__member {
+	.home__member--swiper {
+		.swiper-container {
+			padding: 0 44px;
+			.swiper-button-next {
+				right: 0;
+				width: 44px;
+				height: 44px;
+				&::after {
+					content: "";
+					background: url("../assets/images/stuff/next.png") no-repeat;
+					background-size: 100% 100%;
+					width: 100%;
+					height: 100%;
+				}
+			}
+			.swiper-button-prev {
+				left: 0;
+				width: 44px;
+				height: 44px;
+				&::after {
+					content: "";
+					background: url("../assets/images/stuff/prev.png") no-repeat;
+					background-size: 100% 100%;
+					width: 100%;
+					height: 100%;
+				}
+			}
+			.swiper-button-prev.swiper-button-disabled {
+				&::after {
+					content: "";
+					background: url("../assets/images/stuff/prev-disable.png")
+						no-repeat;
+					background-size: 100% 100%;
+					width: 100%;
+					height: 100%;
+				}
+				opacity: 1;
+			}
+			.swiper-button-next.swiper-button-disabled {
+				&::after {
+					content: "";
+					background: url("../assets/images/stuff/next-disable.png")
+						no-repeat;
+					background-size: 100% 100%;
+					width: 100%;
+					height: 100%;
+				}
+				opacity: 1;
+			}
+		}
+		.swiper-slide {
+			display: flex;
+			justify-content: center;
+			align-self: center;
+			align-items: center;
+		}
+	}
+}

@@ -1,1 +1,28 @@
-section.hot__news
+section.home__hot-news
+	.container
+		.container-1385px.home__hot-news__wrapper
+				.block__main--title
+					h2.title Tin nổi bật
+					a(href="#").btn.btn--readmore
+						span Xem thêm
+						img.svg(src="./assets/images/homepage/arrow-btn.svg", alt="something")
+				.hot-news--content
+					.hot-news--list.clearfix
+						-for(var i = 0; i < 5; i++)
+							.block__main--news
+								a(href="#")
+									.news--img
+										img.ofcv.lazyload(data-src=`./assets/images/homepage/hotnew-img-${i+1}.png`, alt="something")
+									.news--date
+										span 23.07.2020
+									.news--desc
+										h2.title.lcl.lcl-2 Lorem Ipsum is simply dummy text of the printing.
+										p.sub-title.lcl.lcl-3 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever
+										a(href="#").btn.btn--readmore
+											span Đọc tiếp
+											img.svg(src="./assets/images/homepage/small-arrow.svg", alt="something")
+					.hot-news--banner
+						.swiper-container
+							.swiper-wrapper
+								.swiper-slide
+									img(src="./assets/images/homepage/banner.png", alt="")

@@ -12,7 +12,7 @@ textarea {
 	&.input-validation-error {
 		color: red !important;
 		border: 1px solid red !important;
-		transition: .3s all ease-in-out;
+		transition: 0.3s all ease-in-out;
 
 		&::placeholder {
 			color: red !important;
@@ -22,7 +22,7 @@ textarea {
 
 .field-validation-error {
 	display: inline-block;
-	margin: .5rem 0;
+	margin: 0.5rem 0;
 	font-size: 12px;
 	color: red;
 }
@@ -42,7 +42,7 @@ textarea {
 		.content {
 			display: none;
 			opacity: 0;
-			transition: all .3s cubic-bezier(.2, .5, .5, .8);
+			transition: all 0.3s cubic-bezier(0.2, 0.5, 0.5, 0.8);
 
 			&.show {
 				opacity: 1;
@@ -56,7 +56,7 @@ textarea {
 	height: 100%;
 	object-fit: cover;
 	object-position: center;
-	font-family: 'object-fit: cover, object-position: center';
+	font-family: "object-fit: cover, object-position: center";
 	background-size: cover;
 }
 
@@ -65,7 +65,7 @@ textarea {
 	height: 100%;
 	object-fit: contain;
 	object-position: center;
-	font-family: 'object-fit: contain, object-position: center';
+	font-family: "object-fit: contain, object-position: center";
 	background-size: contain;
 }
 
@@ -80,7 +80,7 @@ textarea {
 
 .clearfix {
 	&:after {
-		content: '';
+		content: "";
 		display: table;
 		clear: both;
 	}
@@ -102,5 +102,267 @@ textarea {
 
 	&-3 {
 		-webkit-line-clamp: 3;
+	}
+}
+
+.block__main--title {
+	width: 100%;
+	display: flex;
+	border-bottom: 1px solid rgba($color: #b69256, $alpha: 0.8);
+	padding-bottom: 30px;
+	h2.title {
+		font-size: 35px;
+		font-family: LATO-BOLD;
+		font-weight: 700;
+		color: map-get($mau, main-1);
+		margin-right: auto;
+	}
+}
+.btn--readmore {
+	padding-left: 21px;
+	padding-right: 21px;
+	background-color: map-get($mau, main-3);
+	box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
+	height: 44px;
+	span {
+		color: map-get($mau, main-2);
+		font-size: 25px;
+		font-family: Lato-Heavy;
+		padding-right: 5px;
+	}
+	@media (min-width: 1025px) {
+		&:hover {
+			background: map-get($mau, main-2);
+			span {
+				color: map-get($mau, main-3);
+			}
+		}
+	}
+}
+.block__main--news {
+	position: relative;
+	overflow: hidden;
+	a {
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+	.news--img {
+		position: relative;
+		overflow: hidden;
+		width: 100%;
+		height: 100%;
+		&::before {
+			content: "";
+			pointer-events: none;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background: url("../assets/images/homepage/after-item.png");
+			background-size: 100% 100%;
+		}
+	}
+	.news--date {
+		z-index: 10;
+		display: inline-flex;
+		position: absolute;
+		background: map-get($mau, main-3);
+		width: 110px;
+		align-items: center;
+		justify-content: center;
+		top: 28px;
+		left: 33px;
+		span {
+			font-family: Lato-Medium;
+			color: map-get($mau, main-2);
+		}
+	}
+	.news--desc {
+		z-index: 10;
+		position: absolute;
+		left: 50%;
+		bottom: 25px;
+		transform: translateX(-50%);
+		width: calc(100% - 66px);
+		height: auto;
+		h2.title {
+			color: map-get($mau, main-2);
+			font-family: Lato-Black;
+			font-size: 20px;
+		}
+		p.sub-title {
+			color: map-get($mau, main-2);
+			font-family: Lato-Regular;
+		}
+		.btn--readmore {
+			width: 110px;
+			height: 26px;
+			padding: 0 15px;
+			background: map-get($mau, main-2);
+			span {
+				color: map-get($mau, main-3);
+				font-family: Lato-Medium;
+				font-size: 15px;
+			}
+		}
+	}
+	// @media (min-width: 1025px) {
+	// 	&:hover {
+	// 		a {
+	// 			.news--img {
+	// 				&::before {
+	// 					background: url("../assets/images/homepage/after-hover.png") no-repeat;
+	// 				}
+	// 			}
+	// 		}
+	// 	}
+	// }
+}
+a.block__item {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 30px;
+	&:hover {
+		.img {
+			&::before {
+				content: "";
+				position: absolute;
+				background: url("../assets/images/homepage/hover-news.png") no-repeat;
+				background-size: 100% 100%;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				opacity: 0.5;
+			}
+		}
+		.item--desc {
+			h2.title {
+				color: #B69256;
+			}
+		}
+	}
+	.img {
+		-ms-flex: 0 0 260px;
+		flex: 0 0 260px;
+		max-width: 260px;
+		position: relative;
+		overflow: hidden;
+		&::after {
+			content: "";
+			position: absolute;
+			background: rgb(82, 88, 102);
+			background: linear-gradient(
+				180deg,
+				rgba(82, 88, 102, 1) 0%,
+				rgba(41, 44, 51, 1) 100%
+			);
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			opacity: 0.3;
+		}
+		@media (max-width: 1024.98px) {
+			-ms-flex: 0 0 50%;
+			flex: 0 0 50%;
+			max-width: 50%;
+		}
+	}
+	.item--desc {
+		-ms-flex-preferred-size: 0;
+		flex-basis: 0;
+		-ms-flex-positive: 1;
+		flex-grow: 1;
+		max-width: 100%;
+		align-self: center;
+		padding-left: 32px;
+		position: relative;
+		overflow: hidden;
+		padding-bottom: 18px;
+		&::after {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 1px;
+			background: #b69256;
+			bottom: 0;
+		}
+		h2.title {
+			font-size: 20px;
+			font-family: Lato-Bold;
+			color: map-get($mau, main-1);
+		}
+		p.sub-title {
+			font-family: Lato-Regular;
+			color: map-get($mau, main-1);
+		}
+		@media (max-width: 1024.98px) {
+			-ms-flex: 0 0 50%;
+			flex: 0 0 50%;
+			max-width: 50%;
+			padding-left: 10px;
+		}
+		
+	}
+}
+.block__main--model {
+	position: relative;
+	overflow: hidden;
+	max-width: 100%;
+	a {
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+	.model--img {
+		position: relative;
+		overflow: hidden;
+		width: 100%;
+		height: 100%;
+		&::before {
+			content: "";
+			pointer-events: none;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background: rgb(82,88,102);
+			background: linear-gradient(180deg, rgba(82,88,102,1) 0%, rgba(41,44,51,1) 100%);
+			background-size: 100% 100%;
+			opacity: .68;
+		}
+	}
+	.model--desc {
+		padding: 10px;
+		background: #FFF;
+		box-shadow: 0 3px 6px rgba($color: #000000, $alpha: .13);
+		h2.title {
+			color: map-get($mau, main-3);
+			font-family: Lato-Bold;
+			font-size: 20px;
+			margin-bottom: 10px;
+		}
+		p.sub-title {
+			color: map-get($mau, main-1);
+			font-family: Lato-Regular;
+		}
+		.list--info {
+			margin-top: 10px;
+			display: flex;
+			flex-wrap: wrap;
+			& > div {
+				-ms-flex: 0 0 50%;
+				flex: 0 0 50%;
+				max-width: 50%;
+				margin-bottom: 20px;
+				p {
+					font-family: Lato-Regular;
+				}
+			}
+		}
 	}
 }

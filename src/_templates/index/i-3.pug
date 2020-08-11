@@ -1,0 +1,93 @@
+section.home__stuff
+	.container
+		.container-1385px.home__stuff__wrapper
+				.block__main--title
+					h2.title Dự án nổi bât
+					a(href="#").btn.btn--readmore
+						span Xem thêm
+						img.svg(src="./assets/images/homepage/arrow-btn.svg", alt="something")
+				.home__stuff--event__wrapper
+					.swiper-container
+						.swiper-wrapper
+							-for(var i =0; i < 7; i++)
+								.swiper-slide
+									.block__main--model
+										a(href="#")
+											.model--img
+												img.ofcv.lazyload(data-src=`./assets/images/stuff/hot-event-${i+ 1}.png`, alt="something")
+											.model--desc
+												h2.title.lcl.lcl-2 Lorem Ipsum is simply dummy text of the printing.
+												p.sub-title.lcl.lcl-2 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever
+						.swiper-button-next
+						.swiper-button-prev
+section.home__new-member
+	.container
+		.container-1385px.home__stuff__wrapper
+				.block__main--title
+					h2.title Hội Viên Mới
+					a(href="#").btn.btn--readmore
+						span Xem thêm
+						img.svg(src="./assets/images/homepage/arrow-btn.svg", alt="something")
+		.home__stuff--event__wrapper
+			.swiper-container
+				.swiper-wrapper
+					-for(var i =0; i < 12; i++)
+						.swiper-slide
+							.block__main--model
+								a(href="#")
+									.model--img
+										img.ofcv.lazyload(data-src=`./assets/images/stuff/hot-event-1.png`, alt="something")
+									.model--desc
+										h2.title.lcl.lcl-1 Lorem Ipsum is simply dummy text of the printing.
+										p.sub-title.lcl.lcl-2 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever
+										.list--info
+											-for(var j=0;j<4;j++)
+												.item-info
+													.row
+														.img.col-2
+															img.svg(data-src=`./assets/icons/item-${j+1}.svg`, alt="")
+														.desc.col-10
+															p.lcl.lcl-1 Lorem Ipsum is dummy.
+		.home__new-member--info.container-1385px
+			.home__new-member--info__wrapper
+				h2.title.tt-u.lcl.lcl-1 Lorem Ipsum has been the industry’s.
+				p.sub-title.lcl.lcl-2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+				.list--info.row
+					-for(var j=0;j<4;j++)
+						.item-info.col-6
+							.row
+								.img.col-2
+									img.svg(data-src=`./assets/icons/item-${j+1}.svg`, alt="")
+								.desc.col-10
+									p.lcl.lcl-1 Lorem Ipsum is dummy.
+			.fake-swiper-button
+				.fake-swiper-button__wrapper
+					.swiper-button-next
+					.swiper-button-prev
+section.home__happy-birthday
+	.container
+		.container-1385px.home__stuff__wrapper
+				.block__main--title
+					h2.title Chúc Mừng Sinh Nhật Hội Viên
+					a(href="#").btn.btn--readmore
+						span Xem thêm
+						img.svg(src="./assets/images/homepage/arrow-btn.svg", alt="something")
+				.home__stuff--event__wrapper
+					.swiper-container
+						.swiper-wrapper
+							-for(var i =0; i < 7; i++)
+								.swiper-slide
+									.block__main--model.ov-h
+										a(href="#")
+											.model--img
+												img.ofcv.lazyload(data-src=`./assets/images/stuff/hot-event-${i+ 1}.png`, alt="something")
+											.model--desc.ov-h
+												h2.title.lcl.lcl-2.tt-u mR. Lorem Ipsum
+												.list--info
+													-for(var j=0;j<4;j++)
+														.item-info
+															.row
+																.img.col-2
+																	img.svg(data-src=`./assets/icons/item-${j+1}.svg`, alt="")
+																.desc.col-10
+																	p.lcl.lcl-1 Lorem Ipsum is dummy.
