@@ -116,25 +116,31 @@ textarea {
 }
 
 .btn--readmore {
-    padding-left: 21px;
-    padding-right: 21px;
-    background-color: map-get($mau, main-3);
-    box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
-    height: 44px;
-    span {
-        color: map-get($mau, main-2);
-        font-size: 25px;
-        font-family: Lato-Heavy;
-        padding-right: 5px;
-    }
-    @media (min-width: 1025px) {
-        &:hover {
-            background: map-get($mau, main-2);
-            span {
-                color: map-get($mau, main-3);
-            }
-        }
-    }
+	padding-left: 21px;
+	padding-right: 21px;
+	background-color: map-get($mau, main-3);
+	box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
+	height: 44px;
+	span {
+		color: map-get($mau, main-2);
+		font-size: 25px;
+		font-family: Lato-Heavy;
+		padding-right: 5px;
+	}
+	@media (min-width: 1025px) {
+		&:hover {
+			background: map-get($mau, main-2);
+			span {
+				color: map-get($mau, main-3);
+			}
+			svg {
+				path {
+					fill : map-get($mau, main-3);
+					stroke : map-get($mau, main-3);
+				}
+			}
+		}
+	}
 }
 
 .block__main--news {
