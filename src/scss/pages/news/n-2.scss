@@ -1,0 +1,72 @@
+section.Events {
+    padding-top: 90px;
+    .events__HREC {
+        display: flex;
+        margin-top: 40px;
+        height: 542px;
+    }
+    .events__content {
+        display: flex;
+        width: calc(100% - 327px);
+    }
+    .events__blog {
+        display: flex;
+        margin: 0 -10px;
+        flex-wrap: wrap;
+        .events__item {
+            flex: 0 0 50%;
+            padding: 0 10px;
+            margin-bottom: 20px;
+            .model--img {
+                height: 333px;
+            }
+            .model--date {
+                z-index: 10;
+                display: inline-flex;
+                position: absolute;
+                background: map-get($mau, main-3);
+                width: 110px;
+                align-items: center;
+                justify-content: center;
+                top: 28px;
+                left: 33px;
+                span {
+                    font-family: Lato-Medium;
+                    color: map-get($mau, main-2);
+                }
+            }
+            .model--desc {
+                padding: 30px;
+                margin-top: 8px;
+                border: 1px solid map-get($mau, main-3);
+                h2 {
+                    color: map-get($mau, main-3);
+                    font-family: Lato-Black;
+                    font-size: 20px;
+                    overflow: hidden;
+                    display: -webkit-box;
+                    text-overflow: ellipsis;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 2;
+                    margin-bottom: 8px;
+                }
+                p {
+                    color: map-get($mau, main-1);
+                    font-family: Lato-Regular;
+                    overflow: hidden;
+                    display: -webkit-box;
+                    text-overflow: ellipsis;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 3;
+                }
+            }
+        }
+    }
+    .events__adc {
+        padding-left: 10px;
+        width: 327px;
+        img {
+            height: 100%;
+        }
+    }
+}

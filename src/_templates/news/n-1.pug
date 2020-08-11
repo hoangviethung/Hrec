@@ -1,0 +1,95 @@
+section.News
+	.container
+		.container-1385px.news__wrapper
+			.news__HREC
+				.block__main--title.bg_
+					h2.title Tin tức HREC
+					a(href="#").btn.btn--readmore.d-n
+						span Xem thêm
+						img.svg(src="./assets/images/homepage/arrow-btn.svg", alt="something")
+				.newsHREC__list
+					-for(var i = 0; i < 6; i++)
+						.news__item
+							.block__main--news
+								a(href="#")
+									.news--img
+										img.ofcv.lazyload(data-src=`./assets/images/homepage/hotnew-img-${i+1}.png`, alt="something")
+									.news--date
+										span 23.07.2020
+									.news--desc
+										h2 Lorem Ipsum is simply dummy text of the printing printingand typesetting industry. 
+										p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever
+										a(href="#").btn.btn--readmore
+											span Đọc tiếp
+											img.svg(src="./assets/images/homepage/small-arrow.svg", alt="something")
+			.market__HREC.row
+				.block__HREC.left.col-6
+					.block__main--title
+						h2.title Tin tức thị trường
+					//news list 
+					.swiper-container
+						.swiper-wrapper
+							.swiper-slide
+								.block__list--item
+									-for(var i = 0;i< 3;i++)
+										a(href="#").block__item
+											.img
+												img.lazayload.ofcv(src=`./assets/images/news-events/event-${i+1}.png`, alt="something")
+											.item--desc
+												h2.title.lcl.lcl-2 Lorem Ipsum is simply dummy text of the printing.
+												p.sub-title.lcl.lcl-3 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever…
+							.swiper-slide
+								.block__list--item
+									-for(var i = 0;i< 3;i++)
+										a(href="#").block__item
+											.img
+												img.lazayload.ofcv(src=`./assets/images/news-events/event-${i+1}.png`, alt="something")
+											.item--desc
+												h2.title.lcl.lcl-2 Lorem Ipsum is simply dummy text of the printing.
+												p.sub-title.lcl.lcl-3 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever…
+							.swiper-slide
+								.block__list--item
+									-for(var i = 0;i< 3;i++)
+										a(href="#").block__item
+											.img
+												img.lazayload.ofcv(src=`./assets/images/news-events/event-${i+1}.png`, alt="something")
+											.item--desc
+												h2.title.lcl.lcl-2 Lorem Ipsum is simply dummy text of the printing.
+												p.sub-title.lcl.lcl-3 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever…
+						.swiper-button-next
+						.swiper-button-prev
+				.block__HREC.right.col-6
+					.block__main--title
+						h2.title Pháp lý Bất Động Sản
+					//events list 
+					.swiper-container
+						.swiper-wrapper
+							.swiper-slide
+								.block__list--item
+									-for(var i = 0;i< 3;i++)
+										a(href="#").block__item
+											.img
+												img.lazayload.ofcv(src=`./assets/images/news-events/news-${i+1}.png`, alt="something")
+											.item--desc
+												h2.title.lcl.lcl-2 Lorem Ipsum is simply dummy text of the printing.
+												p.sub-title.lcl.lcl-3 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever…
+							.swiper-slide
+								.block__list--item
+									-for(var i = 0;i< 3;i++)
+										a(href="#").block__item
+											.img
+												img.lazayload.ofcv(src=`./assets/images/news-events/news-${i+1}.png`, alt="something")
+											.item--desc
+												h2.title.lcl.lcl-2 Lorem Ipsum is simply dummy text of the printing.
+												p.sub-title.lcl.lcl-3 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever…
+							.swiper-slide
+								.block__list--item
+									-for(var i = 0;i< 3;i++)
+										a(href="#").block__item
+											.img
+												img.lazayload.ofcv(src=`./assets/images/news-events/news-${i+1}.png`, alt="something")
+											.item--desc
+												h2.title.lcl.lcl-2 Lorem Ipsum is simply dummy text of the printing.
+												p.sub-title.lcl.lcl-3 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever…
+						.swiper-button-next
+						.swiper-button-prev
