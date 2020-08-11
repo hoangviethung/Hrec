@@ -137,20 +137,29 @@ const swiperMemberHome = () => {
     });
 }
 const swiperNews = () => {
-    var swiper = new Swiper('.block__HREC.right .swiper-container', {
-        slidesPerView: 1,
-        slidesPerGroup: 1,
+    const swiper = new Swiper('.block__HREC.right .swiper-container', {
         navigation: {
             nextEl: '.block__HREC.right .swiper-button-next',
             prevEl: '.block__HREC.right .swiper-button-prev',
         },
     });
-    var swiper = new Swiper('.block__HREC.left .swiper-container', {
-        slidesPerView: 1,
-        slidesPerGroup: 1,
+    const swipery = new Swiper('.block__HREC.left .swiper-container', {
         navigation: {
             nextEl: '.block__HREC.left .swiper-button-next',
             prevEl: '.block__HREC.left .swiper-button-prev',
+        },
+    });
+}
+
+const sniperEvent = () => {
+    const swiper = new Swiper('.eventBottom__HREC .swiper-container', {
+        slidesPerView: 2,
+        slidesPerColumn: 4,
+        slidesPerColumnFill: 'row',
+        speed: 800,
+        navigation: {
+            nextEl: '.eventBottom__HREC .swiper-button-next',
+            prevEl: '.eventBottom__HREC .swiper-button-prev',
         },
     });
 }
@@ -168,4 +177,5 @@ document.addEventListener("DOMContentLoaded", () => {
     //Swiper home member
     swiperMemberHome()
     swiperNews();
+    sniperEvent();
 });
