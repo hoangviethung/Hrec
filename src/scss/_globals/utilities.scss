@@ -4,6 +4,21 @@ body {
         overflow: hidden;
     }
 }
+::-webkit-scrollbar-track {
+	
+	background-color: #CDD1D8;
+}
+
+::-webkit-scrollbar {
+	width           : 2px;
+	height          : 2px;
+	background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+	
+	background-color: map-get($mau, main-3);
+}
 
 input,
 select,

@@ -208,6 +208,29 @@ const swipeIntroducePurpose = () => {
 		},
 	  });
 }
+
+const swiperExecutiveCommittee = () => {
+	
+	var swiper = new Swiper('.executive-committee-swiper__wrapper .swiper-container', {
+        slidesPerView: 1,
+		slidesPerGroup: 1,
+        breakpoints: {
+            // 300: {
+            // 	slidesPerView: 1,
+            // },
+            // 600: {
+            // 	slidesPerView: 2,
+            // },
+            // 1024: {
+            // 	slidesPerView: 3,
+            // }
+        },
+        navigation: {
+            nextEl: '.executive-committee-swiper__wrapper .swiper-button-next',
+            prevEl: '.executive-committee-swiper__wrapper .swiper-button-prev',
+        },
+    });
+}
 document.addEventListener("DOMContentLoaded", () => {
 	getSVGs();
 	Loading();
@@ -228,4 +251,5 @@ document.addEventListener("DOMContentLoaded", () => {
 	//swiper introduce struct
 	swipeIntroducePurpose();
 	swiperNews();
+	swiperExecutiveCommittee()
 });
