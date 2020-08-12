@@ -181,8 +181,12 @@ section.Detail {
     }
     .detail__Adc {
         margin-top: 60px;
+        .swiper-slide {
+            height: 832px !important;
+        }
         img {
             padding: 0 0;
+            height: 832px !important;
         }
     }
 }

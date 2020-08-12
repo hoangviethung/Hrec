@@ -25,6 +25,7 @@ section.Events {
                 position: absolute;
                 background: map-get($mau, main-3);
                 width: 110px;
+                height: 34px;
                 align-items: center;
                 justify-content: center;
                 top: 28px;
@@ -86,7 +87,7 @@ section.Events {
         padding-bottom: 117px;
         position: relative;
         .swiper-button-next {
-            right: -5px;
+            right: 26px;
             top: 90%;
             width: 44px;
             height: 44px;
@@ -101,7 +102,7 @@ section.Events {
         }
         .swiper-button-prev {
             top: 90%;
-            left: calc(100% - 90px);
+            left: calc(100% - 115px);
             width: 44px;
             height: 44px;
             &::after {
