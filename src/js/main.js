@@ -32,29 +32,24 @@ const swiperForBanner = () => {
 
 //Swiper Hot Event
 const swiperHotEvent = () => {
-    var swiper = new Swiper('.home__stuff--event__wrapper .swiper-container', {
+    var swiper = new Swiper('.home__stuff .swiper-container', {
         slidesPerView: 3,
-        spaceBetween: 45,
-        slidesPerGroup: 3,
-
+        slidesPerGroup: 1,
         breakpoints: {
             300: {
                 slidesPerView: 1,
-                spaceBetween: 45
             },
             600: {
                 slidesPerView: 2,
-                spaceBetween: 45
             },
             1024: {
                 slidesPerView: 3,
-                spaceBetween: 45
             }
 
         },
         navigation: {
-            nextEl: '.home__stuff--event__wrapper .swiper-button-next',
-            prevEl: '.home__stuff--event__wrapper .swiper-button-prev',
+            nextEl: '.home__stuff .swiper-button-next',
+            prevEl: '.home__stuff .swiper-button-prev',
         },
     });
 }
@@ -63,7 +58,7 @@ const swiperHotEvent = () => {
 const swiperNewMember = () => {
     var swiper = new Swiper('.home__new-member .swiper-container', {
         slidesPerView: 3,
-        simulateTouch: 15,
+        simulateTouch: false,
         centeredSlides: true,
         centeredSlidesBounds: true,
         slidesPerGroup: 1,
@@ -89,7 +84,6 @@ const swiperNewMember = () => {
 const swiperHappyBirthday = () => {
     var swiper = new Swiper('.home__happy-birthday .swiper-container', {
         slidesPerView: 3,
-        spaceBetween: 10,
         slidesPerGroup: 1,
         breakpoints: {
             300: {
@@ -105,9 +99,9 @@ const swiperHappyBirthday = () => {
                 spaceBetween: 45
             }
         },
-        autoplay: {
-            delay: 2000,
-        },
+        // autoplay: {
+        //     delay: 2000,
+        // },
         navigation: {
             nextEl: '.home__stuff .swiper-button-next',
             prevEl: '.home__stuff .swiper-button-prev',
@@ -119,7 +113,6 @@ const swiperHappyBirthday = () => {
 const swiperMemberHome = () => {
     var swiper = new Swiper('.home__member--swiper .swiper-container', {
         slidesPerView: 5,
-        spaceBetween: 10,
         slidesPerGroup: 1,
         loop: true,
         breakpoints: {

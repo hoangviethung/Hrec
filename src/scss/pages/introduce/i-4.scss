@@ -7,6 +7,7 @@
 .executive-committee__wrapper {
 }
 .executive-committee-swiper__wrapper {
+	
 	.swiper-container {
 		padding-bottom: 65px;
 		position: relative;
@@ -25,57 +26,11 @@
 			top: unset;
 			bottom: 0;
 		}
-		.swiper-button-next {
-			right: 0;
-			width: 44px;
-			height: 44px;
-			&::after {
-				content: "";
-				background: url("../assets/images/stuff/next.png") no-repeat;
-				background-size: 100% 100%;
-				width: 100%;
-				height: 100%;
-			}
-		}
 		.swiper-button-prev {
-			right: 10%;
+			right: 8%;
 			left: auto;
-			width: 44px;
-			height: 44px;
-			&::after {
-				content: "";
-				background: url("../assets/images/stuff/prev.png") no-repeat;
-				background-size: 100% 100%;
-				width: 100%;
-				height: 100%;
-			}
 		}
-		.swiper-button-prev.swiper-button-disabled {
-			&::after {
-				content: "";
-				background: url("../assets/images/stuff/prev-disable.png")
-					no-repeat;
-				background-size: 100% 100%;
-				width: 100%;
-				height: 100%;
-			}
-			opacity: 1;
-		}
-		.swiper-button-next.swiper-button-disabled {
-			&::after {
-				content: "";
-				background: url("../assets/images/stuff/next-disable.png")
-					no-repeat;
-				background-size: 100% 100%;
-				width: 100%;
-				height: 100%;
-			}
-			opacity: 1;
-		}
-		
 	}
-
-		
 	.swiper-slide{
 		display: grid;
 		grid-template-columns: auto auto;
