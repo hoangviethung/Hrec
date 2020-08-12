@@ -29,6 +29,11 @@ header {
         z-index: -10;
         opacity: .3;
     }
+    &.sroll {
+        &::after {
+            opacity: .7;
+        }
+    }
     .header__before {
         position: relative;
         &::before {

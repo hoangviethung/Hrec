@@ -4,7 +4,17 @@ import {
 } from "./utilities/util";
 
 
-// swiper home page video
+const scrollBar = () => {
+        const heigh = $(window).height();
+        $(window).scroll(function() {
+            if (heigh > 137) {
+                $("header").addClass('sroll');
+            } else {
+                $("header").removeClass("sroll");
+            }
+        });
+    }
+    // swiper home page video
 const swiperForBanner = () => {
     var swiper = new Swiper('.hot-news--banner .swiper-container', {
         loop: true,
@@ -216,9 +226,76 @@ const sniperEvent = () => {
         },
     });
 }
+const swiperNewAdc = () => {
+    const swiperL = new Swiper('.nSlider__col.left .swiper-container', {
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        effect: "fade",
+        fadeEffect: {
+            crossFade: true
+        },
+        simulateTouch: false,
+    });
+
+}
+const swiperNewAdcR = () => {
+    const swiperR = new Swiper('.nSlider__col.right .swiper-container', {
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        effect: "fade",
+        fadeEffect: {
+            crossFade: true
+        },
+        simulateTouch: false,
+    });
+    const swiperT = new Swiper('.eventTop__slider .swiper-container', {
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        effect: "fade",
+        fadeEffect: {
+            crossFade: true
+        },
+        simulateTouch: false,
+    });
+    const swiperB = new Swiper('.eventBot__slider .swiper-container', {
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        effect: "fade",
+        fadeEffect: {
+            crossFade: true
+        },
+        simulateTouch: false,
+    });
+    const swiperD = new Swiper('.detail__Adc .swiper-container', {
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        effect: "fade",
+        fadeEffect: {
+            crossFade: true
+        },
+        simulateTouch: false,
+    });
+
+}
 document.addEventListener("DOMContentLoaded", () => {
     getSVGs();
     Loading();
+    scrollBar();
     //Swiper for banner
     swiperForBanner();
     //swiper for hotvent homepage
@@ -237,4 +314,6 @@ document.addEventListener("DOMContentLoaded", () => {
     swipeIntroducePurpose();
     swiperNews();
     sniperEvent();
+    swiperNewAdc();
+    swiperNewAdcR();
 });
