@@ -153,27 +153,29 @@ const swiperNews = () => {
 
 // MAIN BANNER WEBSITE
 const initMainBanner = () => {
+    
     const namePage = document.querySelector('#js-page-verify');
     const mainBanner = document.querySelector('.MainSlider__Banners');
-    if (namePage.className == 'index-page') {
+    if (namePage.className == 'index-page' | namePage.className == 'introduce-page') {
         mainBanner.classList.add('isIndex');
-        return new Swiper('.MainSlider__Banners .swiper-container', {
-            effect: 'fade',
-            fadeEffect: {
-                crossFade: true,
-            },
-            speed: 1000,
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: '.MainSlider__Banners .swiper-pagination',
-                type: 'bullets',
-                clickable: true,
-            },
-        });
+      
     }
+    return new Swiper('.MainSlider__Banners .swiper-container', {
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true,
+        },
+        speed: 1000,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.MainSlider__Banners .swiper-pagination',
+            type: 'bullets',
+            clickable: true,
+        },
+    });
 };
 
 //get title breadcrum

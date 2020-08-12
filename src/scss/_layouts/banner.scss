@@ -84,9 +84,9 @@
 
 .pagesBanner__title {
 	h1 {
-		color: map-get($mau, trang);
+		color: map-get($mau, main-2);
 		font-size: 30px;
-		font-family: UTM-COPPERPLATEB;
+		font-family: Lato-Bold;
 	}
 
 	@media (max-width: 575.98px) {

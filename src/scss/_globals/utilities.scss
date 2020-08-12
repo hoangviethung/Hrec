@@ -94,6 +94,9 @@ textarea {
         clear: both;
     }
 }
+.h-100 {
+    height: 100%;
+}
 
 .lcl {
     overflow: hidden;
@@ -191,6 +194,7 @@ textarea {
         width: 110px;
         align-items: center;
         justify-content: center;
+        height: 34px;
         top: 28px;
         left: 33px;
         span {
@@ -214,6 +218,7 @@ textarea {
         p.sub-title {
             color: map-get($mau, main-2);
             font-family: Lato-Regular;
+            margin-bottom: 10px;
         }
         .btn--readmore {
             width: 110px;
@@ -328,6 +333,8 @@ a.block__item {
     position: relative;
     overflow: hidden;
     max-width: 100%;
+    box-shadow: 0 3px 6px rgba($color: #000000, $alpha: .13);
+
     a {
         display: block;
         width: 100%;
@@ -355,7 +362,6 @@ a.block__item {
     .model--desc {
         padding: 10px;
         background: #FFF;
-        box-shadow: 0 3px 6px rgba($color: #000000, $alpha: .13);
         h2.title {
             color: map-get($mau, main-3);
             font-family: Lato-Bold;
