@@ -12,7 +12,7 @@ section.News {
         .news--desc {
             h2 {
                 color: map-get($mau, main-2);
-                font-family: Lato-Black;
+                font-family: Lato-Bold;
                 font-size: 20px;
                 overflow: hidden;
                 display: -webkit-box;
@@ -110,7 +110,7 @@ section.News {
     .block__HREC.left {
         position: relative;
         .swiper-button-next {
-            right: 0;
+            right: -5px;
             top: 100%;
             width: 44px;
             height: 44px;

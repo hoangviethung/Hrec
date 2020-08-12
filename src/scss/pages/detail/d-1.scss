@@ -83,9 +83,9 @@ section.Detail {
         flex: 0 0 50%;
         max-width: 50%;
         padding-inline-start: 20px;
-        color: map-get($mau, main-3);
+        color: map-get($mau, main-6);
         li {
-            color: map-get($mau, main-3);
+            color: map-get($mau, main-6);
             margin-bottom: 15px;
             &:last-child {
                 margin-bottom: 0;
@@ -93,7 +93,7 @@ section.Detail {
             a {
                 font-size: 16px;
                 font-family: Lato-Regular;
-                color: map-get($mau, main-3);
+                color: map-get($mau, main-6);
             }
         }
     }
@@ -105,7 +105,7 @@ section.Detail {
     p {
         font-size: 16px;
         font-family: Lato-Regular;
-        color: map-get($mau, main-1);
+        color: map-get($mau, main-6);
         margin-bottom: 10px;
         &:last-child {
             position: relative;
@@ -144,6 +144,9 @@ section.Detail {
         }
     }
     .detail__related {
+        a {
+            display: block;
+        }
         .item__img {
             height: 221px;
             img {
@@ -160,6 +163,7 @@ section.Detail {
             }
         }
         .related__item {
+            display: block;
             position: relative;
             margin-bottom: 25px;
             &:last-child {
