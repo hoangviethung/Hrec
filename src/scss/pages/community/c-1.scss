@@ -1,0 +1,21 @@
+.community {
+	.newsHREC__list {
+		margin-bottom: 60px;
+	}
+	.news__item:not(:first-child):not(:nth-child(2)) { 
+		margin-bottom: 20px;
+	}
+	.banner.row {
+		margin-bottom: 88px;
+	}
+	
+}
+
+.eventBottom__HREC {
+	margin-left: -33px;
+	margin-right: -33px;
+	.swiper-slide {
+		padding-left: 33px;
+		padding-right: 33px;
+	}
+}

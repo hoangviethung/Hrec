@@ -163,27 +163,29 @@ const swiperNews = () => {
 
 // MAIN BANNER WEBSITE
 const initMainBanner = () => {
+    
     const namePage = document.querySelector('#js-page-verify');
     const mainBanner = document.querySelector('.MainSlider__Banners');
-    if (namePage.className == 'index-page') {
+    if (namePage.className == 'index-page' | namePage.className == 'introduce-page') {
         mainBanner.classList.add('isIndex');
-        return new Swiper('.MainSlider__Banners .swiper-container', {
-            effect: 'fade',
-            fadeEffect: {
-                crossFade: true,
-            },
-            speed: 1000,
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: '.MainSlider__Banners .swiper-pagination',
-                type: 'bullets',
-                clickable: true,
-            },
-        });
+      
     }
+    return new Swiper('.MainSlider__Banners .swiper-container', {
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true,
+        },
+        speed: 1000,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.MainSlider__Banners .swiper-pagination',
+            type: 'bullets',
+            clickable: true,
+        },
+    });
 };
 
 //get title breadcrum
@@ -302,6 +304,29 @@ const showInputSearch = () => {
         })
     }
 }
+
+const swiperExecutiveCommittee = () => {
+	
+	var swiper = new Swiper('.executive-committee-swiper__wrapper .swiper-container', {
+        slidesPerView: 1,
+		slidesPerGroup: 1,
+        breakpoints: {
+            // 300: {
+            // 	slidesPerView: 1,
+            // },
+            // 600: {
+            // 	slidesPerView: 2,
+            // },
+            // 1024: {
+            // 	slidesPerView: 3,
+            // }
+        },
+        navigation: {
+            nextEl: '.executive-committee-swiper__wrapper .swiper-button-next',
+            prevEl: '.executive-committee-swiper__wrapper .swiper-button-prev',
+        },
+    });
+}
 document.addEventListener("DOMContentLoaded", () => {
     getSVGs();
     Loading();
@@ -327,4 +352,5 @@ document.addEventListener("DOMContentLoaded", () => {
     swiperNewAdc();
     swiperNewAdcR();
     showInputSearch();
+    swiperExecutiveCommittee();
 });
