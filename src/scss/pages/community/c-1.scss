@@ -8,7 +8,15 @@
 	.banner.row {
 		margin-bottom: 88px;
 	}
-	
+	.swiper-button-prev.swiper-button-disabled {
+		background: map-get($mau, main-1) !important;
+		 opacity: 1;
+	 }
+	 .swiper-button-next.swiper-button-disabled {
+		 background: map-get($mau, main-1) !important;
+		 opacity: 1;
+	 }
+
 }
 
 .eventBottom__HREC {
@@ -18,4 +26,5 @@
 		padding-left: 33px;
 		padding-right: 33px;
 	}
+	
 }

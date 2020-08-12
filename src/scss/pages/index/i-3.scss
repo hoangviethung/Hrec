@@ -5,53 +5,11 @@
 	}
 	.home__stuff--event__wrapper {
 		.swiper-container {
-			padding: 0 44px 10px 44px;
-			.swiper-button-next {
-				right: 0;
-				width: 44px;
-				height: 44px;
-				&::after {
-					content: "";
-					background: url("../assets/images/stuff/next.png") no-repeat;
-					background-size: 100% 100%;
-					width: 100%;
-					height: 100%;
-				}
+			padding: 0 20px 10px 20px;
+			.swiper-slide {
+				padding: 0 34px;
 			}
-			.swiper-button-prev {
-				left: 0;
-				width: 44px;
-				height: 44px;
-				&::after {
-					content: "";
-					background: url("../assets/images/stuff/prev.png") no-repeat;
-					background-size: 100% 100%;
-					width: 100%;
-					height: 100%;
-				}
-			}
-			.swiper-button-prev.swiper-button-disabled {
-				&::after {
-					content: "";
-					background: url("../assets/images/stuff/prev-disable.png")
-						no-repeat;
-					background-size: 100% 100%;
-					width: 100%;
-					height: 100%;
-				}
-				opacity: 1;
-			}
-			.swiper-button-next.swiper-button-disabled {
-				&::after {
-					content: "";
-					background: url("../assets/images/stuff/next-disable.png")
-						no-repeat;
-					background-size: 100% 100%;
-					width: 100%;
-					height: 100%;
-				}
-				opacity: 1;
-			}
+			
 		}
 		.block__main--model {
 			.model--img {
@@ -108,54 +66,6 @@
 		@media (min-width: 1025px) {
 			max-width: 1465px;
 			margin: 0 auto;
-		}
-		.swiper-container {
-			.swiper-button-next {
-				right: 0;
-				width: 44px;
-				height: 44px;
-				&::after {
-					content: "";
-					background: url("../assets/images/stuff/next.png") no-repeat;
-					background-size: 100% 100%;
-					width: 100%;
-					height: 100%;
-				}
-			}
-			.swiper-button-prev {
-				left: 0;
-				width: 44px;
-				height: 44px;
-				&::after {
-					content: "";
-					background: url("../assets/images/stuff/prev.png") no-repeat;
-					background-size: 100% 100%;
-					width: 100%;
-					height: 100%;
-				}
-			}
-			.swiper-button-prev.swiper-button-disabled {
-				&::after {
-					content: "";
-					background: url("../assets/images/stuff/prev-disable.png")
-						no-repeat;
-					background-size: 100% 100%;
-					width: 100%;
-					height: 100%;
-				}
-				opacity: 1;
-			}
-			.swiper-button-next.swiper-button-disabled {
-				&::after {
-					content: "";
-					background: url("../assets/images/stuff/next-disable.png")
-						no-repeat;
-					background-size: 100% 100%;
-					width: 100%;
-					height: 100%;
-				}
-				opacity: 1;
-			}
 		}
 		.swiper-slide {
 			padding-top: 85px;
@@ -243,12 +153,14 @@
 		transform: translateX(-50%);
 		width: 44px;
 		height: 44px;
+		background: map-get($mau, main-3);
+		box-shadow: 0 3px 6px rgba($color: #000000, $alpha: .16px);
 		&::after {
 			content: "";
 			background: url("../assets/images/stuff/next.png") no-repeat;
-			background-size: 100% 100%;
 			width: 100%;
 			height: 100%;
+			transform: translate(40%,30%);
 		}
 	}
 	.swiper-button-prev {
@@ -256,36 +168,45 @@
 		transform: translateX(-50%);
 		width: 44px;
 		height: 44px;
+		background: map-get($mau, main-3);
+		box-shadow: 0 3px 6px rgba($color: #000000, $alpha: .16px);
 		&::after {
 			content: "";
 			background: url("../assets/images/stuff/prev.png") no-repeat;
-			background-size: 100% 100%;
 			width: 100%;
 			height: 100%;
+			transform: translate(35%,30%);
 		}
 	}
 	.swiper-button-prev.swiper-button-disabled {
+		border: 2px solid map-get($mau, main-3);
+		background: #EFEFEF;
+		box-shadow: none;
 		&::after {
 			content: "";
 			background: url("../assets/images/stuff/prev-disable.png")
 				no-repeat;
-			background-size: 100% 100%;
 			width: 100%;
 			height: 100%;
+			transform: translate(35%,30%);
 		}
 		opacity: 1;
 	}
 	.swiper-button-next.swiper-button-disabled {
+		border: 2px solid map-get($mau, main-3);
+		background: #EFEFEF;
+		
 		&::after {
 			content: "";
 			background: url("../assets/images/stuff/next-disable.png")
 				no-repeat;
-			background-size: 100% 100%;
 			width: 100%;
 			height: 100%;
+			transform: translate(40%,30%);
 		}
 		opacity: 1;
 	}
+	
 	.swiper-button-next, .swiper-button-prev {
 		top: 120%;
 	}
@@ -300,6 +221,9 @@
 	.block__main--model {
 		height: 570px;
 		border: 1px solid map-get($mau, main-3);
+		.item-info {
+			margin-bottom: 10px !important;
+		}
 		@media (min-width: 1025px) {
 			&:hover {
 				.model--img {

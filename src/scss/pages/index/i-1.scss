@@ -60,6 +60,17 @@
 	}
 }
 .hot-news--list {
+	.block__main--news {
+		overflow: hidden;
+		@media (min-width: 1025px) {
+			&:hover {
+				.news--img {
+					transform: scale(1.1);
+					transition: all 1s ease;
+				}
+			}
+		}
+	}
 	.block__main--news+ .block__main--news {
 		h2.title {
 			margin-bottom: 10px;
