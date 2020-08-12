@@ -4,7 +4,17 @@ import {
 } from "./utilities/util";
 
 
-// swiper home page video
+const scrollBar = () => {
+        const heigh = $(window).height();
+        $(window).scroll(function() {
+            if (heigh > 137) {
+                $("header").addClass('sroll');
+            } else {
+                $("header").removeClass("sroll");
+            }
+        });
+    }
+    // swiper home page video
 const swiperForBanner = () => {
     var swiper = new Swiper('.hot-news--banner .swiper-container', {
         loop: true,
@@ -218,6 +228,82 @@ const sniperEvent = () => {
         },
     });
 }
+const swiperNewAdc = () => {
+    const swiperL = new Swiper('.nSlider__col.left .swiper-container', {
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        effect: "fade",
+        fadeEffect: {
+            crossFade: true
+        },
+        simulateTouch: false,
+    });
+
+}
+const swiperNewAdcR = () => {
+    const swiperR = new Swiper('.nSlider__col.right .swiper-container', {
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        effect: "fade",
+        fadeEffect: {
+            crossFade: true
+        },
+        simulateTouch: false,
+    });
+    const swiperT = new Swiper('.eventTop__slider .swiper-container', {
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        effect: "fade",
+        fadeEffect: {
+            crossFade: true
+        },
+        simulateTouch: false,
+    });
+    const swiperB = new Swiper('.eventBot__slider .swiper-container', {
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        effect: "fade",
+        fadeEffect: {
+            crossFade: true
+        },
+        simulateTouch: false,
+    });
+    const swiperD = new Swiper('.detail__Adc .swiper-container', {
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        effect: "fade",
+        fadeEffect: {
+            crossFade: true
+        },
+        simulateTouch: false,
+    });
+
+}
+const showInputSearch = () => {
+    const btn = document.querySelector('.navSearch__btn');
+    const navSearch__input = document.querySelector('.navSearch__input')
+    if (btn) {
+        btn.addEventListener('click', (e) => {
+            btn.classList.toggle('active');
+            navSearch__input.classList.toggle('show');
+        })
+    }
+}
 
 const swiperExecutiveCommittee = () => {
 	
@@ -242,25 +328,29 @@ const swiperExecutiveCommittee = () => {
     });
 }
 document.addEventListener("DOMContentLoaded", () => {
-	getSVGs();
-	Loading();
-	//Swiper for banner
-	swiperForBanner();
-	//swiper for hotvent homepage
-	swiperHotEvent();
-	// Swiper for new member
-	swiperNewMember();
-	//Swiper happy birthday
-	swiperHappyBirthday();
-	//Swiper home member
-	swiperMemberHome();
-	//Main banner
-	initMainBanner();
-	//get title breadcrum
-	getBreadcrumbTitle();
-	//swiper introduce struct
-	swipeIntroducePurpose();
+    getSVGs();
+    Loading();
+    scrollBar();
+    //Swiper for banner
+    swiperForBanner();
+    //swiper for hotvent homepage
+    swiperHotEvent();
+    // Swiper for new member
+    swiperNewMember();
+    //Swiper happy birthday
+    swiperHappyBirthday();
+    //Swiper home member
+    swiperMemberHome();
+    //Main banner
+    initMainBanner();
+    //get title breadcrum
+    getBreadcrumbTitle();
+    //swiper introduce struct
+    swipeIntroducePurpose();
     swiperNews();
     sniperEvent();
-	swiperExecutiveCommittee()
+    swiperNewAdc();
+    swiperNewAdcR();
+    showInputSearch();
+    swiperExecutiveCommittee();
 });

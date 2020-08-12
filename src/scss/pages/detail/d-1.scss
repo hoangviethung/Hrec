@@ -1,0 +1,184 @@
+section.Detail {
+    padding-top: 90px;
+    .detail__content {
+        display: flex;
+    }
+    .detail__left {
+        position: relative;
+        -ms-flex: 0 0 70%;
+        flex: 0 0 70%;
+        max-width: 70%;
+        padding-bottom: 20px;
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 1px;
+            background: map-get($mau, main-3);
+        }
+    }
+    .detail__right {
+        -ms-flex: 0 0 30%;
+        flex: 0 0 30%;
+        max-width: 30%;
+        padding-left: 84px;
+        h2 {
+            font-family: Lato-Bold;
+            font-size: 35px;
+            margin-bottom: 55px;
+            text-transform: uppercase;
+        }
+    }
+    .content__desc {
+        width: 100%;
+        display: flex;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 1px;
+            background: map-get($mau, main-3);
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+        .desc__item {
+            display: flex;
+            margin-right: 40px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        .icon {
+            margin-right: 10px;
+            img {
+                padding: 0 0;
+            }
+        }
+        .text {
+            span {
+                font-family: Lato-Regular;
+                font-size: 20px;
+                color: map-get($mau, main-1);
+            }
+        }
+    }
+    h2 {
+        font-family: Lato-Bold;
+        font-size: 30px;
+        color: map-get($mau, main-3);
+        margin-bottom: 22px;
+    }
+    .content__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    ul {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding-inline-start: 20px;
+        color: map-get($mau, main-3);
+        li {
+            color: map-get($mau, main-3);
+            margin-bottom: 15px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            a {
+                font-size: 16px;
+                font-family: Lato-Regular;
+                color: map-get($mau, main-3);
+            }
+        }
+    }
+    img {
+        padding-top: 30px;
+        padding-bottom: 60px;
+        width: 100%;
+    }
+    p {
+        font-size: 16px;
+        font-family: Lato-Regular;
+        color: map-get($mau, main-1);
+        margin-bottom: 10px;
+        &:last-child {
+            position: relative;
+            margin-bottom: 0;
+        }
+    }
+    .desc__listImg {
+        position: relative;
+        margin-top: 56px;
+        margin-bottom: 40px;
+        img {
+            padding: 0 0;
+            &:nth-child(1) {
+                width: 65%;
+                object-fit: cover;
+                height: 397px;
+                padding-right: 20px;
+            }
+            &:nth-child(3) {
+                width: 35%;
+                position: absolute;
+                width: 35%;
+                height: 192px;
+                bottom: 0;
+                right: 0;
+                object-fit: cover;
+            }
+            &:nth-child(2) {
+                position: absolute;
+                width: 35%;
+                height: 192px;
+                object-fit: cover;
+                top: 0;
+                right: 0;
+            }
+        }
+    }
+    .detail__related {
+        .item__img {
+            height: 221px;
+            img {
+                padding: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .item__content {
+            padding: 12px 0;
+            p {
+                font-family: Lato-Bold;
+            }
+        }
+        .related__item {
+            position: relative;
+            margin-bottom: 25px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 1px;
+                background: map-get($mau, main-3);
+            }
+        }
+    }
+    .detail__Adc {
+        margin-top: 60px;
+        img {
+            padding: 0 0;
+        }
+    }
+}
