@@ -292,6 +292,16 @@ const swiperNewAdcR = () => {
     });
 
 }
+const showInputSearch = () => {
+    const btn = document.querySelector('.navSearch__btn');
+    const navSearch__input = document.querySelector('.navSearch__input')
+    if (btn) {
+        btn.addEventListener('click', (e) => {
+            btn.classList.toggle('active');
+            navSearch__input.classList.toggle('show');
+        })
+    }
+}
 document.addEventListener("DOMContentLoaded", () => {
     getSVGs();
     Loading();
@@ -316,4 +326,5 @@ document.addEventListener("DOMContentLoaded", () => {
     sniperEvent();
     swiperNewAdc();
     swiperNewAdcR();
+    showInputSearch();
 });
