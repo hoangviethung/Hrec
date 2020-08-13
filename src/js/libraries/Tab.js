@@ -1,3 +1,4 @@
+import {swiperExecutiveCommittee} from "../main"
 export default class Tab {
 	constructor(selector) {
 		this.selector = document.querySelector(selector);
@@ -40,6 +41,7 @@ export default class Tab {
 				});
 				setTimeout(() => {
 					targetDOM.forEach((item) => {
+						swiperExecutiveCommittee();
 						item.classList.add("show");
 					});
 				}, 50);

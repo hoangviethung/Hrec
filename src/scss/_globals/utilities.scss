@@ -82,7 +82,7 @@ textarea {
 .blur-up {
 	filter: blur(10px);
 	transition: filter 1s;
-	&.lazy-loaded {
+	&.lazyloaded {
 		filter: blur(0);
 	}
 }
@@ -131,6 +131,11 @@ textarea {
 			color: white;
 		}
 	}
+	@media (max-width: 575.98px) {
+		h2.title {
+			font-size: 30px;
+		}
+	};
 }
 
 .btn--readmore {
@@ -157,6 +162,13 @@ textarea {
 					stroke : map-get($mau, main-3);
 				}
 			}
+		}
+	}
+	@media (max-width: 575.98px) {
+		padding-left: 11px;
+		padding-right: 11px;
+		span {
+			font-size: 20px;
 		}
 	}
 }
@@ -335,7 +347,7 @@ a.block__item {
 			height: 100%;
 			top: 0;
 			left: 0;
-			background: linear-gradient(180deg, #525866 0%, #292C33 100%) no-repeat;
+			background: url("../assets/images/stuff/after.png") no-repeat;
 			background-size: 100% 100%;
 			opacity: .68;
 		}
