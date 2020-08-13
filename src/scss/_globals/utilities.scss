@@ -131,9 +131,11 @@ textarea {
 			color: white;
 		}
 	}
-	@media (max-width: 575.98px) {
+	@media (max-width: 768.98px) {
+		flex-direction: column;
 		h2.title {
 			font-size: 30px;
+			margin: unset;
 		}
 	};
 }
@@ -164,9 +166,10 @@ textarea {
 			}
 		}
 	}
-	@media (max-width: 575.98px) {
+	@media (max-width: 768.98px) {
 		padding-left: 11px;
-		padding-right: 11px;
+		padding-right: 21px;
+		max-width: 160px;
 		span {
 			font-size: 20px;
 		}
@@ -226,6 +229,7 @@ textarea {
 			color: map-get($mau, main-2);
 			font-family: Lato-Black;
 			font-size: 20px;
+			margin-bottom: 10px;
 		}
 		p.sub-title {
 			color: map-get($mau, main-2);

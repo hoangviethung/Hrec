@@ -87,11 +87,8 @@
 	}
 	.home__stuff--event__wrapper {
 		position: relative;
-		max-width: 1445px;
-		@media (min-width: 1025px) {
-			max-width: 1465px;
-			margin: 0 auto;
-		}
+		margin-left: -70px;
+		margin-right: -70px;
 		.swiper-slide {
 			padding-top: 85px;
 			padding-bottom: 10px;

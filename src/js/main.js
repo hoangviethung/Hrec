@@ -115,9 +115,9 @@ const swiperHappyBirthday = () => {
 				spaceBetween: 45,
 			},
 		},
-		// autoplay: {
-		//     delay: 2000,
-		// },
+		autoplay: {
+		    delay: 2000,
+		},
 		navigation: {
 			nextEl: ".home__stuff .swiper-button-next",
 			prevEl: ".home__stuff .swiper-button-prev",
@@ -132,18 +132,15 @@ const swiperMemberHome = () => {
 		slidesPerGroup: 1,
 		loop: true,
 		breakpoints: {
-			// 300: {
-			// 	slidesPerView: 1,
-			// 	spaceBetween: 45
-			// },
-			// 600: {
-			// 	slidesPerView: 2,
-			// 	spaceBetween: 45
-			// },
-			// 1024: {
-			// 	slidesPerView: 3,
-			// 	spaceBetween: 45
-			// }
+			300: {
+				slidesPerView: 1,
+			},
+			600: {
+				slidesPerView: 3,
+			},
+			1024: {
+				slidesPerView: 5,
+			}
 		},
 		autoplay: {
 			delay: 1000,
@@ -318,6 +315,7 @@ export const swiperExecutiveCommittee = () => {
 		slidesPerView: 2,
 		slidesPerColumn: 2,
 		slidesPerColumnFill: "row",
+		spaceBetween: 20,
 		// breakpoints: {
 		// 	// 300: {
 		// 	// 	slidesPerView: 1,
@@ -338,6 +336,7 @@ export const swiperExecutiveCommittee = () => {
 		slidesPerView: 2,
 		slidesPerColumn: 2,
 		slidesPerColumnFill: "row",
+		spaceBetween: 20,
 		// breakpoints: {
 		// 	// 300: {
 		// 	// 	slidesPerView: 1,
