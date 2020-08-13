@@ -96,4 +96,21 @@
 	@media (max-width: 1024.98px) {
 		padding-bottom: 250px;
 	}
+	@media (max-width: 800px) {
+		padding-bottom: 6px;
+		.overview--desc {
+			position: relative;
+			bottom: unset;
+			left: unset;
+			transform: none;
+			max-width: 100%;
+			padding: 20px;
+
+			.btn__wrapper {
+				.btn--readmore {
+					max-width: 100%;
+				}
+			}
+		}		
+	}
 }

@@ -250,18 +250,18 @@ const swipeIntroducePurpose = () => {
         spaceBetween: 60,
         slidesPerGroup: 1,
         breakpoints: {
-            // 300: {
-            // 	slidesPerView: 1,
-            // 	spaceBetween: 45
-            // },
-            // 600: {
-            // 	slidesPerView: 2,
-            // 	spaceBetween: 45
-            // },
-            // 1024: {
-            // 	slidesPerView: 3,
-            // 	spaceBetween: 45
-            // }
+            300: {
+            	slidesPerView: 1,
+            	spaceBetween: 45
+            },
+            600: {
+            	slidesPerView: 2,
+            	spaceBetween: 45
+            },
+            1024: {
+            	slidesPerView: 3,
+            	spaceBetween: 45
+            }
         },
     });
 };
