@@ -9,7 +9,32 @@
 			.swiper-slide {
 				padding: 0 34px;
 			}
-			
+			@media (max-width: 1440px) {
+				.swiper-slide {
+					padding: 0 20px;
+				}
+			}
+			@media (max-width: 1024.98px) {
+				.swiper-slide {
+					padding: 0 34px;
+				}
+			}
+			@media (max-width: 767.98px) {
+				.swiper-slide {
+					padding: 0 20px;
+					.model--img {
+						height: 250px;
+					}
+				}
+			}
+			@media (max-width: 575.98px) {
+				.swiper-slide {
+					padding: 0 30px;
+					.model--img {
+						height: 200px;
+					}
+				}
+			}
 		}
 		.block__main--model {
 			.model--img {
@@ -70,7 +95,7 @@
 		.swiper-slide {
 			padding-top: 85px;
 			padding-bottom: 10px;
-			padding: 0 40px;
+			padding: 0 70px;
 			transition: 0.3s all ease;
 			.block__main--model {
 				max-height: 315px;
@@ -90,18 +115,27 @@
 					display: none ;
 				}
 			}
-			&.swiper-slide-active {
-				transform: scale(1.1);
-				padding: 0;
-				.block__main--model {
-					max-height: 380px;
+			@media (min-width: 1025px) {
+				&.swiper-slide-active {
+					transform: scale(1.1);
+					padding: 0;
+					.block__main--model {
+						max-height: 380px;
+					}
+					.model--img {
+						max-height: 382px !important;
+						max-width: 565px !important;
+					}
+					.model--desc {
+						display: none;
+					}
+					@media (max-width: 1440px) {
+						padding-top: 30px;
+					}
 				}
-				.model--img {
-					max-height: 360px;
-				}
-				.model--desc {
-					display: none;
-				}
+			}
+			@media (max-width: 1024.98px) {
+				padding: 10px 20px 10px 20px;
 			}
 		}
 	}
@@ -111,46 +145,56 @@
 	justify-content: center;
 	position: relative;
 	.home__new-member--info__wrapper {
-		position: relative;
-		max-width: 570px;
-		padding: 10px 20px;
-		border: 1px solid map-get($mau, main-3);
-		h2.title {
-			font-family: Lato-Heavy;
-			color: map-get($mau, main-3);
-			font-size: 25px;
+		display: none;
+		@media (min-width: 1025px) {
+			display: block;
+			position: relative;
+			max-width: 570px;
+			padding: 10px 20px;
+			border: 1px solid map-get($mau, main-3);
+			h2.title {
+				font-family: Lato-Heavy;
+				color: map-get($mau, main-3);
+				font-size: 25px;
+			}
+			p.sub-title {
+				margin-bottom: 10px;
+			}
+			p {
+				font-family: Lato-Regular;
+			}
+			&::after {
+				z-index: 10;
+				content: "";
+				position: absolute;
+				background: #EFEFEF;
+				width: 100%;
+				height: 1px;
+				top: 50%;
+				left: 0;
+			}
+			.item-info {
+				margin-bottom: 10px;
+			}
 		}
-		p.sub-title {
-			margin-bottom: 10px;
-		}
-		p {
-			font-family: Lato-Regular;
-		}
+	}
+	@media (min-width: 1025px) {
 		&::after {
-			z-index: 10;
 			content: "";
 			position: absolute;
-			background: #EFEFEF;
+			background: map-get($mau, main-3);
 			width: 100%;
 			height: 1px;
 			top: 50%;
 			left: 0;
 		}
-		.item-info {
-			margin-bottom: 10px;
-		}
-	}
-	&::after {
-		content: "";
-		position: absolute;
-		background: map-get($mau, main-3);
-		width: 100%;
-		height: 1px;
-		top: 50%;
-		left: 0;
 	}
 }
 .fake-swiper-button {
+	.fake-swiper-button__wrapper {
+		width: 100%;
+		height: 20px;
+	}
 	.swiper-button-next {
 		right: calc(50% - 50px);
 		transform: translateX(-50%);
@@ -228,10 +272,17 @@
 			margin-bottom: 10px !important;
 		}
 		.model--img {
-			max-width: 445px !important;
-			max-height: 395px !important;
+			
 			&::before {
-				background: url("../assets/images/homepage/birthday-hover.png") !important;
+				background: url("../assets/images/homepage/birthday-hover.png") no-repeat !important;
+				background-size: 100% 100%;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: center;
+				background-size: cover !important;
+				font-family: "object-fit: cover, object-position: center";
+
 			}
 		}
 		.model--desc {

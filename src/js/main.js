@@ -55,27 +55,29 @@ const swiperNewMember = () => {
 	var swiper = new Swiper(".home__new-member .swiper-container", {
 		slidesPerView: 3,
 		simulateTouch: false,
-		centeredSlides: true,
-		centeredSlidesBounds: true,
 		slidesPerGroup: 1,
 		breakpoints: {
-			// 300: {
-			// 	slidesPerView: 1,
-			// },
-			// 600: {
-			// 	slidesPerView: 2,
-			// },
-			// 1024: {
-			// 	slidesPerView: 3,
-			// }
+			300: {
+				slidesPerView: 1,
+			},
+			500: {
+				slidesPerView: 2
+			},
+			768: {
+				slidesPerView: 3,
+			},
+			1024: {
+				slidesPerView: 3,
+				centeredSlides: true,
+				centeredSlidesBounds: true
+			}
 		},
 		on: {
 			init: function () {
 				setTimeout(() => {
 					const temp = $(".home__new-member .swiper-slide-active");
 					const width = temp.width();
-					console.log(width);
-					$(".home__new-member--info__wrapper").css("width", `${width + 50}`)
+					$(".home__new-member--info__wrapper").css("width", `${width + 40}`)
 				}, 1000);
 			},
 		},
@@ -103,11 +105,10 @@ const swiperHappyBirthday = () => {
 		breakpoints: {
 			300: {
 				slidesPerView: 1,
-				spaceBetween: 45,
 			},
 			600: {
 				slidesPerView: 2,
-				spaceBetween: 45,
+				spaceBetween: 25,
 			},
 			1024: {
 				slidesPerView: 3,
