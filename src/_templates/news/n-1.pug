@@ -29,33 +29,15 @@ section.News
 					//news list 
 					.swiper-container
 						.swiper-wrapper
-							.swiper-slide
-								.block__list--item
-									-for(var i = 1;i<= 4;i++)
+							-for(i=0;i<=10;i++)
+								.swiper-slide
+									.block__list--item
 										a(href="detail.html").block__item
 											.img
-												img.lazayload.blur-up.ofcv(src=`./assets/images/news-events/event-1.png`, alt="something")
+												img.ofcv(src=`./assets/images/news-events/event-1.png`, alt="something")
 											.item--desc
 												h2.title.lcl.lcl-2 Lorem Ipsum is simply dummy text of the printing.
-												p.sub-title.lcl.lcl-3 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever…
-							.swiper-slide
-								.block__list--item
-									-for(var i = 1;i<= 4;i++)
-										a(href="detail.html").block__item
-											.img
-												img.lazayload.blur-up.ofcv(src=`./assets/images/news-events/event-1.png`, alt="something")
-											.item--desc
-												h2.title.lcl.lcl-2 Lorem Ipsum is simply dummy text of the printing.
-												p.sub-title.lcl.lcl-3 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever…
-							.swiper-slide
-								.block__list--item
-									-for(var i = 1;i<= 4;i++)
-										a(href="detail.html").block__item
-											.img
-												img.lazayload.blur-up.ofcv(src=`./assets/images/news-events/event-1.png`, alt="something")
-											.item--desc
-												h2.title.lcl.lcl-2 Lorem Ipsum is simply dummy text of the printing.
-												p.sub-title.lcl.lcl-3 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever…
+												p.sub-title.lcl.lcl-3 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
 					.swiper-button-next
 					.swiper-button-prev
 				.block__HREC.right.col-6
@@ -64,30 +46,12 @@ section.News
 					//events list 
 					.swiper-container
 						.swiper-wrapper
-							.swiper-slide
-								.block__list--item
-									-for(var i = 1;i<= 4;i++)
+							-for(i=0;i<=10;i++)
+								.swiper-slide
+									.block__list--item
 										a(href="detail.html").block__item
 											.img
-												img.lazayload.blur-up.ofcv(src=`./assets/images/news-events/news-1.png`, alt="something")
-											.item--desc
-												h2.title.lcl.lcl-2 Lorem Ipsum is simply dummy text of the printing.
-												p.sub-title.lcl.lcl-3 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever…
-							.swiper-slide
-								.block__list--item
-									-for(var i = 1;i<= 4;i++)
-										a(href="detail.html").block__item
-											.img
-												img.lazayload.blur-up.ofcv(src=`./assets/images/news-events/news-1.png`, alt="something")
-											.item--desc
-												h2.title.lcl.lcl-2 Lorem Ipsum is simply dummy text of the printing.
-												p.sub-title.lcl.lcl-3 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever…
-							.swiper-slide
-								.block__list--item
-									-for(var i = 1;i<= 4;i++)
-										a(href="detail.html").block__item
-											.img
-												img.lazayload.blur-up.ofcv(src=`./assets/images/news-events/news-1.png`, alt="something")
+												img.ofcv(src=`./assets/images/news-events/news-1.png`, alt="something")
 											.item--desc
 												h2.title.lcl.lcl-2 Lorem Ipsum is simply dummy text of the printing.
 												p.sub-title.lcl.lcl-3 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever…

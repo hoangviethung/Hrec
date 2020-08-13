@@ -196,12 +196,20 @@ const swiperMemberHome = () => {
 };
 const swiperNews = () => {
     const swiper = new Swiper(".block__HREC.right .swiper-container", {
+        slidesPerView: 1,
+        slidesPerColumn: 4,
+        slidesPerColumnFill: 'row',
+        speed: 800,
         navigation: {
             nextEl: ".block__HREC.right .swiper-button-next",
             prevEl: ".block__HREC.right .swiper-button-prev",
         },
     });
     const swipery = new Swiper(".block__HREC.left .swiper-container", {
+        slidesPerView: 1,
+        slidesPerColumn: 4,
+        slidesPerColumnFill: 'row',
+        speed: 800,
         navigation: {
             nextEl: ".block__HREC.left .swiper-button-next",
             prevEl: ".block__HREC.left .swiper-button-prev",
@@ -425,6 +433,31 @@ const swiperPartner = () => {
             .forEach((item) => {});
     }
 };
+const copyDataByAttr = () => {
+    const items__paste = document.querySelectorAll('[data-paste]');
+    const items__copy = document.querySelectorAll('[data-copy]');
+
+    items__paste.forEach((itemPaste) => {
+        items__copy.forEach((itemCopy) => {
+            var data = itemCopy.getAttribute('data-copy');
+            if (data != null && data == itemPaste.getAttribute('data-paste')) {
+                itemPaste.textContent = itemCopy.textContent;
+            }
+        });
+    });
+};
+// ACTIVE LANGGUAGE
+const activeLanguage = () => {
+    const htmlLang = document.querySelector('html').getAttribute('lang');
+    const items__language = document.querySelectorAll(
+        '.header__languages .languages__item'
+    );
+    items__language.forEach((item) => {
+        if (item.getAttribute('data-language') == htmlLang) {
+            item.classList.add('active');
+        }
+    });
+};
 
 document.addEventListener("DOMContentLoaded", () => {
     getSVGs();
@@ -455,6 +488,9 @@ document.addEventListener("DOMContentLoaded", () => {
     showInputSearch();
     swiperPartner();
     renderInfo();
+    copyDataByAttr();
+    // ACTIVE LANGGUAGE
+    activeLanguage();
     //tab
     const ExecutiveCommittee = new Tab(".executive-committee .tab-container");
 });
