@@ -2,7 +2,7 @@ import {
     getSVGs,
     Loading
 } from "./utilities/util";
-
+import Tab from './libraries/Tab'
 // active scrollBar window
 const scrollBar = () => {
     const heigh = $(window).height();
@@ -141,61 +141,58 @@ const swiperNewMember = () => {
 
 //swiper happy birthday
 const swiperHappyBirthday = () => {
-    var swiper = new Swiper(".home__happy-birthday .swiper-container", {
-        slidesPerView: 3,
-        slidesPerGroup: 1,
-        breakpoints: {
-            300: {
-                slidesPerView: 1,
-            },
-            600: {
-                slidesPerView: 2,
-                spaceBetween: 25,
-            },
-            1024: {
-                slidesPerView: 3,
-                spaceBetween: 45,
-            },
-        },
-        // autoplay: {
-        //     delay: 2000,
-        // },
-        navigation: {
-            nextEl: ".home__stuff .swiper-button-next",
-            prevEl: ".home__stuff .swiper-button-prev",
-        },
-    });
+	var swiper = new Swiper(".home__happy-birthday .swiper-container", {
+		slidesPerView: 3,
+		slidesPerGroup: 1,
+		breakpoints: {
+			300: {
+				slidesPerView: 1,
+			},
+			600: {
+				slidesPerView: 2,
+				spaceBetween: 25,
+			},
+			1024: {
+				slidesPerView: 3,
+				spaceBetween: 45,
+			},
+		},
+		autoplay: {
+		    delay: 2000,
+		},
+		navigation: {
+			nextEl: ".home__stuff .swiper-button-next",
+			prevEl: ".home__stuff .swiper-button-prev",
+		},
+	});
 };
 
 //swiper member homepage
 const swiperMemberHome = () => {
-    var swiper = new Swiper(".home__member--swiper .swiper-container", {
-        slidesPerView: 5,
-        slidesPerGroup: 1,
-        loop: true,
-        breakpoints: {
-            // 300: {
-            // 	slidesPerView: 1,
-            // 	spaceBetween: 45
-            // },
-            // 600: {
-            // 	slidesPerView: 2,
-            // 	spaceBetween: 45
-            // },
-            // 1024: {
-            // 	slidesPerView: 3,
-            // 	spaceBetween: 45
-            // }
-        },
-        autoplay: {
-            delay: 1000,
-        },
-        simulateTouch: false,
-        navigation: {
-            nextEl: ".home__member--swiper .swiper-button-next",
-            prevEl: ".home__member--swiper .swiper-button-prev",
-        },
-    });
+	var swiper = new Swiper(".home__member--swiper .swiper-container", {
+		slidesPerView: 5,
+		slidesPerGroup: 1,
+		loop: true,
+		breakpoints: {
+			300: {
+				slidesPerView: 1,
+			},
+			600: {
+				slidesPerView: 3,
+			},
+			1024: {
+				slidesPerView: 5,
+			}
+		},
+		autoplay: {
+			delay: 1000,
+		},
+		simulateTouch: false,
+		navigation: {
+			nextEl: ".home__member--swiper .swiper-button-next",
+			prevEl: ".home__member--swiper .swiper-button-prev",
+		},
+	});
 };
 const swiperNews = () => {
     const swiper = new Swiper(".block__HREC.right .swiper-container", {
@@ -373,46 +370,48 @@ const showInputSearch = () => {
 };
 
 export const swiperExecutiveCommittee = () => {
-    var swiper = new Swiper(".tab-bch .swiper-container", {
-        slidesPerView: 2,
-        slidesPerColumn: 2,
-        slidesPerColumnFill: "row",
-        // breakpoints: {
-        // 	// 300: {
-        // 	// 	slidesPerView: 1,
-        // 	// },
-        // 	// 600: {
-        // 	// 	slidesPerView: 2,
-        // 	// },
-        // 	// 1024: {
-        // 	// 	slidesPerView: 3,
-        // 	// }
-        // },
-        navigation: {
-            nextEl: ".tab-bch .swiper-button-next",
-            prevEl: ".tab-bch .swiper-button-prev",
-        },
-    });
-    var swiper = new Swiper(".tab-bkt .swiper-container", {
-        slidesPerView: 2,
-        slidesPerColumn: 2,
-        slidesPerColumnFill: "row",
-        // breakpoints: {
-        // 	// 300: {
-        // 	// 	slidesPerView: 1,
-        // 	// },
-        // 	// 600: {
-        // 	// 	slidesPerView: 2,
-        // 	// },
-        // 	// 1024: {
-        // 	// 	slidesPerView: 3,
-        // 	// }
-        // },
-        navigation: {
-            nextEl: ".tab-bkt .swiper-button-next",
-            prevEl: ".tab-bkt .swiper-button-prev",
-        },
-    });
+	var swiper = new Swiper(".tab-bch .swiper-container", {
+		slidesPerView: 2,
+		slidesPerColumn: 2,
+		slidesPerColumnFill: "row",
+		spaceBetween: 20,
+		// breakpoints: {
+		// 	// 300: {
+		// 	// 	slidesPerView: 1,
+		// 	// },
+		// 	// 600: {
+		// 	// 	slidesPerView: 2,
+		// 	// },
+		// 	// 1024: {
+		// 	// 	slidesPerView: 3,
+		// 	// }
+		// },
+		navigation: {
+			nextEl: ".tab-bch .swiper-button-next",
+			prevEl: ".tab-bch .swiper-button-prev",
+		},
+	});
+	var swiper = new Swiper(".tab-bkt .swiper-container", {
+		slidesPerView: 2,
+		slidesPerColumn: 2,
+		slidesPerColumnFill: "row",
+		spaceBetween: 20,
+		// breakpoints: {
+		// 	// 300: {
+		// 	// 	slidesPerView: 1,
+		// 	// },
+		// 	// 600: {
+		// 	// 	slidesPerView: 2,
+		// 	// },
+		// 	// 1024: {
+		// 	// 	slidesPerView: 3,
+		// 	// }
+		// },
+		navigation: {
+			nextEl: ".tab-bkt .swiper-button-next",
+			prevEl: ".tab-bkt .swiper-button-prev",
+		},
+	});
 };
 
 //render info in intro page
