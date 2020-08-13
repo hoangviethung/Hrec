@@ -208,6 +208,11 @@ header {
         position: relative;
         margin-right: 5px;
         padding-right: 10px;
+        &.active {
+            a {
+                color: map-get($mau, main-1);
+            }
+        }
         &::after {
             content: '|';
             position: absolute;
