@@ -40,9 +40,9 @@ section.home__new-member
 									.model--desc
 										h2.title.lcl.lcl-1 Lorem Ipsum is simply dummy text of the printing.
 										p.sub-title.lcl.lcl-2 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever
-										.list--info
+										.list--info.row
 											-for(var j=0;j<4;j++)
-												.item-info
+												.item-info.col-6
 													.row
 														.img.col-2
 															img.svg(data-src=`./assets/icons/item-${j+1}.svg`, alt="")
@@ -84,10 +84,16 @@ section.home__happy-birthday
 											.model--desc.ov-h
 												h2.title.lcl.lcl-2.tt-u mR. Lorem Ipsum
 												.list--info
-													-for(var j=0;j<3;j++)
+													-for(var j=0;j<2;j++)
 														.item-info
 															.row
 																.img.col-2
 																	img.svg(data-src=`./assets/icons/item-${j+1}.svg`, alt="")
 																.desc.col-10
 																	p.lcl.lcl-1 Lorem Ipsum is dummy.
+													.item-info
+														.row
+															.img.col-2
+																img.svg(data-src=`./assets/icons/calendar.svg`, alt="")
+															.desc.col-10
+																p.lcl.lcl-1 Lorem Ipsum is dummy.

@@ -31,7 +31,7 @@
 							// transition: all 1s ease-in-out;
 						}
 						&::before {
-							background: url("../assets/images/stuff/stuff-after.png")
+							background: url("../assets/images/homepage/hot-project-after.png")
 								no-repeat;
 							object-fit: cover;
 							object-position: center;
@@ -76,6 +76,9 @@
 				max-height: 315px;
 				.model--img {
 					max-height: 212px;
+					&::before {
+						background: url("../assets/images/homepage/new-member-before.png");
+					}
 				}
 				.model--desc {
 					h2.title {
@@ -109,7 +112,7 @@
 	position: relative;
 	.home__new-member--info__wrapper {
 		position: relative;
-		max-width: 500px;
+		max-width: 570px;
 		padding: 10px 20px;
 		border: 1px solid map-get($mau, main-3);
 		h2.title {
@@ -224,6 +227,17 @@
 		.item-info {
 			margin-bottom: 10px !important;
 		}
+		.model--img {
+			max-width: 445px !important;
+			max-height: 395px !important;
+			&::before {
+				background: url("../assets/images/homepage/birthday-hover.png") !important;
+			}
+		}
+		.model--desc {
+			max-width: 394px !important;
+			max-height: 190px !important;
+		}
 		@media (min-width: 1025px) {
 			&:hover {
 				.model--img {
@@ -231,6 +245,7 @@
 						transform: scale(1.1);
 						transition: all 1s ease-in-out;
 					}
+					
 				}
 				.model--desc {
 					background: map-get($mau, main-3);

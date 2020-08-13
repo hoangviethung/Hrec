@@ -1,49 +1,90 @@
 section.executive-committee
 	.container
-		.container-1385px
+		.container-1385px.tab-container
 			.block__main--title
 				h2.title
-					!= "<span>Ban Chấp Hành </span> | <span>Ban Kiểm Tra </span>"
+					!= "<span toggle-for='item-1'>Ban Chấp Hành </span> | <span toggle-for='item-2'>Ban Kiểm Tra </span>"
 				a(href="#").btn.btn--readmore
 					span Xem thêm
 					img.svg(src="./assets/images/homepage/arrow-btn.svg", alt="something")
-			.executive-committee__wrapper.row
-				.executive-committee-swiper__wrapper.col-6
-					.swiper-container
-						.swiper-wrapper
-							.swiper-slide
-								-for(var i = 0;i< 4; i++)
-									.block__main--model.ov-h
-										a(href="javascrip:;")
-											.model--img
-												img.ofcv.lazyload(data-src=`./assets/images/introduce/item-1.png`, alt="something")
-											.model--desc.ov-h
-												h2.title.lcl.lcl-2.tt-u mR. Lorem Ipsum
-												p.sub-title.lcl.lcl-2 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste distinctio neque sunt nihil architecto culpa id sed eaque, asperiores suscipit hic corrupti quas magni atque. Iusto illum corporis odio temporibus!											
-												.list--info
-													-for(var j=0;j<4;j++)
-														.item-info
-															.row
-																.img.col-2
-																	img.svg(data-src=`./assets/icons/item-${j+1}.svg`, alt="")
-																.desc.col-10
-																	p.lcl.lcl-1 Lorem Ipsum is dummy.
-						.swiper-button-next
-						.swiper-button-prev
-				.executive-committee-active.col-6
-					.img
-						img.lazyload.ofcv(src="./assets/images/introduce/active.png", alt="")
-					.home__new-member--info
-						.home__new-member--info__wrapper
-							h2.title.tt-u.lcl.lcl-1 Lorem Ipsum has been the industry’s.
-							p.sub-title.lcl.lcl-2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-							.list--info.row
-								-for(var j=0;j<4;j++)
-									.item-info.col-6
-										.row
-											.img.col-2
-												img.svg(data-src=`./assets/icons/item-${j+1}.svg`, alt="")
-											.desc.col-10
-												p.lcl.lcl-1 Lorem Ipsum is dummy.
+			.tab-content
+				.content(tab-id="item-1").tab-bch
+					.executive-committee__wrapper.row
+						.executive-committee-swiper__wrapper.col-6
+							.swiper-container
+								.swiper-wrapper
+									-for(var i = 0;i < 8; i++)
+										.swiper-slide
+											.block__main--model.ov-h
+												a(href="javascrip:;")
+													.model--img
+														img.ofcv.lazyload(data-src=`./assets/images/introduce/item-1.png`, alt="something")
+													.model--desc.ov-h
+														h2.title.lcl.lcl-2.tt-u mR. Lorem Ipsum
+														p.sub-title.lcl.lcl-2 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste distinctio neque sunt nihil architecto culpa id sed eaque, asperiores suscipit hic corrupti quas magni atque. Iusto illum corporis odio temporibus!											
+														.list--info.row
+															-for(var j=0;j<4;j++)
+																.item-info.col-6
+																	.row
+																		.img.col-2
+																			img.svg(data-src=`./assets/icons/item-${j+1}.svg`, alt="")
+																		.desc.col-10
+																			p.lcl.lcl-1 Lorem Ipsum is dummy.
+								.swiper-button-next
+								.swiper-button-prev
+						.executive-committee-active.col-6
+							.model--img
+								img.lazyload.ofcv(src="./assets/images/introduce/active.png", alt="")
+							.model--desc.ov-h
+								h2.title.tt-u.lcl.lcl-1 Lorem Ipsum has been the industry’s.
+								p.sub-title.lcl.lcl-2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+								.list--info.row
+									-for(var j=0;j<4;j++)
+										.item-info.col-6
+											.row
+												.img.col-2
+													img.svg(data-src=`./assets/icons/item-${j+1}.svg`, alt="")
+												.desc.col-10
+													p.lcl.lcl-1 Lorem Ipsum is dummy.
+			.tab-content
+				.content(tab-id="item-2").tab-bkt
+					.executive-committee__wrapper.row
+						.executive-committee-swiper__wrapper.col-6
+							.swiper-container
+								.swiper-wrapper
+									-for(var i = 0;i < 8; i++)
+										.swiper-slide
+											.block__main--model.ov-h
+												a(href="javascrip:;")
+													.model--img
+														img.ofcv.lazyload(data-src=`./assets/images/introduce/item-1.png`, alt="something")
+													.model--desc.ov-h
+														h2.title.lcl.lcl-2.tt-u mR. Lorem Ipsum
+														p.sub-title.lcl.lcl-2 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste distinctio neque sunt nihil architecto culpa id sed eaque, asperiores suscipit hic corrupti quas magni atque. Iusto illum corporis odio temporibus!											
+														.list--info
+															-for(var j=0;j<4;j++)
+																.item-info
+																	.row
+																		.img.col-2
+																			img.svg(data-src=`./assets/icons/item-${j+1}.svg`, alt="")
+																		.desc.col-10
+																			p.lcl.lcl-1 Lorem Ipsum is dummy.
+								.swiper-button-next
+								.swiper-button-prev
+						.executive-committee-active.col-6
+							.img
+								img.lazyload.ofcv(src="./assets/images/introduce/active.png", alt="")
+							.home__new-member--info
+								.home__new-member--info__wrapper
+									h2.title.tt-u.lcl.lcl-1 Lorem Ipsum has been the industry’s.
+									p.sub-title.lcl.lcl-2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+									.list--info.row
+										-for(var j=0;j<4;j++)
+											.item-info.col-6
+												.row
+													.img.col-2
+														img.svg(data-src=`./assets/icons/item-${j+1}.svg`, alt="")
+													.desc.col-10
+														p.lcl.lcl-1 Lorem Ipsum is dummy.
 
 
