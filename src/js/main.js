@@ -3,9 +3,11 @@ import {
     Loading
 } from "./utilities/util";
 
-
+// active scrollBar window
 const scrollBar = () => {
-        const heigh = $(window).height();
+    const heigh = $(window).height();
+    const isChange = window.innerWidth > 1024;
+    if (isChange == true) {
         $(window).scroll(function() {
             if (heigh > 137) {
                 $("header").addClass('sroll');
@@ -13,6 +15,43 @@ const scrollBar = () => {
                 $("header").removeClass("sroll");
             }
         });
+    }
+
+}
+const navMobile = () => {
+    const btn = $(".navMobile");
+    const nav = $(".navBar");
+    if (btn) {
+        $(btn).click(function(e) {
+            e.preventDefault();
+            $(btn).toggleClass('active');
+            $(nav).toggleClass("active");
+        });
+    }
+    const contentsMobile = document.querySelectorAll('[data_content--mobile]');
+    const contentsPc = document.querySelectorAll('[data_content--pc]');
+    const isChange = window.innerWidth < 1025;
+    if (isChange == true) {
+        contentsMobile.forEach((item) => {
+            const valueContent = item.getAttribute('data_content--mobile');
+            item.innerHTML = valueContent;
+        })
+    } else {
+        contentsPc.forEach((item) => {
+            const valueContent = item.getAttribute('data_content--pc');
+            item.innerHTML = valueContent;
+        })
+    }
+}
+const changeHeightFooter = () => {
+        const isChange = window.innerWidth < 768;
+        if (isChange == true) {
+            $(window).resize(function() {
+                const height = $(".footer__inner").height();
+                console.log(height);
+                $(".footer__wrapper").css('height', height + 150);
+            });
+        }
     }
     // swiper home page video
 const swiperForBanner = () => {
@@ -156,12 +195,12 @@ const swiperNews = () => {
 
 // MAIN BANNER WEBSITE
 const initMainBanner = () => {
-    
+
     const namePage = document.querySelector('#js-page-verify');
     const mainBanner = document.querySelector('.MainSlider__Banners');
     if (namePage.className == 'index-page' | namePage.className == 'introduce-page') {
         mainBanner.classList.add('isIndex');
-      
+
     }
     return new Swiper('.MainSlider__Banners .swiper-container', {
         effect: 'fade',
@@ -215,6 +254,15 @@ const sniperEvent = () => {
         slidesPerColumn: 4,
         slidesPerColumnFill: 'row',
         speed: 800,
+        breakpoints: {
+            300: {
+                slidesPerView: 1,
+            },
+            1024: {
+                slidesPerView: 2,
+                slidesPerColumn: 4,
+            },
+        },
         navigation: {
             nextEl: '.eventBottom__HREC .swiper-button-next',
             prevEl: '.eventBottom__HREC .swiper-button-prev',
@@ -299,10 +347,10 @@ const showInputSearch = () => {
 }
 
 const swiperExecutiveCommittee = () => {
-	
-	var swiper = new Swiper('.executive-committee-swiper__wrapper .swiper-container', {
+
+    var swiper = new Swiper('.executive-committee-swiper__wrapper .swiper-container', {
         slidesPerView: 1,
-		slidesPerGroup: 1,
+        slidesPerGroup: 1,
         breakpoints: {
             // 300: {
             // 	slidesPerView: 1,
@@ -324,6 +372,8 @@ document.addEventListener("DOMContentLoaded", () => {
     getSVGs();
     Loading();
     scrollBar();
+    navMobile();
+    changeHeightFooter();
     //Swiper for banner
     swiperForBanner();
     //swiper for hotvent homepage

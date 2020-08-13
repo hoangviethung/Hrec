@@ -2,7 +2,12 @@ section.LikeAndShare {
     .lAS__wrapper {
         padding-top: 34px;
         padding-bottom: 45px;
-        // border-top: 1px solid rgba($color: #707070, $alpha: 0.4);
+    }
+    .lAS__item--img {
+        img {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
     }
     .lAS__list {
         display: flex;
