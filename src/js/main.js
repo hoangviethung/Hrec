@@ -2,7 +2,7 @@ import {
     getSVGs,
     Loading
 } from "./utilities/util";
-
+import Tab from './libraries/Tab'
 // active scrollBar window
 const scrollBar = () => {
     const heigh = $(window).height();
