@@ -248,6 +248,27 @@ const initMainBanner = () => {
 
 
 const swipeIntroducePurpose = () => {
+    var swiper = new Swiper(".introduce__purpose__wrapper .swiper-container", {
+        slidesPerView: 3,
+        spaceBetween: 60,
+        slidesPerGroup: 1,
+        breakpoints: {
+            300: {
+                slidesPerView: 1,
+                spaceBetween: 45
+            },
+            600: {
+                slidesPerView: 2,
+                spaceBetween: 45
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 45
+            }
+        },
+    });
+};
+const sniperEvent = () => {
     const swiper = new Swiper('.eventBottom__HREC .swiper-container', {
         slidesPerView: 2,
         slidesPerColumn: 4,

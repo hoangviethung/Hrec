@@ -146,8 +146,10 @@ section.News {
             @media (min-width: 1025px) {
                 &:hover {
                     .news--img {
-                        transform: scale(1.1);
-                        transition: 1s all ease-in-out;
+                        img {
+                            transform: scale(1.1);
+                            transition: 1s all ease-in-out;
+                        }
                         &::before {
                             background-size: 100% 100%;
                             background: url("../assets/images/news-events/hover-small.png") no-repeat !important;
@@ -161,7 +163,6 @@ section.News {
                     }
                 }
                 .news--desc {
-                    background: map-get($mau, main-3);
                     transition: all .5s ease-in-out;
                 }
             }
