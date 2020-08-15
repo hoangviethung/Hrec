@@ -46,8 +46,6 @@ const navMobile = () => {
 const changeHeightFooter = () => {
         const isChange = window.innerWidth < 768;
         const height = $(".footer__inner").height();
-
-        console.log(isChange);
         if (isChange == true) {
             $(".footer__wrapper").css('height', height + 150);
             $(window).resize(function() {
@@ -248,35 +246,8 @@ const initMainBanner = () => {
     });
 };
 
-//get title breadcrum
-const getBreadcrumbTitle = () => {
-    let title = $("#breadcrumb-wrapper ul li").eq(1).text();
-    $("#breadcrumb-wrapper ul li").last().addClass("active");
-    $(".pagesBanner__title h1").text(title);
-};
 
 const swipeIntroducePurpose = () => {
-    var swiper = new Swiper(".introduce__purpose__wrapper .swiper-container", {
-        slidesPerView: 3,
-        spaceBetween: 60,
-        slidesPerGroup: 1,
-        breakpoints: {
-            300: {
-                slidesPerView: 1,
-                spaceBetween: 45
-            },
-            600: {
-                slidesPerView: 2,
-                spaceBetween: 45
-            },
-            1024: {
-                slidesPerView: 3,
-                spaceBetween: 45
-            }
-        },
-    });
-};
-const sniperEvent = () => {
     const swiper = new Swiper('.eventBottom__HREC .swiper-container', {
         slidesPerView: 2,
         slidesPerColumn: 4,
@@ -374,42 +345,60 @@ const showInputSearch = () => {
 
 export const swiperExecutiveCommittee = () => {
     var swiper = new Swiper(".tab-bch .swiper-container", {
-        slidesPerView: 2,
-        slidesPerColumn: 2,
-        slidesPerColumnFill: "row",
         spaceBetween: 20,
-        // breakpoints: {
-        // 	// 300: {
-        // 	// 	slidesPerView: 1,
-        // 	// },
-        // 	// 600: {
-        // 	// 	slidesPerView: 2,
-        // 	// },
-        // 	// 1024: {
-        // 	// 	slidesPerView: 3,
-        // 	// }
-        // },
+        breakpoints: {
+            300: {
+                slidesPerView: 1,
+            },
+            500: {
+                slidesPerView: 2,
+                slidesPerGroup: 1,
+            },
+            700: {
+                slidesPerView: 3,
+                slidesPerGroup: 1
+            },
+            1025: {
+                slidesPerView: 2,
+                slidesPerColumn: 2,
+                slidesPerColumnFill: "row",
+            }
+        },
+        on: {
+            init: function() {
+                document.querySelector(".tab-bch .swiper-container .swiper-slide").click()
+            }
+        },
         navigation: {
             nextEl: ".tab-bch .swiper-button-next",
             prevEl: ".tab-bch .swiper-button-prev",
         },
     });
     var swiper = new Swiper(".tab-bkt .swiper-container", {
-        slidesPerView: 2,
-        slidesPerColumn: 2,
-        slidesPerColumnFill: "row",
         spaceBetween: 20,
-        // breakpoints: {
-        // 	// 300: {
-        // 	// 	slidesPerView: 1,
-        // 	// },
-        // 	// 600: {
-        // 	// 	slidesPerView: 2,
-        // 	// },
-        // 	// 1024: {
-        // 	// 	slidesPerView: 3,
-        // 	// }
-        // },
+        breakpoints: {
+            300: {
+                slidesPerView: 1,
+            },
+            500: {
+                slidesPerView: 2,
+                slidesPerGroup: 1,
+            },
+            700: {
+                slidesPerView: 3,
+                slidesPerGroup: 1
+            },
+            1025: {
+                slidesPerView: 2,
+                slidesPerColumn: 2,
+                slidesPerColumnFill: "row",
+            }
+        },
+        on: {
+            init: function() {
+                document.querySelector(".tab-bkt .swiper-container .swiper-slide").click()
+            }
+        },
         navigation: {
             nextEl: ".tab-bkt .swiper-button-next",
             prevEl: ".tab-bkt .swiper-button-prev",
@@ -420,11 +409,19 @@ export const swiperExecutiveCommittee = () => {
 //render info in intro page
 const renderInfo = () => {
     document
-        .querySelectorAll(".executive-committee-swiper__wrapper .swiper-slide")
+        .querySelectorAll(".tab-bch .executive-committee-swiper__wrapper .swiper-slide")
         .forEach((item) => {
             item.addEventListener("click", () => {
                 const temp = item.querySelector("a");
-                $(".executive-committee-active").html(temp.innerHTML);
+                $(".tab-bch .executive-committee-active").html(temp.innerHTML);
+            });
+        });
+    document
+        .querySelectorAll(".tab-bkt .executive-committee-swiper__wrapper .swiper-slide")
+        .forEach((item) => {
+            item.addEventListener("click", () => {
+                const temp = item.querySelector("a");
+                $(".tab-bkt .executive-committee-active").html(temp.innerHTML);
             });
         });
 };
@@ -480,8 +477,6 @@ document.addEventListener("DOMContentLoaded", () => {
     swiperMemberHome();
     //Main banner
     initMainBanner();
-    //get title breadcrum
-    getBreadcrumbTitle();
     //swiper introduce struct
     swipeIntroducePurpose();
     swiperNews();

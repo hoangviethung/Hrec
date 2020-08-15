@@ -67,12 +67,11 @@ section.Events
 					.swiper-wrapper
 						-for(i=0;i<=10;i++)
 							.swiper-slide
-								.block__list--item
-									a(href="detail.html").block__item
-										.img
-											img.lazyload.blur-up.ofcv(src=`./assets/images/news-events/event-1.png`, alt="something")
-										.item--desc
-											h2 Lorem Ipsum is simply dummy text of the printing.
-											p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever…
+								a(href="detail.html").block__item
+									.img
+										img.ofcv(src=`./assets/images/news-events/event-1.png`, alt="something")
+									.item--desc
+										h2 Lorem Ipsum is simply dummy text of the printing.
+										p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever…
 				.swiper-button-next
 				.swiper-button-prev

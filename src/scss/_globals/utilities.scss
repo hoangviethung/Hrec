@@ -138,6 +138,11 @@ textarea {
 			margin: unset;
 		}
 	};
+	@media (max-width: 575.98px) {
+		h2.title {
+			font-size: 20px;
+		}
+	}
 }
 
 .btn--readmore {
@@ -248,17 +253,6 @@ textarea {
 			}
 		}
 	}
-	// @media (min-width: 1025px) {
-	// 	&:hover {
-	// 		a {
-	// 			.news--img {
-	// 				&::before {
-	// 					background: url("../assets/images/homepage/after-hover.png") no-repeat;
-	// 				}
-	// 			}
-	// 		}
-	// 	}
-	// }
 }
 
 a.block__item {

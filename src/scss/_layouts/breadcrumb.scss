@@ -7,17 +7,13 @@
         padding: 0;
         li {
             a {
+                text-transform: uppercase;
                 font-family: Lato-Bold;
                 color: map-get($mau, main-2);
                 font-size: 14px;
                 display: inline-block;
                 @media (max-width: 575.98px) {
                     font-size: 10px;
-                }
-            }
-            &.active {
-                a {
-                    color: map-get($mau, main-3);
                 }
             }
             &:last-child {

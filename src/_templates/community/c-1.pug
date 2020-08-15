@@ -22,24 +22,31 @@ section.News.community.ov-h.Events
 										a(href="#").btn.btn--readmore
 											span Đọc tiếp
 											img.svg(src="./assets/images/homepage/small-arrow.svg", alt="something")
-				.banner.row
-					-for(var i=0;i < 2; i++)
-						.hot-news--banner.col-lg-6.col-md-12
-							.swiper-container
-								.swiper-wrapper
-									.swiper-slide
-										img(src=`./assets/images/introduce/banner-${i + 1}.png`, alt="")
-				.eventBottom__HREC
-					.swiper-container
-						.swiper-wrapper
-							-for(i=0;i<=10;i++)
+			.news__slider
+				.nSlider__row
+					.nSlider__col.left
+						.swiper-container
+							.swiper-wrapper
 								.swiper-slide
-									.block__list--item
-										a(href="#").block__item
-											.img
-												img.lazayload.blur-up.ofcv(src=`./assets/images/news-events/event-1.png`, alt="something")
-											.item--desc
-												h2 Lorem Ipsum is simply dummy text of the printing.
-												p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever…
-					.swiper-button-next
-					.swiper-button-prev
+									a(href="")
+										img(src="./assets/images/news-events/s2.png", alt="alooo")
+					.nSlider__col.right
+						.swiper-container
+							.swiper-wrapper
+								.swiper-slide
+									a(href="")
+										img(src="./assets/images/news-events/s1.png", alt="alooo")
+			.eventBottom__HREC
+				.swiper-container
+					.swiper-wrapper
+						-for(i=0;i<=10;i++)
+							.swiper-slide
+								.block__list--item
+									a(href="#").block__item
+										.img
+											img.ofcv(src=`./assets/images/news-events/event-1.png`, alt="something")
+										.item--desc
+											h2 Lorem Ipsum is simply dummy text of the printing.
+											p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever…
+				.swiper-button-next
+				.swiper-button-prev

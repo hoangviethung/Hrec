@@ -17,10 +17,14 @@
 		 opacity: 1;
 	 }
 	 .item--desc {
+		 h2 {
+			 color: map-get($mau, main-2) !important;
+		 }
 		p {
 			color: map-get($mau, main-2) !important;
 		}
 	}
+	
 }
 
 .eventBottom__HREC {
