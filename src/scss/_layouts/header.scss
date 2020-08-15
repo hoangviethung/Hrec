@@ -64,7 +64,7 @@ header {
         &::after {
             position: absolute;
             content: '';
-            width: 308px;
+            width: 316px;
             height: 127px;
             background: white;
             z-index: 1;
@@ -88,7 +88,7 @@ header {
             height: 0;
             border-right: 86px solid transparent;
             border-top: 80px solid white;
-            border-left: 259px solid transparent;
+            border-left: 267px solid transparent;
             content: '';
             @media (max-width: 1024.98px) {
                 content: none;
@@ -98,7 +98,7 @@ header {
         &::after {
             position: absolute;
             top: 21px;
-            left: 335px;
+            left: 345px;
             width: 154px;
             height: 65px;
             background: url(../assets/images/layout/bg.png);
@@ -432,7 +432,7 @@ header {
         a.navBar__link {
             color: white;
             font-family: Lato-Heavy;
-            font-size: 25px;
+            font-size: 20xpx;
             @media (max-width: 1599.98px) {
                 font-size: 20px;
             }
