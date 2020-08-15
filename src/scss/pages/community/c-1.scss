@@ -1,6 +1,10 @@
 .community {
 	.newsHREC__list {
 		margin-bottom: 60px;
+		.news__item:nth-child(1),
+		.news__item:nth-child(2) {
+			margin-bottom: 50px; 
+		}
 	}
 	.news__item:not(:first-child):not(:nth-child(2)) { 
 		margin-bottom: 20px;
@@ -25,6 +29,9 @@
 		}
 	}
 	
+	.news__slider {
+		padding-bottom: 0 !important;
+	}
 }
 
 .eventBottom__HREC {

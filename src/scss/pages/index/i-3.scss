@@ -1,5 +1,8 @@
 .home__stuff {
 	margin-bottom: 140px;
+	@media (max-width: 767.98px) {
+		margin-bottom: 40px;
+	}
 	.block__main--title {
 		margin-bottom: 55px;
 	}
@@ -82,6 +85,9 @@
 //Section Hội Viên Mới
 .home__new-member {
 	margin-bottom: 140px;
+	@media (max-width: 767.98px) {
+		margin-bottom: 60px;
+	}
 	.block__main--title {
 		margin-bottom: 55px;
 	}
@@ -93,7 +99,7 @@
 			padding-top: 85px;
 			padding-bottom: 10px;
 			padding: 0 70px;
-			transition: 0.3s all ease;
+			transition: 1s all ease;
 			.block__main--model {
 				max-height: 315px;
 				.model--img {
@@ -258,23 +264,48 @@
 	
 	.swiper-button-next, .swiper-button-prev {
 		top: 120%;
+		transform: translateY(0%);
 	}
 }
 
 //swiper happy birthday
 .home__happy-birthday {
 	margin-bottom: 140px;
+	@media (max-width: 767.98px) {
+		margin-bottom: 40px;
+	}
 	.block__main--title {
 		margin-bottom: 55px;
 	}
 	.block__main--model {
+		position: relative;
+		box-shadow: none;
+		border-bottom: 1px solid map-get($mau, main-3);
+		&::after {
+			position: absolute;
+			content: "";
+			bottom: 0;
+			left: 0;
+			background: map-get($mau, main-3);
+			width: 1px;
+			height: calc(100% - 396px);
+		}
+		&::before {
+			position: absolute;
+			content: "";
+			bottom: 0;
+			right: 0;
+			background: map-get($mau, main-3);
+			width: 1px;
+			height: calc(100% - 396px);
+		}
 		height: 570px;
-		border: 1px solid map-get($mau, main-3);
 		.item-info {
 			margin-bottom: 10px !important;
 		}
 		.model--img {
-			
+			position: relative;
+		
 			&::before {
 				background: url("../assets/images/homepage/birthday-hover.png") no-repeat !important;
 				background-size: 100% 100%;
@@ -301,6 +332,8 @@
 					
 				}
 				.model--desc {
+					transition: 1s all ease;
+
 					background: map-get($mau, main-3);
 					h2.title {
 						color: map-get($mau, main-2);

@@ -55,7 +55,26 @@
 		position: relative;
 		width: 327px;
 		height: 292px;
-		border: 1px solid map-get($mau, main-3);
+		border-bottom: 1px solid map-get($mau, main-3);
+		&::after {
+			position: absolute;
+			content: "";
+			bottom: 0;
+			right: 0;
+			width: 1px;
+			height: calc(100% - 230px);
+			background: map-get($mau, main-3);
+		}
+		&::before {
+			position: absolute;
+			content: "";
+			bottom: 0;
+			left: 0;
+			width: 1px;
+			height: calc(100% - 230px);
+			background: map-get($mau, main-3);
+		}
+		
 		.model--img {
 			max-height: 230px;
 			&::before {

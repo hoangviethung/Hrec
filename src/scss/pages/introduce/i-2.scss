@@ -9,7 +9,25 @@
 	.swiper-slide {
 		position: relative;
 		padding-left: 30px;
-		border: 1px solid map-get($mau, main-3);
+		border-left: 1px solid map-get($mau, main-3);
+		&::after {
+			content: "";
+			position: absolute;
+			width: 30px;
+			height: 1px;
+			top: 0;
+			left: 0;
+			background: map-get($mau, main-3);
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			width: 30px;
+			height: 1px;
+			bottom: 0;
+			left: 0;
+			background: map-get($mau, main-3);
+		}
 			.desc {
 			position: absolute;
 			bottom: 40px;

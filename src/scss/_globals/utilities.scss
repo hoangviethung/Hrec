@@ -132,17 +132,29 @@ textarea {
 		}
 	}
 	@media (max-width: 768.98px) {
-		flex-direction: column;
-		h2.title {
-			font-size: 30px;
-			margin: unset;
+		display: flex;
+		flex-wrap: wrap;
+		.btn--readmore {
+			background: none;
+			box-shadow: none;
+			span {
+				font-size: 20px;
+				color: map-get($mau, main-3);
+				margin: unset;
+			}
+			svg {
+				path {
+					fill : map-get($mau, main-3);
+					stroke : map-get($mau, main-3);
+				}
+			}
 		}
 	};
-	@media (max-width: 575.98px) {
-		h2.title {
-			font-size: 20px;
-		}
-	}
+	// @media (max-width: 575.98px) {
+	// 	h2.title {
+	// 		font-size: 20px;
+	// 	}
+	// }
 }
 
 .btn--readmore {
@@ -185,6 +197,7 @@ textarea {
 	position: relative;
 	overflow: hidden;
 	a {
+		overflow: hidden;
 		display: block;
 		width: 100%;
 		height: 100%;
@@ -329,7 +342,6 @@ a.block__item {
 	overflow: hidden;
 	max-width: 100%;
 	box-shadow: 0 3px 6px rgba($color: #000000, $alpha: .13);
-	margin: 0 3px;
 	a {
 		display: block;
 		width: 100%;

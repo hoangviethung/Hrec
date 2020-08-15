@@ -1,59 +1,55 @@
-import {
-	getSVGs,
-	Loading
-} from "./utilities/util";
-import Tab from './libraries/Tab'
+import { getSVGs, Loading } from "./utilities/util";
+import Tab from "./libraries/Tab";
 // active scrollBar window
 const scrollBar = () => {
 	const heigh = $(window).height();
 	const isChange = window.innerWidth > 1024;
 	if (isChange == true) {
-		$(window).scroll(function() {
+		$(window).scroll(function () {
 			if (heigh > 137) {
-				$("header").addClass('sroll');
+				$("header").addClass("sroll");
 			} else {
 				$("header").removeClass("sroll");
 			}
 		});
 	}
-
-}
+};
 const navMobile = () => {
 	const btn = $(".navMobile");
 	const nav = $(".navBar");
 	if (btn) {
-		$(btn).click(function(e) {
+		$(btn).click(function (e) {
 			e.preventDefault();
-			$(btn).toggleClass('active');
+			$(btn).toggleClass("active");
 			$(nav).toggleClass("active");
 		});
 	}
-	const contentsMobile = document.querySelectorAll('[data_content--mobile]');
-	const contentsPc = document.querySelectorAll('[data_content--pc]');
+	const contentsMobile = document.querySelectorAll("[data_content--mobile]");
+	const contentsPc = document.querySelectorAll("[data_content--pc]");
 	const isChange = window.innerWidth < 1025;
 	if (isChange == true) {
 		contentsMobile.forEach((item) => {
-			const valueContent = item.getAttribute('data_content--mobile');
+			const valueContent = item.getAttribute("data_content--mobile");
 			item.innerHTML = valueContent;
-		})
+		});
 	} else {
 		contentsPc.forEach((item) => {
-			const valueContent = item.getAttribute('data_content--pc');
+			const valueContent = item.getAttribute("data_content--pc");
 			item.innerHTML = valueContent;
-		})
+		});
 	}
-}
+};
 const changeHeightFooter = () => {
-		const isChange = window.innerWidth < 768;
-		if (isChange == true) {
-			$(window).resize(function() {
-				const height = $(".footer__inner").height();
-				console.log(height);
-				$(".footer__wrapper").css('height', height + 150);
-			});
-		}
+	const isChange = window.innerWidth < 768;
+	if (isChange == true) {
+		$(window).resize(function () {
+			const height = $(".footer__inner").height();
+			console.log(height);
+			$(".footer__wrapper").css("height", height + 150);
+		});
 	}
-	// swiper home page video
+};
+// swiper home page video
 const swiperForBanner = () => {
 	var swiper = new Swiper(".hot-news--banner .swiper-container", {
 		loop: true,
@@ -103,7 +99,7 @@ const swiperNewMember = () => {
 				slidesPerView: 1,
 			},
 			500: {
-				slidesPerView: 2
+				slidesPerView: 2,
 			},
 			768: {
 				slidesPerView: 3,
@@ -111,15 +107,18 @@ const swiperNewMember = () => {
 			1024: {
 				slidesPerView: 3,
 				centeredSlides: true,
-				centeredSlidesBounds: true
-			}
+				centeredSlidesBounds: true,
+			},
 		},
 		on: {
-			init: function() {
+			init: function () {
 				setTimeout(() => {
 					const temp = $(".home__new-member .swiper-slide-active");
 					const width = temp.width();
-					$(".home__new-member--info__wrapper").css("width", `${width + 40}`)
+					$(".home__new-member--info__wrapper").css(
+						"width",
+						`${width + 40}`
+					);
 				}, 1000);
 			},
 		},
@@ -128,10 +127,10 @@ const swiperNewMember = () => {
 			prevEl: ".fake-swiper-button .swiper-button-prev",
 		},
 	});
-	swiper.on("slideChange", function() {
+	swiper.on("slideChange", function () {
 		const data = $(".home__new-member .swiper-slide-active");
-		const width = data.width();
-		$(".home__new-member--info__wrapper").width(width);
+		// const width = data.width();
+		// $(".home__new-member--info__wrapper").width(width);
 		const temp = data.find(".model--desc");
 		$(".home__new-member--info .home__new-member--info__wrapper").html(
 			temp.html()
@@ -182,7 +181,7 @@ const swiperMemberHome = () => {
 			},
 			1024: {
 				slidesPerView: 5,
-			}
+			},
 		},
 		autoplay: {
 			delay: 1000,
@@ -198,7 +197,7 @@ const swiperNews = () => {
 	const swiper = new Swiper(".block__HREC.right .swiper-container", {
 		slidesPerView: 1,
 		slidesPerColumn: 4,
-		slidesPerColumnFill: 'row',
+		slidesPerColumnFill: "row",
 		speed: 800,
 		navigation: {
 			nextEl: ".block__HREC.right .swiper-button-next",
@@ -208,7 +207,7 @@ const swiperNews = () => {
 	const swipery = new Swiper(".block__HREC.left .swiper-container", {
 		slidesPerView: 1,
 		slidesPerColumn: 4,
-		slidesPerColumnFill: 'row',
+		slidesPerColumnFill: "row",
 		speed: 800,
 		navigation: {
 			nextEl: ".block__HREC.left .swiper-button-next",
@@ -245,7 +244,6 @@ const initMainBanner = () => {
 	});
 };
 
-
 const swipeIntroducePurpose = () => {
 	var swiper = new Swiper(".introduce__purpose__wrapper .swiper-container", {
 		slidesPerView: 3,
@@ -254,24 +252,24 @@ const swipeIntroducePurpose = () => {
 		breakpoints: {
 			300: {
 				slidesPerView: 1,
-				spaceBetween: 45
+				spaceBetween: 45,
 			},
 			600: {
 				slidesPerView: 2,
-				spaceBetween: 45
+				spaceBetween: 45,
 			},
 			1024: {
 				slidesPerView: 3,
-				spaceBetween: 45
-			}
+				spaceBetween: 45,
+			},
 		},
 	});
 };
 const sniperEvent = () => {
-	const swiper = new Swiper('.eventBottom__HREC .swiper-container', {
+	const swiper = new Swiper(".eventBottom__HREC .swiper-container", {
 		slidesPerView: 2,
 		slidesPerColumn: 4,
-		slidesPerColumnFill: 'row',
+		slidesPerColumnFill: "row",
 		speed: 800,
 		breakpoints: {
 			300: {
@@ -283,11 +281,11 @@ const sniperEvent = () => {
 			},
 		},
 		navigation: {
-			nextEl: '.eventBottom__HREC .swiper-button-next',
-			prevEl: '.eventBottom__HREC .swiper-button-prev',
+			nextEl: ".eventBottom__HREC .swiper-button-next",
+			prevEl: ".eventBottom__HREC .swiper-button-prev",
 		},
 	});
-}
+};
 const swiperNewAdc = () => {
 	const swiperL = new Swiper(".nSlider__col.left .swiper-container", {
 		loop: true,
@@ -376,18 +374,21 @@ export const swiperExecutiveCommittee = () => {
 			},
 			700: {
 				slidesPerView: 3,
-				slidesPerGroup: 1
+				slidesPerGroup: 1,
 			},
 			1025: {
 				slidesPerView: 2,
 				slidesPerColumn: 2,
 				slidesPerColumnFill: "row",
-			}
+			},
 		},
 		on: {
-			init: function() {
-				document.querySelector(".tab-bch .swiper-container .swiper-slide").click()
-			}
+			init: function () {
+				document
+					.querySelector(".tab-bch .swiper-container .swiper-slide")
+					.click();
+				getSVGs();
+			},
 		},
 		navigation: {
 			nextEl: ".tab-bch .swiper-button-next",
@@ -406,18 +407,20 @@ export const swiperExecutiveCommittee = () => {
 			},
 			700: {
 				slidesPerView: 3,
-				slidesPerGroup: 1
+				slidesPerGroup: 1,
 			},
 			1025: {
 				slidesPerView: 2,
 				slidesPerColumn: 2,
 				slidesPerColumnFill: "row",
-			}
+			},
 		},
 		on: {
-			init: function() {
-				document.querySelector(".tab-bkt .swiper-container .swiper-slide").click()
-			}
+			init: function () {
+				document
+					.querySelector(".tab-bkt .swiper-container .swiper-slide")
+					.click();
+			},
 		},
 		navigation: {
 			nextEl: ".tab-bkt .swiper-button-next",
@@ -429,15 +432,19 @@ export const swiperExecutiveCommittee = () => {
 //render info in intro page
 const renderInfo = () => {
 	document
-		.querySelectorAll(".tab-bch .executive-committee-swiper__wrapper .swiper-slide")
+		.querySelectorAll(
+			".tab-bch .executive-committee-swiper__wrapper .swiper-slide"
+		)
 		.forEach((item) => {
 			item.addEventListener("click", () => {
 				const temp = item.querySelector("a");
 				$(".tab-bch .executive-committee-active").html(temp.innerHTML);
 			});
 		});
-		document
-		.querySelectorAll(".tab-bkt .executive-committee-swiper__wrapper .swiper-slide")
+	document
+		.querySelectorAll(
+			".tab-bkt .executive-committee-swiper__wrapper .swiper-slide"
+		)
 		.forEach((item) => {
 			item.addEventListener("click", () => {
 				const temp = item.querySelector("a");
@@ -445,22 +452,15 @@ const renderInfo = () => {
 			});
 		});
 };
-// swiper partner
-const swiperPartner = () => {
-	if (document.querySelector(".place-to-get-partner")) {
-		document
-			.querySelectorAll(".place-to-get-partner img")
-			.forEach((item) => {});
-	}
-};
+
 const copyDataByAttr = () => {
-	const items__paste = document.querySelectorAll('[data-paste]');
-	const items__copy = document.querySelectorAll('[data-copy]');
+	const items__paste = document.querySelectorAll("[data-paste]");
+	const items__copy = document.querySelectorAll("[data-copy]");
 
 	items__paste.forEach((itemPaste) => {
 		items__copy.forEach((itemCopy) => {
-			var data = itemCopy.getAttribute('data-copy');
-			if (data != null && data == itemPaste.getAttribute('data-paste')) {
+			var data = itemCopy.getAttribute("data-copy");
+			if (data != null && data == itemPaste.getAttribute("data-paste")) {
 				itemPaste.textContent = itemCopy.textContent;
 			}
 		});
@@ -468,15 +468,49 @@ const copyDataByAttr = () => {
 };
 // ACTIVE LANGGUAGE
 const activeLanguage = () => {
-	const htmlLang = document.querySelector('html').getAttribute('lang');
+	const htmlLang = document.querySelector("html").getAttribute("lang");
 	const items__language = document.querySelectorAll(
-		'.header__languages .languages__item'
+		".header__languages .languages__item"
 	);
 	items__language.forEach((item) => {
-		if (item.getAttribute('data-language') == htmlLang) {
-			item.classList.add('active');
+		if (item.getAttribute("data-language") == htmlLang) {
+			item.classList.add("active");
 		}
 	});
+};
+//fake swiper partner
+const fakeSwiperPartner = () => {
+	if (document.querySelector(".index-page")) {
+		// CODE YOUR JS HERE
+		const array = [
+			"url(../assets/images/partner/logo-1.png)",
+			"url(../assets/images/partner/logo-2.png)",
+			"url(../assets/images/partner/logo-3.png)",
+			"url(../assets/images/partner/logo-4.png)",
+			"url(../assets/images/partner/logo-5.png)",
+		];
+		const images = Array.from(
+			document.querySelectorAll(".partner--logo .img")
+		);
+		let arrayLength = 4;
+		let imageslength = 0;
+		// THAY ĐỔI HÌNH ẢNH THEO THỜI GIAN
+		const autoChange = () => {
+			const imageChange = array[arrayLength++ % array.length];
+			const itemChange = images[imageslength++ % images.length];
+			itemChange.setAttribute("style", `--data-bg:${imageChange}`);
+		};
+		// KHỞI TẠO LIST HÌNH
+		const init = setInterval(autoChange, 2000);
+		images.forEach((item, index) => {
+			item.setAttribute("style", `--data-bg:${array[index]}`);
+			item.addEventListener("mouseenter", (e) => {});
+			item.addEventListener("mouseleave", (e) => {
+				setInterval(autoChange, 2000);
+				console.log("leave");
+			});
+		});
+	}
 };
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -504,11 +538,14 @@ document.addEventListener("DOMContentLoaded", () => {
 	swiperNewAdc();
 	swiperNewAdcR();
 	showInputSearch();
-	swiperPartner();
+	//render info in swiperExecutiveCommittee
 	renderInfo();
+	//
 	copyDataByAttr();
 	// ACTIVE LANGGUAGE
 	activeLanguage();
+	//fake home parner swiper
+	fakeSwiperPartner();
 	//tab
 	const ExecutiveCommittee = new Tab(".executive-committee .tab-container");
 });

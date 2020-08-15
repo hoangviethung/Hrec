@@ -9,11 +9,12 @@ section.introduce__purpose
 					.swiper-wrapper
 						-for(var i =0; i < 3; i++)
 							.swiper-slide.ov-h
-								.img
+								.img.ov-h
 									img.ofcv.lazyload(src="./assets/images/introduce/struct-1.png", alt="something")
 								.desc.ov-h
 									.title
-										img.svg(data-src=`./assets/images/introduce/icons-${i+1}.svg`, alt="something")
+										.img.ov-h
+											img.svg(data-src=`./assets/images/introduce/icons-${i+1}.svg`, alt="something")
 										h2 #{titleRule[i]}
 									p.lcl.lcl-3 Kết nối, hỗ trợ các thành viên trong Câu lạc bộ cũng như Hiệp hội Doanh nghiệp Thành phố…
 									a(href="#").btn.btn--readmore
