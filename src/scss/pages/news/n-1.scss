@@ -1,4 +1,5 @@
 section.News {
+<<<<<<< HEAD
 	padding-top: 90px;
 	@media (max-width: 1024.98px) {
 		padding-top: 40px;
@@ -138,6 +139,142 @@ section.News {
 				left: 0;
 				bottom: 0;
 				transform: none;
+=======
+    padding-top: 90px;
+    @media (max-width: 1024.98px) {
+        padding-top: 40px;
+    }
+    background: #525866;
+    .newsHREC__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 40px;
+        margin-right: -10px;
+        margin-left: -10px;
+    }
+    .news__item {
+        .news--desc {
+            h2 {
+                color: map-get($mau, main-2);
+                font-family: Lato-Black;
+                font-size: 20px;
+                overflow: hidden;
+                display: -webkit-box;
+                text-overflow: ellipsis;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                margin-bottom: 8px;
+                @media (max-width: 1440.98px) {
+                    font-size: 18px;
+                }
+            }
+            p {
+                color: map-get($mau, main-2);
+                font-family: Lato-Regular;
+                overflow: hidden;
+                display: -webkit-box;
+                text-overflow: ellipsis;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                font-size: 16px;
+                @media (max-width: 1440.98px) {
+                    font-size: 14px;
+                }
+            }
+        }
+        &:nth-child(1),
+        &:nth-child(2) {
+            &:hover {
+                .news--img {
+                    img {
+                        transition: all .5s ease-in-out;
+                        transform: scale(1.1);
+                    }
+                }
+            }
+            padding-right: 10px;
+            padding-left: 10px;
+            width: 50%;
+            flex: 0 0 50%;
+            margin-bottom: 40px;
+            .btn {
+                display: block;
+            }
+            .news--img {
+                height: 450px;
+                img {
+                    transition: all .5s ease-in-out;
+                }
+            }
+            .news--desc {
+                p {
+                    margin-bottom: 10px;
+                }
+            }
+            @media (max-width: 1024.98px) {
+                padding: 0 5px;
+                margin-bottom: 20px;
+            }
+            @media (max-width: 575.98px) {
+                -ms-flex: 0 0 100%;
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+        &:nth-child(1) {
+            padding-right: 10px;
+            @media (max-width: 1024.98px) {
+                padding-right: 5px;
+            }
+        }
+        &:nth-child(2) {
+            padding-left: 10px;
+            @media (max-width: 1024.98px) {
+                padding-left: 5px;
+            }
+        }
+        &:not(:first-child):not(:nth-child(2)) {
+            &:hover {
+                .news--img {
+                    img {
+                        transition: all .5s ease-in-out;
+                        transform: scale(1.1);
+                    }
+                }
+                .news--desc {
+                    background: map-get($mau, main-3);
+                    transition: all .5s ease-in-out;
+                }
+            }
+            -ms-flex: 0 0 25%;
+            flex: 0 0 25%;
+            max-width: 25%;
+            padding-right: 10px;
+            padding-left: 10px;
+            .btn {
+                display: none;
+            }
+            .news--img {
+                overflow: hidden;
+                height: 218px;
+                img {
+                    transition: all .5s ease-in-out;
+                }
+            }
+            .news--date {
+                top: 21px;
+                left: 18px;
+            }
+            .news--desc {
+                margin-top: 10px;
+                border: 1px solid map-get($mau, main-3);
+                padding: 17px;
+                position: relative;
+                width: 100%;
+                left: 0;
+                bottom: 0;
+                transform: none;
+>>>>>>> 84ad9d74cf05a8726dd5afc779653cb046763abe
                 height: auto;
                 h2 {
                     font-size: 20px;

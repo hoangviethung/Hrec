@@ -26,6 +26,22 @@ section.Events {
         margin: 0 -10px;
         flex-wrap: wrap;
         .events__item {
+            &:hover {
+                .model--img {
+                    img {
+                        transform: scale(1.1);
+                        transition: all .5s ease-in-out;
+                    }
+                }
+                .model--desc {
+                    background: map-get($mau, main-3);
+                    h2,
+                    p {
+                        transition: all .5s ease-in-out;
+                        color: map-get($mau, main-2);
+                    }
+                }
+            }
             flex: 0 0 50%;
             padding: 0 10px;
             margin-bottom: 20px;
@@ -36,6 +52,9 @@ section.Events {
             }
             .model--img {
                 height: 333px;
+                img {
+                    transition: all .5s ease-in-out;
+                }
             }
             .model--date {
                 z-index: 10;
