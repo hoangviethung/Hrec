@@ -112,6 +112,34 @@ section.Events {
         margin-top: 75px;
         padding-bottom: 117px;
         position: relative;
+        .block__item {
+            @media (min-width: 1025px) {
+                &:hover {
+                    .img {
+                        img {
+                            transform: scale(1.1);
+                            transition: 1s all ease-in-out;
+                        }
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            background: url("../assets/images/homepage/hover-news.png") no-repeat;
+                            background-size: 100% 100%;
+                            width: 100%;
+                            height: 100%;
+                            top: 0;
+                            left: 0;
+                            opacity: 0.5;
+                        }
+                    }
+                    .item--desc {
+                        h2 {
+                            color: #B69256 !important;
+                        }
+                    }
+                }
+            }
+        }
         .swiper-button-next {
             right: 32px;
             top: 90%;
@@ -139,14 +167,13 @@ section.Events {
                 content: "";
                 position: absolute;
                 width: calc(100% - 32px);
-                height: 2px;
+                height: 1px;
                 background: #b69256;
                 bottom: 0;
                 right: 0;
             }
             h2 {
-                color: map-get($mau, main-3);
-                font-family: Lato-Black;
+                color: map-get($mau, main-1);
                 font-size: 20px;
                 overflow: hidden;
                 display: -webkit-box;
@@ -154,6 +181,7 @@ section.Events {
                 -webkit-box-orient: vertical;
                 -webkit-line-clamp: 2;
                 margin-bottom: 8px;
+                font-family: Lato-Bold;
             }
             p {
                 color: map-get($mau, main-1);
@@ -162,7 +190,7 @@ section.Events {
                 display: -webkit-box;
                 text-overflow: ellipsis;
                 -webkit-box-orient: vertical;
-                -webkit-line-clamp: 2;
+                -webkit-line-clamp: 3;
             }
         }
     }

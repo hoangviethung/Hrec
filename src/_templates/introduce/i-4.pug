@@ -7,7 +7,33 @@ section.executive-committee
 			.tab-content
 				.content(tab-id="item-1").tab-bch
 					.executive-committee__wrapper.row
-						.executive-committee-swiper__wrapper.col-6
+						.executive-committee-swiper__wrapper.col-lg-6
+							.swiper-container
+								.swiper-wrapper
+									-for(var i = 0;i < 8; i++)
+										.swiper-slide
+											.block__main--model.ov-h
+												a(href="javascrip:;")
+													.model--img
+														img.ofcv.lazyload(data-src=`./assets/images/introduce/item-1.png`, alt="something")
+													.model--desc.ov-h
+														h2.title.lcl.lcl-1.tt-u mR. Lorem Ipsum
+														p.sub-title.lcl.lcl-2 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste distinctio neque sunt nihil architecto culpa id sed eaque, asperiores suscipit hic corrupti quas magni atque. Iusto illum corporis odio temporibus!											
+														.list--info.row
+															-for(var j=0;j<4;j++)
+																.item-info.col-6
+																	.row
+																		.img.col-2
+																			img.svg(data-src=`./assets/icons/item-${j+1}.svg`, alt="")
+																		.desc.col-10
+																			p.lcl.lcl-1 Lorem Ipsum is dummy.
+								.swiper-button-next
+								.swiper-button-prev
+						.executive-committee-active.col-lg-6
+			.tab-content
+				.content(tab-id="item-2").tab-bkt
+					.executive-committee__wrapper.row
+						.executive-committee-swiper__wrapper.col-lg-6
 							.swiper-container
 								.swiper-wrapper
 									-for(var i = 0;i < 8; i++)
@@ -29,59 +55,7 @@ section.executive-committee
 																			p.lcl.lcl-1 Lorem Ipsum is dummy.
 								.swiper-button-next
 								.swiper-button-prev
-						.executive-committee-active.col-6
-							.model--img
-								img.lazyload.ofcv(src="./assets/images/introduce/active.png", alt="")
-							.model--desc.ov-h
-								h2.title.tt-u.lcl.lcl-1 Lorem Ipsum has been the industry’s.
-								p.sub-title.lcl.lcl-2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-								.list--info.row
-									-for(var j=0;j<4;j++)
-										.item-info.col-6
-											.row
-												.img.col-2
-													img.svg(data-src=`./assets/icons/item-${j+1}.svg`, alt="")
-												.desc.col-10
-													p.lcl.lcl-1 Lorem Ipsum is dummy.
-			.tab-content
-				.content(tab-id="item-2").tab-bkt
-					.executive-committee__wrapper.row
-						.executive-committee-swiper__wrapper.col-6
-							.swiper-container
-								.swiper-wrapper
-									-for(var i = 0;i < 8; i++)
-										.swiper-slide
-											.block__main--model.ov-h
-												a(href="javascrip:;")
-													.model--img
-														img.ofcv.lazyload(data-src=`./assets/images/introduce/item-1.png`, alt="something")
-													.model--desc.ov-h
-														h2.title.lcl.lcl-2.tt-u mR. Lorem Ipsum
-														p.sub-title.lcl.lcl-2 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste distinctio neque sunt nihil architecto culpa id sed eaque, asperiores suscipit hic corrupti quas magni atque. Iusto illum corporis odio temporibus!											
-														.list--info
-															-for(var j=0;j<4;j++)
-																.item-info
-																	.row
-																		.img.col-2
-																			img.svg(data-src=`./assets/icons/item-${j+1}.svg`, alt="")
-																		.desc.col-10
-																			p.lcl.lcl-1 Lorem Ipsum is dummy.
-								.swiper-button-next
-								.swiper-button-prev
-						.executive-committee-active.col-6
-							.img
-								img.lazyload.ofcv(src="./assets/images/introduce/active.png", alt="")
-							.home__new-member--info
-								.home__new-member--info__wrapper
-									h2.title.tt-u.lcl.lcl-1 Lorem Ipsum has been the industry’s.
-									p.sub-title.lcl.lcl-2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-									.list--info.row
-										-for(var j=0;j<4;j++)
-											.item-info.col-6
-												.row
-													.img.col-2
-														img.svg(data-src=`./assets/icons/item-${j+1}.svg`, alt="")
-													.desc.col-10
-														p.lcl.lcl-1 Lorem Ipsum is dummy.
+						.executive-committee-active.col-lg-6
+							
 
 

@@ -35,6 +35,16 @@
 				color: map-get($mau, main-1);
 				margin-bottom: 20px;
 			}
+			@media (max-width: 1440px) {
+				width: calc(100% - 45px);
+			}
+			
+			@media (max-width: 767.98px) {
+				width: calc(100% - 35px);
+			}
+			@media (max-width: 575.98px) {
+				width: calc(100% - 85px);
+			}
 		}
 		
 		.btn--readmore {

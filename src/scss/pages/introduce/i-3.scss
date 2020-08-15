@@ -7,5 +7,16 @@
 .introduce__organization__wrapper {
 	.struct-map {
 		margin-bottom: 120px;
+		@media (max-width: 1024.98px) {
+			margin-bottom: 60px;
+		}
+	}
+	@media (max-width: 767.98px) {
+		.hot-news--banner {
+			margin-bottom: 10px;
+			.swiper-container {
+				text-align: center;
+			}
+		}
 	}
 }
