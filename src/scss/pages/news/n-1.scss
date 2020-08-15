@@ -144,6 +144,11 @@ section.News {
                 max-width: 50%;
                 margin-bottom: 20px;
             }
+            @media (max-width: 575.98px) {
+                -ms-flex: 0 0 100%;
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
         }
     }
     .market__HREC {
@@ -198,6 +203,14 @@ section.News {
                     font-size: 14px;
                 }
             }
+        }
+    }
+    .block__HREC {
+        @media (max-width: 768.98px) {
+            margin-bottom: 40px;
+        }
+        @media (max-width: 575.98px) {
+            margin-bottom: 20px;
         }
     }
     .block__HREC.right,
