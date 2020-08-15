@@ -214,15 +214,11 @@ section.News {
             }
         }
         .swiper-button-next {
-            right: 0;
-            top: 100%;
             width: 44px;
             height: 44px;
             z-index: 10;
         }
         .swiper-button-prev {
-            top: 100%;
-            left: calc(100% - 108px);
             width: 44px;
             height: 44px;
         }
@@ -233,6 +229,26 @@ section.News {
         .swiper-button-next.swiper-button-disabled {
             background: map-get($mau, main-1);
             opacity: 1;
+        }
+    }
+    .block__HREC.right {
+        .swiper-button-next {
+            right: 10px;
+            top: 100%;
+        }
+        .swiper-button-prev {
+            top: 100%;
+            left: calc(100% - 110px);
+        }
+    }
+    .block__HREC.left {
+        .swiper-button-next {
+            right: 40px;
+            top: 100%;
+        }
+        .swiper-button-prev {
+            top: 100%;
+            left: calc(100% - 140px);
         }
     }
     .block__HREC.right {
