@@ -38,6 +38,7 @@ section.Events {
                 }
                 .model--desc {
                     background: map-get($mau, main-3);
+                    transition: all .5s ease-in-out;
                     h2,
                     p {
                         transition: all .5s ease-in-out;
@@ -75,6 +76,7 @@ section.Events {
                 }
             }
             .model--desc {
+                transition: all .5s ease-in-out;
                 padding: 30px;
                 margin-top: 8px;
                 border: 1px solid map-get($mau, main-3);

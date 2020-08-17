@@ -2,19 +2,23 @@ import {
     getSVGs,
     Loading
 } from "./utilities/util";
-import Tab from './libraries/Tab'
+import Tab from './libraries/Tab';
+import CommonController from './libraries/CommonController';
+
 // active scrollBar window
 const scrollBar = () => {
-    const heigh = $(window).height();
     const isChange = window.innerWidth > 1024;
     if (isChange == true) {
         $(window).scroll(function() {
+            const heigh = window.scrollY;
             if (heigh > 137) {
                 $("header").addClass('sroll');
             } else {
                 $("header").removeClass("sroll");
             }
         });
+    } else {
+        console.log("Saii");
     }
 
 }
@@ -588,6 +592,8 @@ document.addEventListener("DOMContentLoaded", () => {
     scrollBar();
     navMobile();
     changeHeightFooter();
+    // CommonController
+    CommonController();
     //Swiper for banner
     swiperForBanner();
     //swiper for hotvent homepage

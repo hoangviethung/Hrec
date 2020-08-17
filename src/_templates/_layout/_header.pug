@@ -20,7 +20,7 @@ header
 								img(src="./assets/icons/phone.png", alt="phone")
 							.item__text
 								a.information__link(href="tel:0906 999 780" data-paste="phone")
-					.header__login
+					.header__login(data-fancybox data-src="#form__login" data-options='{"touch" : false}' href="javascript:;")
 						.login__icon
 							img(src="./assets/icons/acc.png", alt="acc")
 						.login__text
@@ -40,7 +40,7 @@ header
 											input(type="password", name="password")
 										.btn.btn-login(data-url="login")
 											button(type="submit") Đăng nhập
-					.header__languages
+					.header__languages.language
 						.languages__item.item(data-language="vi")
 							a.languages__link(data_content--pc="Vietnamese" data_content--mobile="VIE" href="#") Vietnamese
 						.languages__item.item(data-language="en")

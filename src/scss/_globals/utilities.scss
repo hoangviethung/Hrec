@@ -1,532 +1,547 @@
 body {
-	overflow-x: hidden;
-	&.disabled {
-		overflow: hidden;
-	}
+    overflow-x: hidden;
+    &.disabled {
+        overflow: hidden;
+    }
 }
 
 input,
 select,
 textarea {
-	&.input-validation-error {
-		color: red !important;
-		border: 1px solid red !important;
-		transition: 0.3s all ease-in-out;
-		&::placeholder {
-			color: red !important;
-		}
-	}
+    &.input-validation-error {
+        color: red !important;
+        border: 1px solid red !important;
+        transition: 0.3s all ease-in-out;
+        &::placeholder {
+            color: red !important;
+        }
+    }
 }
 
 .field-validation-error {
-	display: inline-block;
-	margin: 0.5rem 0;
-	font-size: 12px;
-	color: red;
+    display: inline-block;
+    margin: 0.5rem 0;
+    font-size: 12px;
+    color: red;
 }
 
 .tab-container {
-	.list-tab {
-		.item {
-			cursor: pointer;
-			&.active {
-				color: map-get($mau, main);
-			}
-		}
-	}
-	.tab-content {
-		.content {
-			display: none;
-			opacity: 0;
-			transition: all 0.3s cubic-bezier(0.2, 0.5, 0.5, 0.8);
-			&.show {
-				opacity: 1;
-			}
-		}
-	}
+    .list-tab {
+        .item {
+            cursor: pointer;
+            &.active {
+                color: map-get($mau, main);
+            }
+        }
+    }
+    .tab-content {
+        .content {
+            display: none;
+            opacity: 0;
+            transition: all 0.3s cubic-bezier(0.2, 0.5, 0.5, 0.8);
+            &.show {
+                opacity: 1;
+            }
+        }
+    }
 }
 
 .ofcv {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	object-position: center;
-	font-family: "object-fit: cover, object-position: center";
-	background-size: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    font-family: "object-fit: cover, object-position: center";
+    background-size: cover;
 }
 
 .ofct {
-	width: 100%;
-	height: 100%;
-	object-fit: contain;
-	object-position: center;
-	font-family: "object-fit: contain, object-position: center";
-	background-size: contain;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    font-family: "object-fit: contain, object-position: center";
+    background-size: contain;
 }
 
 .blur-up {
-	filter: blur(10px);
-	transition: filter 1s;
-	&.lazyloaded {
-		filter: blur(0);
-	}
+    filter: blur(10px);
+    transition: filter 1s;
+    &.lazyloaded {
+        filter: blur(0);
+    }
 }
 
 .clearfix {
-	&:after {
-		content: "";
-		display: table;
-		clear: both;
-	}
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
 }
+
 .h-100 {
-	height: 100%;
+    height: 100%;
 }
 
 .lcl {
-	overflow: hidden;
-	display: -webkit-box;
-	text-overflow: ellipsis;
-	-webkit-box-orient: vertical;
-	&-1 {
-		-webkit-line-clamp: 1;
-	}
-	&-2 {
-		-webkit-line-clamp: 2;
-	}
-	&-3 {
-		-webkit-line-clamp: 3;
-	}
+    overflow: hidden;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    &-1 {
+        -webkit-line-clamp: 1;
+    }
+    &-2 {
+        -webkit-line-clamp: 2;
+    }
+    &-3 {
+        -webkit-line-clamp: 3;
+    }
 }
 
 .block__main--title {
-	width: 100%;
-	display: flex;
-	flex-wrap: wrap;
-	border-bottom: 1px solid rgba($color: #b69256, $alpha: 0.8);
-	padding-bottom: 30px;
-	h2.title {
-		font-size: 35px;
-		font-family: LATO-BOLD;
-		font-weight: 700;
-		color: map-get($mau, main-1);
-		margin-right: auto;
-	}
-	&.bg_ {
-		h2 {
-			color: white;
-		}
-	}
-	@media (max-width: 768.98px) {
-		flex-direction: column;
-		padding-bottom: 10px;
-		h2.title {
-			font-size: 20px;
-		}
-		.btn--readmore {
-			height: 30px;
-			max-width: 120px;
-			span {
-				font-size: 14px;
-			}
-		}
-	};
-	// @media (max-width: 575.98px) {
-	// 	h2.title {
-	// 		font-size: 20px;
-	// 	}
-	// }
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid rgba($color: #b69256, $alpha: 0.8);
+    padding-bottom: 30px;
+    h2.title {
+        font-size: 35px;
+        font-family: LATO-BOLD;
+        font-weight: 700;
+        color: map-get($mau, main-1);
+        margin-right: auto;
+    }
+    &.bg_ {
+        h2 {
+            color: white;
+        }
+    }
+    @media (max-width: 768.98px) {
+        flex-direction: column;
+        padding-bottom: 10px;
+        h2.title {
+            font-size: 20px;
+        }
+        .btn--readmore {
+            height: 30px;
+            max-width: 120px;
+            span {
+                font-size: 14px;
+            }
+        }
+    }
+    ;
+    // @media (max-width: 575.98px) {
+    // 	h2.title {
+    // 		font-size: 20px;
+    // 	}
+    // }
 }
 
 .btn--readmore {
-	padding-left: 21px;
-	padding-right: 21px;
-	background-color: map-get($mau, main-3);
-	box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
-	height: 44px;
-	span {
-		color: map-get($mau, main-2);
-		font-size: 25px;
-		font-family: Lato-Heavy;
-		padding-right: 5px;
-	}
-	@media (min-width: 1025px) {
-		&:hover {
-			background: map-get($mau, main-2);
-			span {
-				color: map-get($mau, main-3);
-			}
-			svg {
-				path {
-					fill : map-get($mau, main-3);
-					stroke : map-get($mau, main-3);
-				}
-			}
-		}
-	}
-	@media (max-width: 768.98px) {
-		padding-left: 11px;
-		padding-right: 11px;
-		max-width: 160px;
-		span {
-			font-size: 20px;
-		}
-	}
+    padding-left: 21px;
+    padding-right: 21px;
+    background-color: map-get($mau, main-3);
+    box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
+    height: 44px;
+    span {
+        color: map-get($mau, main-2);
+        font-size: 25px;
+        font-family: Lato-Heavy;
+        padding-right: 5px;
+    }
+    @media (min-width: 1025px) {
+        &:hover {
+            background: map-get($mau, main-2);
+            span {
+                color: map-get($mau, main-3);
+            }
+            svg {
+                path {
+                    fill: map-get($mau, main-3);
+                    stroke: map-get($mau, main-3);
+                }
+            }
+        }
+    }
+    @media (max-width: 768.98px) {
+        padding-left: 11px;
+        padding-right: 11px;
+        max-width: 160px;
+        span {
+            font-size: 20px;
+        }
+    }
 }
 
 .block__main--news {
-	position: relative;
-	overflow: hidden;
-	a {
-		overflow: hidden;
-		display: block;
-		width: 100%;
-		height: 100%;
-	}
-	.news--img {
-		position: relative;
-		overflow: hidden;
-		width: 100%;
-		height: 100%;
-		&::after {
-			content: "";
-			pointer-events: none;
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			top: 0;
-			left: 0;
-			background: url("../assets/images/homepage/after-hover.png");
-			background-size: 100% 100%;
-			transform: translate(-100%);
-		}
-		&::before {
-			content: "";
-			pointer-events: none;
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			top: 0;
-			left: 0;
-			background: url("../assets/images/homepage/after-item.png");
-			background-size: 100% 100%;
-		}
-	}
-	.news--date {
-		z-index: 10;
-		display: inline-flex;
-		position: absolute;
-		background: map-get($mau, main-3);
-		width: 110px;
-		align-items: center;
-		justify-content: center;
-		height: 34px;
-		top: 28px;
-		left: 33px;
-		span {
-			font-family: Lato-Medium;
-			color: map-get($mau, main-2);
-		}
-	}
-	.news--desc {
-		z-index: 10;
-		position: absolute;
-		left: 50%;
-		bottom: 25px;
-		transform: translateX(-50%);
-		width: calc(100% - 66px);
-		height: auto;
-		h2.title {
-			color: map-get($mau, main-2);
-			font-family: Lato-Black;
-			font-size: 20px;
-			margin-bottom: 10px;
-		}
-		p.sub-title {
-			color: map-get($mau, main-2);
-			font-family: Lato-Regular;
-			margin-bottom: 10px;
-		}
-		.btn--readmore {
-			width: 110px;
-			height: 26px;
-			padding: 0 15px;
-			background: map-get($mau, main-2);
-			span {
-				color: map-get($mau, main-3);
-				font-family: Lato-Medium;
-				font-size: 15px;
-			}
-		}
-	}
-	@media (min-width: 1025px) {
-		&:hover {
-			.news--img {
-				img {
-					transform: scale(1.1);
-					transition:1s all ease;
-				}
-				&::before {
-					transition: .3s all ease-in-out;
-					transform: translateY(100%);
-				}
-				&::after {
-					opacity: .5;
-					transition: 1s all ease-in-out;
-					transform: translateY(0%);
-				}
-				
-			}
-		}
-	}
-	@media (max-width: 767.98px) {
-		.news--date {
-			top: 10px;
-			left: 10px;
-		}
-		.news--desc {
-			h2.title {
-				font-size: 18px;
-			}
-		}
-	}
+    position: relative;
+    overflow: hidden;
+    a {
+        overflow: hidden;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    .news--img {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        &::after {
+            content: "";
+            pointer-events: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: url("../assets/images/homepage/after-hover.png");
+            background-size: 100% 100%;
+            transform: translate(-100%);
+        }
+        &::before {
+            content: "";
+            pointer-events: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: url("../assets/images/homepage/after-item.png");
+            background-size: 100% 100%;
+        }
+    }
+    .news--date {
+        z-index: 10;
+        display: inline-flex;
+        position: absolute;
+        background: map-get($mau, main-3);
+        width: 110px;
+        align-items: center;
+        justify-content: center;
+        height: 34px;
+        top: 28px;
+        left: 33px;
+        span {
+            font-family: Lato-Medium;
+            color: map-get($mau, main-2);
+        }
+    }
+    .news--desc {
+        z-index: 10;
+        position: absolute;
+        left: 50%;
+        bottom: 25px;
+        transform: translateX(-50%);
+        width: calc(100% - 66px);
+        height: auto;
+        h2.title {
+            color: map-get($mau, main-2);
+            font-family: Lato-Black;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        p.sub-title {
+            color: map-get($mau, main-2);
+            font-family: Lato-Regular;
+            margin-bottom: 10px;
+        }
+        .btn--readmore {
+            width: 110px;
+            height: 26px;
+            padding: 0 15px;
+            background: map-get($mau, main-2);
+            span {
+                color: map-get($mau, main-3);
+                font-family: Lato-Medium;
+                font-size: 15px;
+            }
+        }
+    }
+    @media (min-width: 1025px) {
+        &:hover {
+            .news--img {
+                img {
+                    transform: scale(1.1);
+                    transition: 1s all ease;
+                }
+                &::before {
+                    transition: .3s all ease-in-out;
+                    transform: translateY(100%);
+                }
+                &::after {
+                    opacity: .5;
+                    transition: 1s all ease-in-out;
+                    transform: translateY(0%);
+                }
+            }
+        }
+    }
+    @media (max-width: 767.98px) {
+        .news--date {
+            top: 10px;
+            left: 10px;
+        }
+        .news--desc {
+            h2.title {
+                font-size: 18px;
+            }
+        }
+    }
 }
 
 .block__item {
-	display: flex;
-	flex-wrap: wrap;
-	margin-bottom: 30px;
-	.img {
-		-ms-flex: 0 0 260px;
-		flex: 0 0 260px;
-		max-width: 260px;
-		position: relative;
-		overflow: hidden;
-		max-height: 175px;
-		height: 100%;
-		&::after {
-			content: "";
-			pointer-events: none;
-			position: absolute;
-			background: rgb(82, 88, 102);
-			background: linear-gradient(180deg, rgba(82, 88, 102, 1) 0%, rgba(41, 44, 51, 1) 100%);
-			width: 100%;
-			height: 100%;
-			top: 0;
-			left: 0;
-			opacity: 0.3;
-		}
-		&::before {
-			content: "";
-			position: absolute;
-			background: url("../assets/images/homepage/hover-news.png") no-repeat;
-			background-size: 100% 100%;
-			width: 100%;
-			height: 100%;
-			top: 0;
-			left: 0;
-			opacity: 0;
-		}
-		@media (max-width: 1024.98px) {
-			-ms-flex: 0 0 50%;
-			flex: 0 0 50%;
-			max-width: 50%;
-		}
-	}
-	.item--desc {
-		-ms-flex-preferred-size: 0;
-		flex-basis: 0;
-		-ms-flex-positive: 1;
-		flex-grow: 1;
-		max-width: 100%;
-		align-self: center;
-		padding-left: 32px;
-		position: relative;
-		overflow: hidden;
-		padding-bottom: 18px;
-		&::after {
-			content: "";
-			position: absolute;
-			width: 100%;
-			height: 1px;
-			background: #b69256;
-			bottom: 0;
-		}
-	
-		h2.title {
-			font-size: 20px;
-			font-family: Lato-Bold;
-			color: map-get($mau, main-1);
-		}
-		p.sub-title {
-			font-family: Lato-Regular;
-			color: map-get($mau, main-1);
-		}
-		@media (max-width: 1024.98px) {
-			-ms-flex: 0 0 50%;
-			flex: 0 0 50%;
-			max-width: 50%;
-			padding-left: 10px;
-			p.sub-title {
-				-webkit-line-clamp: 2;
-			}
-		}
-	}
-	@media (max-width: 1024.98px) {
-		.item--desc {
-			padding-bottom: 10px;
-			h2.title {
-				font-size: 18px !important;
-			}
-		}
-	}
-	@media (max-width: 575.98px) {
-		.item--desc {
-			h2.title {
-				font-size: 16px !important;
-			}
-			p.sub-title {
-				font-size: 14px !important;
-			}
-		}
-	}
-	@media (min-width: 1025px) {
-		&:hover {
-			.img {
-				img {
-					transform: scale(1.1);
-					transition: 1s all ease-in-out;
-				}
-				&::after {
-					transition: .5s all ease-in-out;
-					transform: translate(100%);
-				}
-				&::before {
-					transition: 1s all ease-in;
-					z-index: 10;
-					opacity: .5;
-				}
-				
-			}
-			.item--desc {
-				h2.title {
-					color: #B69256;
-				}
-			}
-		}
-	}
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    .img {
+        -ms-flex: 0 0 260px;
+        flex: 0 0 260px;
+        max-width: 260px;
+        position: relative;
+        overflow: hidden;
+        max-height: 175px;
+        height: 100%;
+        &::after {
+            content: "";
+            pointer-events: none;
+            position: absolute;
+            background: rgb(82, 88, 102);
+            background: linear-gradient(180deg, rgba(82, 88, 102, 1) 0%, rgba(41, 44, 51, 1) 100%);
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            opacity: 0.3;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            background: url("../assets/images/homepage/hover-news.png") no-repeat;
+            background-size: 100% 100%;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+        @media (max-width: 1024.98px) {
+            -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+    }
+    .item--desc {
+        -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        max-width: 100%;
+        align-self: center;
+        padding-left: 32px;
+        position: relative;
+        overflow: hidden;
+        padding-bottom: 18px;
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background: #b69256;
+            bottom: 0;
+        }
+        h2.title {
+            font-size: 20px;
+            font-family: Lato-Bold;
+            color: map-get($mau, main-1);
+        }
+        p.sub-title {
+            font-family: Lato-Regular;
+            color: map-get($mau, main-1);
+        }
+        @media (max-width: 1024.98px) {
+            -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+            max-width: 50%;
+            padding-left: 10px;
+            p.sub-title {
+                -webkit-line-clamp: 2;
+            }
+        }
+    }
+    @media (max-width: 1024.98px) {
+        .item--desc {
+            padding-bottom: 10px;
+            h2.title {
+                font-size: 18px !important;
+            }
+        }
+    }
+    @media (max-width: 575.98px) {
+        .item--desc {
+            h2.title {
+                font-size: 16px !important;
+            }
+            p.sub-title {
+                font-size: 14px !important;
+            }
+        }
+    }
+    @media (min-width: 1025px) {
+        &:hover {
+            .img {
+                img {
+                    transform: scale(1.1);
+                    transition: 1s all ease-in-out;
+                }
+                &::after {
+                    transition: .5s all ease-in-out;
+                    transform: translate(100%);
+                }
+                &::before {
+                    transition: 1s all ease-in;
+                    z-index: 10;
+                    opacity: .5;
+                }
+            }
+            .item--desc {
+                h2.title {
+                    color: #B69256;
+                }
+            }
+        }
+    }
 }
 
 .block__main--model {
-	position: relative;
-	overflow: hidden;
-	max-width: 100%;
-	box-shadow: 0 3px 6px rgba($color: #000000, $alpha: .13);
-	a {
-		display: block;
-		width: 100%;
-		height: 100%;
-	}
-	.model--img {
-		position: relative;
-		overflow: hidden;
-		width: 100%;
-		height: 100%;
-		&::before {
-			content: "";
-			pointer-events: none;
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			top: 0;
-			left: 0;
-			background: url("../assets/images/stuff/after.png") no-repeat;
-			background-size: 100% 100%;
-			opacity: .68;
-		}
-	}
-	.model--desc {
-		padding: 10px;
-		background: #FFF;
-		h2.title {
-			color: map-get($mau, main-3);
-			font-family: Lato-Bold;
-			font-size: 20px;
-			margin-bottom: 10px;
-		}
-		p.sub-title {
-			color: map-get($mau, main-1);
-			font-family: Lato-Regular;
-		}
-		.list--info {
-			margin-top: 10px;
-			display: flex;
-			flex-wrap: wrap;
-			&>div {
-				-ms-flex: 0 0 50%;
-				flex: 0 0 50%;
-				max-width: 50%;
-				margin-bottom: 20px;
-				p {
-					font-family: Lato-Regular;
-				}
-			}
-		}
-	}
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    box-shadow: 0 3px 6px rgba($color: #000000, $alpha: .13);
+    a {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    .model--img {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        &::before {
+            content: "";
+            pointer-events: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: url("../assets/images/stuff/after.png") no-repeat;
+            background-size: 100% 100%;
+            opacity: .68;
+        }
+    }
+    .model--desc {
+        padding: 10px;
+        background: #FFF;
+        h2.title {
+            color: map-get($mau, main-3);
+            font-family: Lato-Bold;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        p.sub-title {
+            color: map-get($mau, main-1);
+            font-family: Lato-Regular;
+        }
+        .list--info {
+            margin-top: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            &>div {
+                -ms-flex: 0 0 50%;
+                flex: 0 0 50%;
+                max-width: 50%;
+                margin-bottom: 20px;
+                p {
+                    font-family: Lato-Regular;
+                }
+            }
+        }
+    }
 }
 
 .swiper-button-next {
-	right: 0;
-	width: 44px;
-	height: 44px;
-	background: map-get($mau, main-3);
-	box-shadow: 0 3px 6px rgba($color: #000000, $alpha: .16px);
-	&::after {
-		content: "";
-		background: url("../assets/images/stuff/next.png") no-repeat;
-		width: 100%;
-		height: 100%;
-		transform: translate(40%,30%);
-	}
+    right: 0;
+    width: 44px;
+    height: 44px;
+    background: map-get($mau, main-3);
+    box-shadow: 0 3px 6px rgba($color: #000000, $alpha: .16px);
+    &::after {
+        content: "";
+        background: url("../assets/images/stuff/next.png") no-repeat;
+        width: 100%;
+        height: 100%;
+        transform: translate(40%, 30%);
+    }
 }
+
 .swiper-button-prev {
-	left: 0;
-	width: 44px;
-	height: 44px;
-	background: map-get($mau, main-3);
-	box-shadow: 0 3px 6px rgba($color: #000000, $alpha: .16px);
-	&::after {
-		content: "";
-		background: url("../assets/images/stuff/prev.png") no-repeat;
-		width: 100%;
-		height: 100%;
-		transform: translate(35%,30%);
-	}
+    left: 0;
+    width: 44px;
+    height: 44px;
+    background: map-get($mau, main-3);
+    box-shadow: 0 3px 6px rgba($color: #000000, $alpha: .16px);
+    &::after {
+        content: "";
+        background: url("../assets/images/stuff/prev.png") no-repeat;
+        width: 100%;
+        height: 100%;
+        transform: translate(35%, 30%);
+    }
 }
+
 .swiper-button-prev.swiper-button-disabled {
-	border: 2px solid map-get($mau, main-3);
-	background: #EFEFEF;
-	box-shadow: none;
-	&::after {
-		content: "";
-		background: url("../assets/images/stuff/prev-disable.png")
-			no-repeat;
-		width: 100%;
-		height: 100%;
-		transform: translate(35%,30%);
-	}
-	opacity: 1;
+    border: 2px solid map-get($mau, main-3);
+    background: #EFEFEF;
+    box-shadow: none;
+    &::after {
+        content: "";
+        background: url("../assets/images/stuff/prev-disable.png") no-repeat;
+        width: 100%;
+        height: 100%;
+        transform: translate(35%, 30%);
+    }
+    opacity: 1;
 }
+
 .swiper-button-next.swiper-button-disabled {
-	border: 2px solid map-get($mau, main-3);
-	background: #EFEFEF;
-	opacity: 1;
-	&::after {
-		content: "";
-		background: url("../assets/images/stuff/next-disable.png")
-			no-repeat;
-		width: 100%;
-		height: 100%;
-		transform: translate(40%,30%);
-	}
+    border: 2px solid map-get($mau, main-3);
+    background: #EFEFEF;
+    opacity: 1;
+    &::after {
+        content: "";
+        background: url("../assets/images/stuff/next-disable.png") no-repeat;
+        width: 100%;
+        height: 100%;
+        transform: translate(40%, 30%);
+    }
+}
+
+::-webkit-scrollbar-track {
+    background-color: map-get($mau, main-2);
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: map-get($mau, main-2);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: map-get($mau, main-1);
+    background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent)
 }
