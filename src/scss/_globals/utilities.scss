@@ -4,21 +4,6 @@ body {
 		overflow: hidden;
 	}
 }
-::-webkit-scrollbar-track {
-	
-	background-color: #CDD1D8;
-}
-
-::-webkit-scrollbar {
-	width           : 2px;
-	height          : 2px;
-	background-color: #fff;
-}
-
-::-webkit-scrollbar-thumb {
-	
-	background-color: map-get($mau, main-3);
-}
 
 input,
 select,
@@ -117,6 +102,7 @@ textarea {
 .block__main--title {
 	width: 100%;
 	display: flex;
+	flex-wrap: wrap;
 	border-bottom: 1px solid rgba($color: #b69256, $alpha: 0.8);
 	padding-bottom: 30px;
 	h2.title {
@@ -132,21 +118,16 @@ textarea {
 		}
 	}
 	@media (max-width: 768.98px) {
-		display: flex;
-		flex-wrap: wrap;
+		flex-direction: column;
+		padding-bottom: 10px;
+		h2.title {
+			font-size: 20px;
+		}
 		.btn--readmore {
-			background: none;
-			box-shadow: none;
+			height: 30px;
+			max-width: 120px;
 			span {
-				font-size: 20px;
-				color: map-get($mau, main-3);
-				margin: unset;
-			}
-			svg {
-				path {
-					fill : map-get($mau, main-3);
-					stroke : map-get($mau, main-3);
-				}
+				font-size: 14px;
 			}
 		}
 	};
@@ -207,6 +188,18 @@ textarea {
 		overflow: hidden;
 		width: 100%;
 		height: 100%;
+		&::after {
+			content: "";
+			pointer-events: none;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background: url("../assets/images/homepage/after-hover.png");
+			background-size: 100% 100%;
+			transform: translate(-100%);
+		}
 		&::before {
 			content: "";
 			pointer-events: none;
@@ -266,9 +259,40 @@ textarea {
 			}
 		}
 	}
+	@media (min-width: 1025px) {
+		&:hover {
+			.news--img {
+				img {
+					transform: scale(1.1);
+					transition:1s all ease;
+				}
+				&::before {
+					transition: .3s all ease-in-out;
+					transform: translateY(100%);
+				}
+				&::after {
+					opacity: .5;
+					transition: 1s all ease-in-out;
+					transform: translateY(0%);
+				}
+				
+			}
+		}
+	}
+	@media (max-width: 767.98px) {
+		.news--date {
+			top: 10px;
+			left: 10px;
+		}
+		.news--desc {
+			h2.title {
+				font-size: 18px;
+			}
+		}
+	}
 }
 
-a.block__item {
+.block__item {
 	display: flex;
 	flex-wrap: wrap;
 	margin-bottom: 30px;
@@ -282,6 +306,7 @@ a.block__item {
 		height: 100%;
 		&::after {
 			content: "";
+			pointer-events: none;
 			position: absolute;
 			background: rgb(82, 88, 102);
 			background: linear-gradient(180deg, rgba(82, 88, 102, 1) 0%, rgba(41, 44, 51, 1) 100%);
@@ -290,6 +315,17 @@ a.block__item {
 			top: 0;
 			left: 0;
 			opacity: 0.3;
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			background: url("../assets/images/homepage/hover-news.png") no-repeat;
+			background-size: 100% 100%;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			opacity: 0;
 		}
 		@media (max-width: 1024.98px) {
 			-ms-flex: 0 0 50%;
@@ -316,6 +352,7 @@ a.block__item {
 			background: #b69256;
 			bottom: 0;
 		}
+	
 		h2.title {
 			font-size: 20px;
 			font-family: Lato-Bold;
@@ -332,6 +369,49 @@ a.block__item {
 			padding-left: 10px;
 			p.sub-title {
 				-webkit-line-clamp: 2;
+			}
+		}
+	}
+	@media (max-width: 1024.98px) {
+		.item--desc {
+			padding-bottom: 10px;
+			h2.title {
+				font-size: 18px !important;
+			}
+		}
+	}
+	@media (max-width: 575.98px) {
+		.item--desc {
+			h2.title {
+				font-size: 16px !important;
+			}
+			p.sub-title {
+				font-size: 14px !important;
+			}
+		}
+	}
+	@media (min-width: 1025px) {
+		&:hover {
+			.img {
+				img {
+					transform: scale(1.1);
+					transition: 1s all ease-in-out;
+				}
+				&::after {
+					transition: .5s all ease-in-out;
+					transform: translate(100%);
+				}
+				&::before {
+					transition: 1s all ease-in;
+					z-index: 10;
+					opacity: .5;
+				}
+				
+			}
+			.item--desc {
+				h2.title {
+					color: #B69256;
+				}
 			}
 		}
 	}
@@ -440,7 +520,7 @@ a.block__item {
 .swiper-button-next.swiper-button-disabled {
 	border: 2px solid map-get($mau, main-3);
 	background: #EFEFEF;
-	
+	opacity: 1;
 	&::after {
 		content: "";
 		background: url("../assets/images/stuff/next-disable.png")
@@ -449,5 +529,4 @@ a.block__item {
 		height: 100%;
 		transform: translate(40%,30%);
 	}
-	opacity: 1;
 }

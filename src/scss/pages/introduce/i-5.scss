@@ -3,6 +3,12 @@
 	.block__main--title {
 		margin-bottom: 40px;
 	}
+	@media (max-width: 767.98px) {
+		margin-bottom: 40px;
+		.block__main--title {
+			margin-bottom: 20px;
+		}
+	}
 }
 .rule {
 	align-self: flex-end	;
@@ -34,6 +40,7 @@
 			}
 		}
 		.rule {
+			margin-top: 20px;
 			-ms-flex: 0 0 100%;
 			flex: 0 0 100%;
 			max-width: 100%;
@@ -62,8 +69,23 @@
 	.rule-content {
 		display: flex;
 		flex-wrap: wrap;
+		::-webkit-scrollbar-track {
+	
+			background-color: #CDD1D8;
+		}
 		
+		::-webkit-scrollbar {
+			width           : 2px;
+			height          : 2px;
+			background-color: #fff;
+		}
+		
+		::-webkit-scrollbar-thumb {
+			
+			background-color: map-get($mau, main-3);
+		}
 		.desc {
+			
 			-ms-flex: 0 0 60%;
 			flex: 0 0 60%;
 			max-width: 60%;

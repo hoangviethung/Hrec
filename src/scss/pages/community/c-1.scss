@@ -32,6 +32,22 @@
 	.news__slider {
 		padding-bottom: 0 !important;
 	}
+	 .eventBottom__HREC .item--desc::after {
+		@media (max-width: 1024.98px) {
+			width: calc(100% - 10px) !important;
+		}
+	}
+	.eventBottom__HREC .item--desc {
+		@media (max-width: 575.98px) {
+			h2 {
+				margin-bottom: 0 !important;
+				font-size: 14px !important;
+			}
+			p {
+				font-size: 12px !important;
+			}
+		}
+	}
 }
 
 .eventBottom__HREC {

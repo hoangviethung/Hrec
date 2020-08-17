@@ -1,5 +1,4 @@
-.container,
-.container-1385px {
+.container {
     width: 100%;
     padding-right: 10px;
     padding-left: 10px;
@@ -7,10 +6,12 @@
     margin-left: auto;
     position: relative;
 }
-// .container-1385px {
-// 	position: relative;
-// 	max-width: 1385px;
-// }
+.container-1385px {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+}
 
 @media (min-width: 1025px) {
     .container {
