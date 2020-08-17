@@ -24,6 +24,8 @@ const navMobile = () => {
     if (btn) {
         $(btn).click(function(e) {
             e.preventDefault();
+            $("body").toggleClass("active")
+            $("body").toggleClass("ov-h");
             $(btn).toggleClass('active');
             $(nav).toggleClass("active");
         });
@@ -47,10 +49,10 @@ const changeHeightFooter = () => {
         const isChange = window.innerWidth < 768;
         const height = $(".footer__inner").height();
         if (isChange == true) {
-            $(".footer__wrapper").css('height', height + 150);
+            $(".footer__wrapper").css('height', height + 110);
             $(window).resize(function() {
                 console.log(height);
-                $(".footer__wrapper").css('height', height + 150);
+                $(".footer__wrapper").css('height', height + 110);
             });
         }
     }
@@ -480,6 +482,47 @@ const activeLanguage = () => {
     });
 };
 
+const showLoginHome = () => {
+    $(".login__text").click(function(e) {
+        e.preventDefault();
+        e.preventDefault();
+        $.fancybox.open({
+            src: '#form__login'
+        });
+    });
+}
+
+const ajaxFormLogin = () => {
+    $('.btn.btn-login button').on('click', function(e) {
+        e.preventDefault();
+        const _thisBtn = $(this);
+        const url = _thisBtn.attr('data-url');
+        const formData = new FormData();
+        $('.input__login input').each(function() {
+            const name = $(this).attr('name');
+            const value = $(this).val();
+            formData.append(name, value);
+        });
+        if ($('.headerLogin__body form').valid() === true) {
+            $.ajax({
+                url: url,
+                type: 'post',
+                data: formData,
+                processData: false,
+                contentType: false,
+                beforeSend: function() {
+                    _thisBtn.attr('disabled', 'disabled');
+                },
+                success: function(res) {
+                    alert(`${res.Message}`);
+                    window.location.reload();
+                    _thisBtn.removeAttr('disabled');
+                },
+            });
+        }
+    });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     getSVGs();
     Loading();
@@ -507,9 +550,13 @@ document.addEventListener("DOMContentLoaded", () => {
     showInputSearch();
     swiperPartner();
     renderInfo();
+    // ajaxFormLogin
+    ajaxFormLogin();
     copyDataByAttr();
     // ACTIVE LANGGUAGE
     activeLanguage();
+    // showLoginHome
+    showLoginHome();
     //tab
     const ExecutiveCommittee = new Tab(".executive-committee .tab-container");
 });
