@@ -143,8 +143,10 @@ textarea {
 	padding-right: 21px;
 	background-color: map-get($mau, main-3);
 	box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
+	transition: 1s all ease-in-out;
 	height: 44px;
 	span {
+		transition: 1s all ease-in-out;
 		color: map-get($mau, main-2);
 		font-size: 25px;
 		font-family: Lato-Heavy;
@@ -152,12 +154,15 @@ textarea {
 	}
 	@media (min-width: 1025px) {
 		&:hover {
+			transition: 1s all ease-in-out;
 			background: map-get($mau, main-2);
 			span {
+				transition: 1s all ease-in-out;
 				color: map-get($mau, main-3);
 			}
 			svg {
 				path {
+					transition: 1s all ease-in-out;
 					fill : map-get($mau, main-3);
 					stroke : map-get($mau, main-3);
 				}
@@ -188,6 +193,9 @@ textarea {
 		overflow: hidden;
 		width: 100%;
 		height: 100%;
+		img {
+			transition: .3s all ease-in-out;
+		}
 		&::after {
 			content: "";
 			pointer-events: none;
@@ -203,6 +211,7 @@ textarea {
 		&::before {
 			content: "";
 			pointer-events: none;
+			transition: 1s all ease-in-out;
 			position: absolute;
 			width: 100%;
 			height: 100%;
@@ -264,11 +273,11 @@ textarea {
 			.news--img {
 				img {
 					transform: scale(1.1);
-					transition:1s all ease;
+					transition: 1s all ease-in-out;
 				}
 				&::before {
-					transition: .3s all ease-in-out;
-					transform: translateY(100%);
+					transition: 1s all ease-in-out;
+					opacity: 0;
 				}
 				&::after {
 					opacity: .5;
@@ -304,6 +313,9 @@ textarea {
 		overflow: hidden;
 		max-height: 175px;
 		height: 100%;
+		img {
+			transition: 1s all ease-in-out;
+		}
 		&::after {
 			content: "";
 			pointer-events: none;
@@ -315,6 +327,7 @@ textarea {
 			top: 0;
 			left: 0;
 			opacity: 0.3;
+			transition: 1s all ease-in-out;
 		}
 		&::before {
 			content: "";
@@ -327,10 +340,22 @@ textarea {
 			left: 0;
 			opacity: 0;
 		}
+		@media (max-width: 1440px) {
+			-ms-flex: 0 45%;
+			flex: 0 45%;
+			max-width: 45%;
+		}
 		@media (max-width: 1024.98px) {
-			-ms-flex: 0 0 50%;
-			flex: 0 0 50%;
-			max-width: 50%;
+			-ms-flex: 0 0 40%;
+			flex: 0 0 40%;
+			max-width: 40%;
+		}
+		@media (max-width: 575.98px) {
+			-ms-flex: 0 0 100%;
+			flex: 0 0 100%;
+			max-width: 100%;
+			margin-bottom: 10px;
+
 		}
 	}
 	.item--desc {
@@ -362,14 +387,31 @@ textarea {
 			font-family: Lato-Regular;
 			color: map-get($mau, main-1);
 		}
+		@media (max-width: 1440px) {
+			-ms-flex: 0 0 55%;
+			flex: 0 0 55%;
+			max-width: 55%;
+			padding-left: 10px;
+			padding-bottom:10px;
+		}
 		@media (max-width: 1024.98px) {
 			-ms-flex: 0 0 50%;
 			flex: 0 0 50%;
 			max-width: 50%;
-			padding-left: 10px;
+			align-self: flex-start;
+
 			p.sub-title {
 				-webkit-line-clamp: 2;
 			}
+		}
+		@media (max-width: 767.98px) {
+			align-self: center;
+		}
+		@media (max-width: 575.98px) {
+			-ms-flex: 0 0 100%;
+			flex: 0 0 100%;
+			max-width: 100%;
+			padding-left: 0;
 		}
 	}
 	@media (max-width: 1024.98px) {
@@ -381,6 +423,7 @@ textarea {
 		}
 	}
 	@media (max-width: 575.98px) {
+		margin-bottom: 10px;
 		.item--desc {
 			h2.title {
 				font-size: 16px !important;
@@ -482,11 +525,16 @@ textarea {
 	background: map-get($mau, main-3);
 	box-shadow: 0 3px 6px rgba($color: #000000, $alpha: .16px);
 	&::after {
+		pointer-events: none;
 		content: "";
 		background: url("../assets/images/stuff/next.png") no-repeat;
-		width: 100%;
-		height: 100%;
-		transform: translate(40%,30%);
+		width:12px;
+		height:20px;
+		background-size: contain;
+	}
+	@media (max-width: 575.98px) {
+		width: 30px;
+		height: 30px;
 	}
 }
 .swiper-button-prev {
@@ -497,10 +545,15 @@ textarea {
 	box-shadow: 0 3px 6px rgba($color: #000000, $alpha: .16px);
 	&::after {
 		content: "";
+		pointer-events: none;
 		background: url("../assets/images/stuff/prev.png") no-repeat;
-		width: 100%;
-		height: 100%;
-		transform: translate(35%,30%);
+		width:12px;
+		height:20px;
+		background-size: contain;
+	}
+	@media (max-width: 575.98px) {
+		width: 30px;
+		height: 30px;
 	}
 }
 .swiper-button-prev.swiper-button-disabled {
@@ -509,13 +562,18 @@ textarea {
 	box-shadow: none;
 	&::after {
 		content: "";
+		pointer-events: none;
 		background: url("../assets/images/stuff/prev-disable.png")
 			no-repeat;
-		width: 100%;
-		height: 100%;
-		transform: translate(35%,30%);
+		width:12px;
+		height:20px;
+		background-size: contain;
 	}
 	opacity: 1;
+	@media (max-width: 575.98px) {
+		width: 30px;
+		height: 30px;
+	}
 }
 .swiper-button-next.swiper-button-disabled {
 	border: 2px solid map-get($mau, main-3);
@@ -523,10 +581,15 @@ textarea {
 	opacity: 1;
 	&::after {
 		content: "";
+		pointer-events: none;
 		background: url("../assets/images/stuff/next-disable.png")
 			no-repeat;
-		width: 100%;
-		height: 100%;
-		transform: translate(40%,30%);
+		width:12px;
+		height:20px;
+		background-size: contain;
+	}
+	@media (max-width: 575.98px) {
+		width: 30px;
+		height: 30px;
 	}
 }

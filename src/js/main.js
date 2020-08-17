@@ -160,9 +160,10 @@ const swiperHappyBirthday = () => {
 		autoplay: {
 			delay: 2000,
 		},
+		simulateTouch: false,
 		navigation: {
-			nextEl: ".home__stuff .swiper-button-next",
-			prevEl: ".home__stuff .swiper-button-prev",
+			nextEl: ".home__happy-birthday .swiper-button-next",
+			prevEl: ".home__happy-birthday .swiper-button-prev",
 		},
 	});
 };
@@ -500,7 +501,7 @@ const fakeSwiperPartner = () => {
 		var images = Array.from(
 			document.querySelectorAll(".partner--logo .img.test")
 		);
-		let arrayLength = 3;
+		let arrayLength = 4;
 		let imageslength = 0;
 		// THAY ĐỔI HÌNH ẢNH THEO THỜI GIAN
 		const autoChange = () => {
@@ -509,18 +510,19 @@ const fakeSwiperPartner = () => {
 			itemChange.setAttribute("style", `--data-bg:${imageChange}`);
 		};
 		// KHỞI TẠO LIST HÌNH
-		const init = setInterval(autoChange, 500);
+		const init = setInterval(autoChange, 1000);
 		images.forEach((item, index) => {
 			item.setAttribute("style", `--data-bg:${array[index]}`);
-			item.addEventListener("mouseenter", (e) => {	
-				const temp = item.getAttribute("style");
-				const test = temp.substr(10,temp.length);
-				const a = array.indexOf(`${test}`)
-				array.splice(a, 1);
+			item.addEventListener("mouseenter", (e) => {
 				item.classList.remove("test")
 				images = Array.from(
 					document.querySelectorAll(".partner--logo .img.test")
 				);
+				const temp = item.getAttribute("style");
+				const test = temp.substr(10,temp.length);
+				const a = array.indexOf(`${test}`)
+				array.splice(a, 1);
+				
 			});
 			item.addEventListener("mouseleave", (e) => {
 				item.classList.add("test");
