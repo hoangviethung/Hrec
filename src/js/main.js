@@ -497,10 +497,10 @@ const fakeSwiperPartner = () => {
 			"url(../assets/images/partner/logo-4.png)",
 			"url(../assets/images/partner/logo-5.png)",
 		];
-		const images = Array.from(
-			document.querySelectorAll(".partner--logo .img")
+		var images = Array.from(
+			document.querySelectorAll(".partner--logo .img.test")
 		);
-		let arrayLength = 4;
+		let arrayLength = 3;
 		let imageslength = 0;
 		// THAY ĐỔI HÌNH ẢNH THEO THỜI GIAN
 		const autoChange = () => {
@@ -512,13 +512,28 @@ const fakeSwiperPartner = () => {
 		const init = setInterval(autoChange, 500);
 		images.forEach((item, index) => {
 			item.setAttribute("style", `--data-bg:${array[index]}`);
-			item.addEventListener("mouseenter", (e) => {
-				array.splice(`${array[index]}` , 1)
-				console.log(array);
+			item.addEventListener("mouseenter", (e) => {	
+				const temp = item.getAttribute("style");
+				const test = temp.substr(10,temp.length);
+				const a = array.indexOf(`${test}`)
+				array.splice(a, 1);
+				item.classList.remove("test")
+				images = Array.from(
+					document.querySelectorAll(".partner--logo .img.test")
+				);
 			});
 			item.addEventListener("mouseleave", (e) => {
-				console.log(item.getAttribute("style"));
-				const init = setInterval(autoChange, 500);
+				item.classList.add("test");
+				images = Array.from(
+					document.querySelectorAll(".partner--logo .img.test")
+				);
+				array = [
+					"url(../assets/images/partner/logo-1.png)",
+					"url(../assets/images/partner/logo-2.png)",
+					"url(../assets/images/partner/logo-3.png)",
+					"url(../assets/images/partner/logo-4.png)",
+					"url(../assets/images/partner/logo-5.png)",
+				];
 			});
 		});
 	}
