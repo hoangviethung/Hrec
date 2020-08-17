@@ -1,17 +1,29 @@
-.home__partner__wrapper {
+.home__partner {
 	margin-bottom: 100px;
+	@media (max-width: 767.98px) {
+		margin-bottom: 40px;
+	}
+	.partner.col-6 {
+		@media (max-width: 1024.98px) {
+			-ms-flex: 0 0 100%;
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
+	}
 	.block__main--title {
-		margin-bottom: 100px;
+		margin-bottom: 50px;
+		@media (max-width: 767.98px) {
+			margin-bottom: 20px;
+		}
 	}
 	.partner {
 		padding-left: 0;
-		padding-right: 0;
 	}
 }
 .partner__wrapper--content {
 	.partner--logo {
 		width: 325px;
-		max-height: 275px;
+		height: 275px;
 		&:nth-child(odd) {
 			padding-right: 10px;
 		}
@@ -25,24 +37,30 @@
 			margin-bottom: 20px;
 		}
 		.img {
-			padding: 60px 0;
-			width: 100%;
+			background: var(--data-bg) no-repeat;
 			height: 100%;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			background: map-get($mau, main-2);
-			box-shadow: 0 3px 6px rgba($color: #000000, $alpha: .16);
+			width: 100%;
+			transition: 0.3s all ease-in-out;
+			background-position: center;
+			z-index: 10;
+		}
+		.background--img{
+			position: relative;
+			height: 100%;
+			background: url("../assets/images/partner/white.png") no-repeat;
+			background-size: 100% 100%;
+			box-shadow: 0 3px  6px rgba($color: #000000, $alpha: .16);
 		}
 		@media (min-width: 1025px) {
 			&:hover {
-				padding: 18px;
-				border: 1px solid map-get($mau, main-3);
-				transition: all 1s ease-in-out;
+				.background--img{
+					transition: 1s all ease-in-out;
+					border: 1px solid map-get($mau, main-3);
+					background-size: calc(100% - 25px) calc(100% - 25px);
+					background-position: center;
+					box-shadow: 0 3px 6px rgba($color: #000000, $alpha: .16);
+				}
 			}
-		}
-		.swiper-container {
-			height: 100%;
 		}
 	}
 	.hot-news--banner.col-6 {
@@ -53,10 +71,17 @@
 		height: 275px;
 		.swiper-container {
 			height: 100%;
+			text-align: center;
+			img {
+				height: 100%;
+			}
+		}
+		@media (max-width: 767.98px) {
+			height: auto;
 		}
 	}
 	@media (max-width: 1440px) {
-		&> div {
+		& > div {
 			-ms-flex: 0 0 100%;
 			flex: 0 0 100%;
 			max-width: 100%;
@@ -106,9 +131,29 @@
 }
 //section member
 .home__member {
+	margin-bottom: 80px;
+	.block__main--title {
+		margin-bottom: 40px;
+	}
 	.home__member--swiper {
+		position: relative;
 		.swiper-container {
-			padding: 0 44px;
+			margin: 0 44px;
+			@media (max-width: 575.98px) {
+				margin: 0;
+			}
+		}
+		.swiper-button-next, .swiper-button-prev {
+			@media (max-width: 575.98px) {
+				top: unset;
+				bottom: -50px;
+				&.swiper-button-next {
+					right: calc(50% - 50px);
+				}
+				&.swiper-button-prev {
+					left: calc(50% - 50px);
+				}
+			}
 		}
 		.swiper-slide {
 			display: flex;

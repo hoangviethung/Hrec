@@ -12,14 +12,14 @@ section.News.community.ov-h.Events
 						.news__item
 							.block__main--news
 								a(href="#")
-									.news--img
+									.news--img.ov-h
 										img.ofcv.lazyload(data-src=`./assets/images/homepage/hotnew-img-1.png`, alt="something")
 									.news--date
 										span 23.07.2020
 									.news--desc
-										h2 Lorem Ipsum is simply dummy text of the printing printingand typesetting industry. 
-										p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever
-										a(href="#").btn.btn--readmore
+										h2.title Lorem Ipsum is simply dummy text of the printing printingand typesetting industry. 
+										p.sub-title Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever
+										.btn.btn--readmore
 											span Đọc tiếp
 											img.svg(src="./assets/images/homepage/small-arrow.svg", alt="something")
 			.news__slider
@@ -39,14 +39,14 @@ section.News.community.ov-h.Events
 			.eventBottom__HREC
 				.swiper-container
 					.swiper-wrapper
-						-for(i=0;i<=10;i++)
+						-for(i=0;i<=16;i++)
 							.swiper-slide
 								.block__list--item
 									a(href="#").block__item
 										.img
 											img.ofcv(src=`./assets/images/news-events/event-1.png`, alt="something")
 										.item--desc
-											h2 Lorem Ipsum is simply dummy text of the printing.
-											p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever…
+											h2.title Lorem Ipsum is simply dummy text of the printing.
+											p.sub-title Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever…
 				.swiper-button-next
 				.swiper-button-prev

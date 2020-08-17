@@ -1,7 +1,13 @@
 .introduce__purpose {
 	margin-bottom: 110px;
+	@media (max-width: 767.98px) {
+		margin-bottom: 40px;
+	}
 	.block__main--title {
-		margin-bottom: 70px;
+		margin-bottom: 55px;
+		@media (max-width: 767.98px) {
+			margin-bottom: 20px;
+		}
 	}
 }
 
@@ -9,7 +15,25 @@
 	.swiper-slide {
 		position: relative;
 		padding-left: 30px;
-		border: 1px solid map-get($mau, main-3);
+		border-left: 1px solid map-get($mau, main-3);
+		&::after {
+			content: "";
+			position: absolute;
+			width: 30px;
+			height: 1px;
+			top: 0;
+			left: 0;
+			background: map-get($mau, main-3);
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			width: 30px;
+			height: 1px;
+			bottom: 0;
+			left: 0;
+			background: map-get($mau, main-3);
+		}
 			.desc {
 			position: absolute;
 			bottom: 40px;
@@ -29,11 +53,24 @@
 					font-size: 25px;
 					font-family: Lato-Bold;
 					color:	map-get($mau, main-3);
+					@media (max-width: 575.98px) {
+						font-size: 18px;
+					}
+				}
+				.img {
+					svg {
+						vertical-align: baseline;
+						@media (max-width: 575.98px) {
+								width: 16px;
+								height: 14px;
+						}
+					}
 				}
 			}
 			p {
 				color: map-get($mau, main-1);
 				margin-bottom: 20px;
+
 			}
 			@media (max-width: 1440px) {
 				width: calc(100% - 45px);
@@ -69,29 +106,35 @@
 					}
 				}
 				.desc {
-					transition: all 1s ease-in-out;
+					transition: all .3s ease-in-out;
 					background: map-get($mau, main-3);
 				}
 				.title {
 					svg {
 						path {
+							transition: all 1s ease-in-out;
 							fill: map-get($mau, main-2)
 						}
 					}
 					h2 {
+						transition: all 1s ease-in-out;
 						color: map-get($mau, main-2);
 					}
 				}
 				p {
+					transition: all 1s ease-in-out;
 					color: map-get($mau, main-2);
 				}
 				.btn--readmore {
+					transition: all 1s ease-in-out;
 					background: map-get($mau, main-2);
 					span {
+						transition: all 1s ease-in-out;
 						color: map-get($mau, main-3);
 					}
 					svg {
 						path {
+							transition: all 1s ease-in-out;
 							fill: map-get($mau, main-3)
 						}
 					}

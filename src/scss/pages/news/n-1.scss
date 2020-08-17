@@ -75,18 +75,9 @@ section.News {
                         background-size: 100% 100%;
                         opacity: 0.5;
                     }
-                }
-            }
-            @media (min-width: 1025px) {
-                .news--img {
-                    &:hover {
-                        transform: scale(1.1);
-                        transition: 1s all ease-in-out;
-                        &::before {
-                            background-size: 100% 100%;
-                            background: url("../assets/images/news-events/hover-big.png") no-repeat !important;
-                            opacity: 0.6 !important;
-                        }
+                    &::after {
+                        background: url("../assets/images/news-events/hover-big.png") no-repeat !important;
+                        opacity: 0.6 !important;
                     }
                 }
             }
@@ -114,9 +105,14 @@ section.News {
             }
             .news--img {
                 height: 218px;
+                overflow: hidden;
                 &:before {
                     background: linear-gradient(to bottom, #525866 0%, #292c33 100%);
                     opacity: 0.3;
+                }
+                &::after {
+                    background: url("../assets/images/news-events/hover-small.png") no-repeat !important;
+                    opacity: 0.5 ;
                 }
             }
             .news--desc {
@@ -145,17 +141,6 @@ section.News {
             }
             @media (min-width: 1025px) {
                 &:hover {
-                    .news--img {
-                        img {
-                            transform: scale(1.1);
-                            transition: 1s all ease-in-out;
-                        }
-                        &::before {
-                            background-size: 100% 100%;
-                            background: url("../assets/images/news-events/hover-small.png") no-repeat !important;
-                            opacity: 0.5 !important;
-                        }
-                    }
                     .news--desc {
                         transition: 1s all ease-in-out;
                         background: map-get($mau, main-3);

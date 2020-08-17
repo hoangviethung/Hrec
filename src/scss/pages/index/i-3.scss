@@ -1,35 +1,38 @@
 .home__stuff {
 	margin-bottom: 140px;
+	@media (max-width: 767.98px) {
+		margin-bottom: 80px;
+	}
 	.block__main--title {
 		margin-bottom: 55px;
+		@media (max-width: 767.98px) {
+			margin-bottom: 20px;
+		}
 	}
 	.home__stuff--event__wrapper {
+		position: relative;
 		.swiper-container {
-			padding: 0 20px 10px 20px;
+			padding: 10px 0;
+			margin: 0 50px;
 			.swiper-slide {
-				padding: 0 34px;
+				padding: 0 30px;
 			}
 			@media (max-width: 1440px) {
 				.swiper-slide {
-					padding: 0 20px;
+					padding: 0 5px;
 				}
 			}
-			@media (max-width: 1024.98px) {
-				.swiper-slide {
-					padding: 0 34px;
-				}
-			}
-			@media (max-width: 767.98px) {
-				.swiper-slide {
-					padding: 0 20px;
-					.model--img {
-						height: 250px;
-					}
-				}
-			}
+			// @media (max-width: 1024.98px) {
+			// 	.swiper-slide {
+			// 		padding: 0 34px;
+			// 	}
+			// }
+		
+			
 			@media (max-width: 575.98px) {
+				margin: 0 0px;
 				.swiper-slide {
-					padding: 0 30px;
+					padding: 0 0px;
 					.model--img {
 						height: 200px;
 					}
@@ -52,10 +55,12 @@
 					.model--img {
 						img {
 							height: 297px;
-							// transform: scale(1.1);
-							// transition: all 1s ease-in-out;
+							transform: scale(1.1);
+							transition: all 1s ease-in-out;
 						}
 						&::before {
+							z-index: 10;
+							transition: 1s all ease-in-out;
 							background: url("../assets/images/homepage/hot-project-after.png")
 								no-repeat;
 							object-fit: cover;
@@ -65,15 +70,31 @@
 						}
 					}
 					.model--desc {
+						transition: 1s all ease-in-out;
 						box-shadow: 0 3px 6px rgba($color: #000000, $alpha: .57);
 						background: map-get($mau, main-3);
 						h2.title {
 							color: map-get($mau, main-2);
+							transition: .3s all ease-in-out;
 						}
 						p.sub-title {
+							transition: .3s all ease-in-out;
 							color: map-get($mau, main-2);
 						}
 					}
+				}
+			}
+		}
+	
+		.swiper-button-next, .swiper-button-prev {
+			@media (max-width: 575.98px) {
+				top: unset;
+				bottom: -40px;
+				&.swiper-button-next {
+					right: calc(50% - 50px);
+				}
+				&.swiper-button-prev {
+					left: calc(50% - 50px);
 				}
 			}
 		}
@@ -82,8 +103,14 @@
 //Section Hội Viên Mới
 .home__new-member {
 	margin-bottom: 140px;
+	@media (max-width: 767.98px) {
+		margin-bottom: 60px;
+	}
 	.block__main--title {
 		margin-bottom: 55px;
+		@media (max-width: 767.98px) {
+			margin-bottom: 20px;
+		}
 	}
 	.home__stuff--event__wrapper {
 		position: relative;
@@ -93,7 +120,7 @@
 			padding-top: 85px;
 			padding-bottom: 10px;
 			padding: 0 70px;
-			transition: 0.3s all ease;
+			transition: 1s all ease;
 			.block__main--model {
 				max-height: 315px;
 				.model--img {
@@ -258,24 +285,53 @@
 	
 	.swiper-button-next, .swiper-button-prev {
 		top: 120%;
+		transform: translateY(0%);
 	}
 }
 
 //swiper happy birthday
 .home__happy-birthday {
 	margin-bottom: 140px;
+	@media (max-width: 767.98px) {
+		margin-bottom: 40px;
+	}
 	.block__main--title {
 		margin-bottom: 55px;
+		@media (max-width: 767.98px) {
+			margin-bottom: 20px;
+		}
 	}
 	.block__main--model {
+		position: relative;
+		box-shadow: none;
+		border-bottom: 1px solid map-get($mau, main-3);
+		&::after {
+			position: absolute;
+			content: "";
+			bottom: 0;
+			left: 0;
+			background: map-get($mau, main-3);
+			width: 1px;
+			height: calc(100% - 396px);
+		}
+		&::before {
+			position: absolute;
+			content: "";
+			bottom: 0;
+			right: 0;
+			background: map-get($mau, main-3);
+			width: 1px;
+			height: calc(100% - 396px);
+		}
 		height: 570px;
-		border: 1px solid map-get($mau, main-3);
 		.item-info {
 			margin-bottom: 10px !important;
 		}
 		.model--img {
-			
+			max-height: 396px;
+			position: relative;
 			&::before {
+				z-index: 10;
 				background: url("../assets/images/homepage/birthday-hover.png") no-repeat !important;
 				background-size: 100% 100%;
 				width: 100%;
@@ -288,8 +344,17 @@
 			}
 		}
 		.model--desc {
+			z-index: 11;
 			max-width: 394px !important;
 			max-height: 190px !important;
+			padding: 25px 40px;
+			width: calc(100% - 50px);
+			height: 189px;
+			position: absolute;
+			bottom: 25px;
+			left: 50%;
+			transform: translateX(-50%);
+			box-shadow: 2px 3px 10px rgba($color: #000000, $alpha: .1);
 		}
 		@media (min-width: 1025px) {
 			&:hover {
@@ -298,38 +363,32 @@
 						transform: scale(1.1);
 						transition: all 1s ease-in-out;
 					}
-					
+					&::before {
+						transition: 1s all ease-in-out;
+						opacity: 0;
+					}
 				}
 				.model--desc {
+					transition: 1s all ease;
+
 					background: map-get($mau, main-3);
 					h2.title {
+						transition: 1s all ease;
 						color: map-get($mau, main-2);
 					}
 					svg {
 						path{
+							transition: 1s all ease;
 							fill: map-get($mau, main-2);
 						}
 					}
 					p {
+						transition: 1s all ease;
 						color: map-get($mau, main-2);
 					}
 				}
 			}
 		}
-	}
-	.model--img {
-		max-height: 396px;
-	}
-	.model--desc {
-		padding: 25px 40px;
-		width: calc(100% - 50px);
-		height: 189px;
-		position: absolute;
-		bottom: 25px;
-		left: 50%;
-		transform: translateX(-50%);
-		box-shadow: 2px 3px 10px rgba($color: #000000, $alpha: .1);
-		
 	}
 	.list--info {
 		.item-info {

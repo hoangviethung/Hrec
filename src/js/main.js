@@ -99,30 +99,29 @@ const swiperHotEvent = () => {
 const swiperNewMember = () => {
     var swiper = new Swiper(".home__new-member .swiper-container", {
         slidesPerView: 3,
-        simulateTouch: false,
         slidesPerGroup: 1,
         breakpoints: {
             300: {
                 slidesPerView: 1,
             },
-            500: {
-                slidesPerView: 2
-            },
-            768: {
-                slidesPerView: 3,
+            600: {
+                slidesPerView: 2,
             },
             1024: {
                 slidesPerView: 3,
                 centeredSlides: true,
-                centeredSlidesBounds: true
-            }
+                centeredSlidesBounds: true,
+            },
         },
         on: {
             init: function() {
                 setTimeout(() => {
                     const temp = $(".home__new-member .swiper-slide-active");
                     const width = temp.width();
-                    $(".home__new-member--info__wrapper").css("width", `${width + 40}`)
+                    $(".home__new-member--info__wrapper").css(
+                        "width",
+                        `${width + 40}`
+                    );
                 }, 1000);
             },
         },
@@ -133,8 +132,8 @@ const swiperNewMember = () => {
     });
     swiper.on("slideChange", function() {
         const data = $(".home__new-member .swiper-slide-active");
-        const width = data.width();
-        $(".home__new-member--info__wrapper").width(width);
+        // const width = data.width();
+        // $(".home__new-member--info__wrapper").width(width);
         const temp = data.find(".model--desc");
         $(".home__new-member--info .home__new-member--info__wrapper").html(
             temp.html()
@@ -178,14 +177,11 @@ const swiperMemberHome = () => {
         loop: true,
         breakpoints: {
             300: {
-                slidesPerView: 1,
-            },
-            600: {
                 slidesPerView: 3,
             },
             1024: {
                 slidesPerView: 5,
-            }
+            },
         },
         autoplay: {
             delay: 1000,
@@ -248,25 +244,29 @@ const initMainBanner = () => {
     });
 };
 
-
 const swipeIntroducePurpose = () => {
     var swiper = new Swiper(".introduce__purpose__wrapper .swiper-container", {
         slidesPerView: 3,
         spaceBetween: 60,
         slidesPerGroup: 1,
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
         breakpoints: {
             300: {
                 slidesPerView: 1,
-                spaceBetween: 45
+                spaceBetween: 45,
             },
             600: {
                 slidesPerView: 2,
-                spaceBetween: 45
+                spaceBetween: 45,
             },
             1024: {
                 slidesPerView: 3,
-                spaceBetween: 45
-            }
+                spaceBetween: 45,
+            },
         },
     });
 };
@@ -379,18 +379,21 @@ export const swiperExecutiveCommittee = () => {
             },
             700: {
                 slidesPerView: 3,
-                slidesPerGroup: 1
+                slidesPerGroup: 1,
             },
             1025: {
                 slidesPerView: 2,
                 slidesPerColumn: 2,
                 slidesPerColumnFill: "row",
-            }
+            },
         },
         on: {
             init: function() {
-                document.querySelector(".tab-bch .swiper-container .swiper-slide").click()
-            }
+                document
+                    .querySelector(".tab-bch .swiper-container .swiper-slide")
+                    .click();
+                getSVGs();
+            },
         },
         navigation: {
             nextEl: ".tab-bch .swiper-button-next",
@@ -409,18 +412,20 @@ export const swiperExecutiveCommittee = () => {
             },
             700: {
                 slidesPerView: 3,
-                slidesPerGroup: 1
+                slidesPerGroup: 1,
             },
             1025: {
                 slidesPerView: 2,
                 slidesPerColumn: 2,
                 slidesPerColumnFill: "row",
-            }
+            },
         },
         on: {
             init: function() {
-                document.querySelector(".tab-bkt .swiper-container .swiper-slide").click()
-            }
+                document
+                    .querySelector(".tab-bkt .swiper-container .swiper-slide")
+                    .click();
+            },
         },
         navigation: {
             nextEl: ".tab-bkt .swiper-button-next",
@@ -432,30 +437,32 @@ export const swiperExecutiveCommittee = () => {
 //render info in intro page
 const renderInfo = () => {
     document
-        .querySelectorAll(".tab-bch .executive-committee-swiper__wrapper .swiper-slide")
+        .querySelectorAll(
+            ".tab-bch .executive-committee-swiper__wrapper .swiper-slide"
+        )
         .forEach((item) => {
             item.addEventListener("click", () => {
                 const temp = item.querySelector("a");
                 $(".tab-bch .executive-committee-active").html(temp.innerHTML);
+                const tempheight = $(".executive-committee-active").height();
+                // $('html, body').animate({
+                // 	scrollTop: $(".executive-committee-active").offset().top - 200
+                // }, 2000);
             });
         });
     document
-        .querySelectorAll(".tab-bkt .executive-committee-swiper__wrapper .swiper-slide")
+        .querySelectorAll(
+            ".tab-bkt .executive-committee-swiper__wrapper .swiper-slide"
+        )
         .forEach((item) => {
             item.addEventListener("click", () => {
                 const temp = item.querySelector("a");
                 $(".tab-bkt .executive-committee-active").html(temp.innerHTML);
             });
+
         });
 };
-// swiper partner
-const swiperPartner = () => {
-    if (document.querySelector(".place-to-get-partner")) {
-        document
-            .querySelectorAll(".place-to-get-partner img")
-            .forEach((item) => {});
-    }
-};
+
 const copyDataByAttr = () => {
     const items__paste = document.querySelectorAll('[data-paste]');
     const items__copy = document.querySelectorAll('[data-copy]');
@@ -480,6 +487,58 @@ const activeLanguage = () => {
             item.classList.add('active');
         }
     });
+};
+//fake swiper partner
+const fakeSwiperPartner = () => {
+    if (document.querySelector(".index-page")) {
+        // CODE YOUR JS HERE
+        var array = [
+            "url(../assets/images/partner/logo-1.png)",
+            "url(../assets/images/partner/logo-2.png)",
+            "url(../assets/images/partner/logo-3.png)",
+            "url(../assets/images/partner/logo-4.png)",
+            "url(../assets/images/partner/logo-5.png)",
+        ];
+        var images = Array.from(
+            document.querySelectorAll(".partner--logo .img.test")
+        );
+        let arrayLength = 3;
+        let imageslength = 0;
+        // THAY ĐỔI HÌNH ẢNH THEO THỜI GIAN
+        const autoChange = () => {
+            const imageChange = array[arrayLength++ % array.length];
+            const itemChange = images[imageslength++ % images.length];
+            itemChange.setAttribute("style", `--data-bg:${imageChange}`);
+        };
+        // KHỞI TẠO LIST HÌNH
+        const init = setInterval(autoChange, 500);
+        images.forEach((item, index) => {
+            item.setAttribute("style", `--data-bg:${array[index]}`);
+            item.addEventListener("mouseenter", (e) => {
+                const temp = item.getAttribute("style");
+                const test = temp.substr(10, temp.length);
+                const a = array.indexOf(`${test}`)
+                array.splice(a, 1);
+                item.classList.remove("test")
+                images = Array.from(
+                    document.querySelectorAll(".partner--logo .img.test")
+                );
+            });
+            item.addEventListener("mouseleave", (e) => {
+                item.classList.add("test");
+                images = Array.from(
+                    document.querySelectorAll(".partner--logo .img.test")
+                );
+                array = [
+                    "url(../assets/images/partner/logo-1.png)",
+                    "url(../assets/images/partner/logo-2.png)",
+                    "url(../assets/images/partner/logo-3.png)",
+                    "url(../assets/images/partner/logo-4.png)",
+                    "url(../assets/images/partner/logo-5.png)",
+                ];
+            });
+        });
+    }
 };
 
 const showLoginHome = () => {
@@ -548,13 +607,15 @@ document.addEventListener("DOMContentLoaded", () => {
     swiperNewAdc();
     swiperNewAdcR();
     showInputSearch();
-    swiperPartner();
+    //render info in swiperExecutiveCommittee
     renderInfo();
-    // ajaxFormLogin
-    ajaxFormLogin();
+    //
     copyDataByAttr();
     // ACTIVE LANGGUAGE
     activeLanguage();
+    //fake home parner swiper
+    fakeSwiperPartner();
+    ajaxFormLogin();
     // showLoginHome
     showLoginHome();
     //tab

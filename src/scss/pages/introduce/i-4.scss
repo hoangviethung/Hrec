@@ -1,8 +1,15 @@
 .executive-committee {
-	margin-bottom: 130px;
+	margin-bottom: 110px;
+	@media (max-width: 767.98px) {
+		margin-bottom: 40px;
+	}
 	.block__main--title {
 		margin-bottom: 60px;
+		@media (max-width: 767.98px) {
+			margin-bottom: 20px;
+		}
 		.active {
+			transition: .3s all ease-in-out;
 			color: map-get($mau, main-3);
 		}
 		h2 {
@@ -55,7 +62,26 @@
 		position: relative;
 		width: 327px;
 		height: 292px;
-		border: 1px solid map-get($mau, main-3);
+		border-bottom: 1px solid map-get($mau, main-3);
+		&::after {
+			position: absolute;
+			content: "";
+			bottom: 0;
+			right: 0;
+			width: 1px;
+			height: calc(100% - 230px);
+			background: map-get($mau, main-3);
+		}
+		&::before {
+			position: absolute;
+			content: "";
+			bottom: 0;
+			left: 0;
+			width: 1px;
+			height: calc(100% - 230px);
+			background: map-get($mau, main-3);
+		}
+		
 		.model--img {
 			max-height: 230px;
 			&::before {
@@ -73,6 +99,9 @@
 			h2 {
 				margin-bottom: 0;
 				font-family: Lato-Heavy;
+				@media (max-width: 575.98px) {
+					font-size: 16px;
+				}
 			}
 			.list--info {
 				display: none;
@@ -82,16 +111,19 @@
 			&:hover {
 				.model--img {
 					&::before {
+						transition: all 1s ease-in-out;
 						background: url("../assets/images/introduce/after-bch.png");
 					}
 				}
 				.model--desc {
-					transition: all 1s ease-in-out;
+					transition: all .3s ease-in-out;
 					background: map-get($mau, main-3);
 					h2 {
+						transition: all 1s ease-in-out;
 						color: map-get($mau, main-2);
 					}
 					p {
+						transition: all 1s ease-in-out;
 						color: map-get($mau, main-2);
 					}
 				}
