@@ -21,6 +21,23 @@
 	}
 }
 .partner__wrapper--content {
+	.partner-logo__wrapper {
+		.row {
+			@media (max-width: 575.98px) {
+				flex-direction: column;
+				.partner--logo {
+					-ms-flex: 0 0 100%;
+					flex: 0 0 100%;
+					max-width: 100%;
+					width: 100%;
+					padding: 0 10px;
+					&:not(:last-child ) {
+						margin-bottom: 10px !important;
+					}
+				}
+			}
+		}
+	}
 	.partner--logo {
 		width: 325px;
 		height: 275px;

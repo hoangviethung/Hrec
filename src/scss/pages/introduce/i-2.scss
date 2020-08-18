@@ -34,12 +34,17 @@
 			left: 0;
 			background: map-get($mau, main-3);
 		}
-			.desc {
+		.img {
+			img {
+				transition: 1s all ease-in-out;
+			}
+		}
+		.desc {
 			position: absolute;
 			bottom: 40px;
 			left: 0;
 			background: map-get($mau, main-2);
-			box-shadow: 3px 3px 6px rgba($color: #000000, $alpha: .52);
+			box-shadow: 3px 3px 6px rgba($color: #000000, $alpha: 0.52);
 			width: calc(100% - 85px);
 			max-height: 242px;
 			padding: 35px 44px;
@@ -52,7 +57,7 @@
 					padding-left: 10px;
 					font-size: 25px;
 					font-family: Lato-Bold;
-					color:	map-get($mau, main-3);
+					color: map-get($mau, main-3);
 					@media (max-width: 575.98px) {
 						font-size: 18px;
 					}
@@ -61,8 +66,8 @@
 					svg {
 						vertical-align: baseline;
 						@media (max-width: 575.98px) {
-								width: 16px;
-								height: 14px;
+							width: 16px;
+							height: 14px;
 						}
 					}
 				}
@@ -70,12 +75,11 @@
 			p {
 				color: map-get($mau, main-1);
 				margin-bottom: 20px;
-
 			}
 			@media (max-width: 1440px) {
 				width: calc(100% - 45px);
 			}
-			
+
 			@media (max-width: 767.98px) {
 				width: calc(100% - 35px);
 			}
@@ -83,7 +87,7 @@
 				width: calc(100% - 85px);
 			}
 		}
-		
+
 		.btn--readmore {
 			height: 34px;
 			span {
@@ -92,7 +96,7 @@
 			}
 			svg {
 				path {
-					fill: map-get($mau, main-2)
+					fill: map-get($mau, main-2);
 				}
 			}
 		}
@@ -106,14 +110,14 @@
 					}
 				}
 				.desc {
-					transition: all .3s ease-in-out;
+					transition: all 0.3s ease-in-out;
 					background: map-get($mau, main-3);
 				}
 				.title {
 					svg {
 						path {
 							transition: all 1s ease-in-out;
-							fill: map-get($mau, main-2)
+							fill: map-get($mau, main-2);
 						}
 					}
 					h2 {
@@ -135,7 +139,7 @@
 					svg {
 						path {
 							transition: all 1s ease-in-out;
-							fill: map-get($mau, main-3)
+							fill: map-get($mau, main-3);
 						}
 					}
 				}

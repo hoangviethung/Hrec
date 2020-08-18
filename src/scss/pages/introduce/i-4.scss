@@ -107,32 +107,33 @@
 				display: none;
 			}
 		}
-		@media (min-width: 1025px) {
-			&:hover {
-				.model--img {
-					&::before {
-						transition: all 1s ease-in-out;
-						background: url("../assets/images/introduce/after-bch.png");
-					}
-				}
-				.model--desc {
-					transition: all .3s ease-in-out;
-					background: map-get($mau, main-3);
-					h2 {
-						transition: all 1s ease-in-out;
-						color: map-get($mau, main-2);
-					}
-					p {
-						transition: all 1s ease-in-out;
-						color: map-get($mau, main-2);
-					}
-				}
-			}
-		}
+		
 		@media (max-width: 575.98px) {
 			max-width: 100%;
 			margin: 0 auto;
 		}
+	}
+	.swiper-slide {
+		&.active {
+			.model--img {
+				&::before {
+					transition: all 1s ease-in-out;
+					background: url("../assets/images/introduce/after-bch.png");
+				}
+			}
+			.model--desc {
+				transition: all .3s ease-in-out;
+				background: map-get($mau, main-3);
+				h2 {
+					transition: all 1s ease-in-out;
+					color: map-get($mau, main-2);
+				}
+				p {
+					transition: all 1s ease-in-out;
+					color: map-get($mau, main-2);
+				}
+			}
+	}
 	}
 }
 

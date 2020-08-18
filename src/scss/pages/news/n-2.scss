@@ -140,8 +140,6 @@ section.Events {
         .swiper-button-next {
             right: 32px;
             top: 90%;
-            width: 44px;
-            height: 44px;
             z-index: 10;
         }
         .swiper-button-prev {
@@ -149,6 +147,9 @@ section.Events {
             left: calc(100% - 135px);
             width: 44px;
             height: 44px;
+            @media (max-width: 575.98px) {
+                left: calc(100% - 100px);
+            }
         }
         .swiper-button-prev.swiper-button-disabled {
             background: map-get($mau, main-2);

@@ -441,13 +441,17 @@ export const swiperExecutiveCommittee = () => {
 
 //render info in intro page
 const renderInfo = () => {
-    document
-        .querySelectorAll(
-            ".tab-bch .executive-committee-swiper__wrapper .swiper-slide"
-        )
-        .forEach((item) => {
+   const tabbch =  document
+   .querySelectorAll(
+       ".tab-bch .swiper-slide"
+   )
+        tabbch.forEach((item) => {
             item.addEventListener("click", () => {
                 const temp = item.querySelector("a");
+                tabbch.forEach(item => {
+                    item.classList.remove('active')
+                })
+                item.classList.add("active")
                 $(".tab-bch .executive-committee-active").html(temp.innerHTML);
                 const tempheight = $(".executive-committee-active").height();
                 // $('html, body').animate({
@@ -455,13 +459,17 @@ const renderInfo = () => {
                 // }, 2000);
             });
         });
-    document
+    const tabbkt = document
         .querySelectorAll(
-            ".tab-bkt .executive-committee-swiper__wrapper .swiper-slide"
+            ".tab-bkt .swiper-slide"
         )
-        .forEach((item) => {
+        tabbkt.forEach((item) => {
             item.addEventListener("click", () => {
                 const temp = item.querySelector("a");
+                tabbkt.forEach(item => {
+                    item.classList.remove("active")
+                }) 
+                item.classList.add("active")
                 $(".tab-bkt .executive-committee-active").html(temp.innerHTML);
             });
 
