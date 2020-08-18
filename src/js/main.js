@@ -22,6 +22,7 @@ const scrollBar = () => {
     }
 
 }
+
 const navMobile = () => {
     const btn = $(".navMobile");
     const nav = $(".navBar");
@@ -49,6 +50,7 @@ const navMobile = () => {
         })
     }
 }
+
 const changeHeightFooter = () => {
         const isChange = window.innerWidth < 769;
         const height = $(".footer__inner").height();
@@ -197,6 +199,7 @@ const swiperMemberHome = () => {
         },
     });
 };
+
 const swiperNews = () => {
     const swiper = new Swiper(".block__HREC.right .swiper-container", {
         slidesPerView: 1,
@@ -269,6 +272,7 @@ const swipeIntroducePurpose = () => {
         },
     });
 };
+
 const sniperEvent = () => {
     const swiper = new Swiper('.eventBottom__HREC .swiper-container', {
         slidesPerView: 2,
@@ -288,6 +292,7 @@ const sniperEvent = () => {
         },
     });
 }
+
 const swiperNewAdc = () => {
     const swiperL = new Swiper(".nSlider__col.left .swiper-container", {
         loop: true,
@@ -302,6 +307,7 @@ const swiperNewAdc = () => {
         simulateTouch: false,
     });
 };
+
 const swiperNewAdcR = () => {
     const swiperR = new Swiper(".nSlider__col.right .swiper-container", {
         loop: true,
@@ -352,6 +358,7 @@ const swiperNewAdcR = () => {
         simulateTouch: false,
     });
 };
+
 const showInputSearch = () => {
     const btn = document.querySelector(".navSearch__btn");
     const navSearch__input = document.querySelector(".navSearch__input");
