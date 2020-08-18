@@ -84,12 +84,18 @@
 }
 
 .eventBottom__HREC {
-	margin-left: -33px;
-	margin-right: -33px;
-	.swiper-slide {
-		padding-left: 33px;
-		padding-right: 33px;
-		
-	}
-	
+    margin-left: -33px;
+    margin-right: -33px;
+    .swiper-slide {
+        padding-left: 33px;
+        padding-right: 33px;
+    }
+    @media (max-width: 1024.98px) {
+        margin-left: -10px;
+        margin-right: -10px;
+        .swiper-slide {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
 }

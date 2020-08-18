@@ -38,6 +38,9 @@ section.Detail {
         @media (max-width: 1449.98px) {
             padding-left: 50px;
         }
+        @media (max-width: 910.98px) {
+            padding-left: 25px;
+        }
         @media (max-width: 768.98px) {
             -ms-flex: 0 0 100%;
             flex: 0 0 100%;
@@ -53,6 +56,13 @@ section.Detail {
             text-transform: uppercase;
             @media (max-width: 1440.98px) {
                 font-size: 30px;
+            }
+            @media (max-width: 1024.98px) {
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+            @media (max-width: 910.98px) {
+                margin-bottom: 10px;
             }
             @media (max-width: 768.98px) {
                 margin-bottom: 20px;
@@ -229,6 +239,9 @@ section.Detail {
         .item__img {
             height: 221px;
             overflow: hidden;
+            @media (max-width: 1024.98px) {
+                height: 130px;
+            }
             @media (max-width: 768.98px) {
                 height: 224px;
             }
@@ -307,12 +320,17 @@ section.Detail {
         }
     }
     .detail__Adc {
+        @media (max-width: 910.98px) {
+            img {
+                height: 100% !important;
+            }
+        }
         @media (max-width: 768.98px) {
             -ms-flex: 0 0 50%;
             flex: 0 0 50%;
             max-width: 50%;
             padding-left: 10px;
-            margin-top: 65px;
+            margin-top: 50px;
             img {
                 height: 100% !important;
             }
