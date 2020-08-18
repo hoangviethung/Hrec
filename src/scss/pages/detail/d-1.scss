@@ -30,6 +30,7 @@ section.Detail {
         }
     }
     .detail__right {
+        height: calc(100% - 115px);
         -ms-flex: 0 0 30%;
         flex: 0 0 30%;
         max-width: 30%;
@@ -42,11 +43,8 @@ section.Detail {
             flex: 0 0 100%;
             max-width: 100%;
             display: flex;
-            padding-left: 20px;
+            padding-left: unset;
             flex-wrap: wrap;
-        }
-        @media (max-width: 575.98px) {
-            padding-left: 0;
         }
         h2 {
             font-family: Lato-Bold;
@@ -55,6 +53,9 @@ section.Detail {
             text-transform: uppercase;
             @media (max-width: 1440.98px) {
                 font-size: 30px;
+            }
+            @media (max-width: 768.98px) {
+                margin-bottom: 20px;
             }
             @media (max-width: 575.98px) {
                 margin-bottom: 20px;
@@ -213,9 +214,9 @@ section.Detail {
     }
     .detail__related {
         @media (max-width: 768.98px) {
-            -ms-flex: 0 0 60%;
-            flex: 0 0 60%;
-            max-width: 60%;
+            -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+            max-width: 50%;
         }
         @media (max-width: 575.98px) {
             -ms-flex: 0 0 100%;
@@ -228,6 +229,9 @@ section.Detail {
         .item__img {
             height: 221px;
             overflow: hidden;
+            @media (max-width: 768.98px) {
+                height: 224px;
+            }
             img {
                 padding: 0;
                 width: 100%;
@@ -235,11 +239,35 @@ section.Detail {
                 object-fit: cover;
                 transition: all .5s ease-in-out;
             }
+            @media (max-width: 768.98px) {
+                position: relative;
+                &::after {
+                    position: absolute;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    content: "";
+                    background: map-get($mau, main-3);
+                    opacity: .5;
+                    left: 0;
+                }
+            }
         }
         .item__content {
             padding: 12px 0;
+            position: relative;
+            @media (max-width: 768.98px) {
+                padding: unset;
+            }
             p {
                 font-family: Lato-Bold;
+                @media (max-width: 768.98px) {
+                    position: absolute;
+                    bottom: 10px;
+                    left: 10px;
+                    z-index: 10;
+                    color: map-get($mau, main-2);
+                }
             }
         }
         .related__item {
@@ -259,6 +287,9 @@ section.Detail {
             display: block;
             position: relative;
             margin-bottom: 25px;
+            @media (max-width: 768.98px) {
+                margin-bottom: 10px;
+            }
             &:last-child {
                 margin-bottom: 0;
             }
@@ -269,16 +300,22 @@ section.Detail {
                 width: 100%;
                 height: 1px;
                 background: map-get($mau, main-3);
+                @media (max-width: 768.98px) {
+                    content: none;
+                }
             }
         }
     }
     .detail__Adc {
         @media (max-width: 768.98px) {
-            -ms-flex: 0 0 40%;
-            flex: 0 0 40%;
-            max-width: 40%;
-            padding-left: 20px;
-            margin-top: 0;
+            -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+            max-width: 50%;
+            padding-left: 10px;
+            margin-top: 65px;
+            img {
+                height: 100% !important;
+            }
         }
         @media (max-width: 575.98px) {
             -ms-flex: 0 0 100%;
@@ -289,13 +326,13 @@ section.Detail {
         }
         margin-top: 60px;
         .swiper-slide {
-            height: 832px !important;
+            height: 100%;
             width: 100%;
         }
         img {
             width: 100%;
-            padding: 0 0;
-            height: 832px !important;
+            padding: unset;
+            height: 840px;
         }
     }
 }
