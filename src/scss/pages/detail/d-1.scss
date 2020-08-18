@@ -313,6 +313,9 @@ section.Detail {
             max-width: 50%;
             padding-left: 10px;
             margin-top: 65px;
+            img {
+                height: 100% !important;
+            }
         }
         @media (max-width: 575.98px) {
             -ms-flex: 0 0 100%;
@@ -329,7 +332,7 @@ section.Detail {
         img {
             width: 100%;
             padding: unset;
-            height: 840px !important;
+            height: 840px;
         }
     }
 }
