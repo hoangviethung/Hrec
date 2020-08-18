@@ -190,7 +190,7 @@ const swiperMemberHome = () => {
             },
         },
         autoplay: {
-            delay: 1000,
+            delay: 2000,
         },
         simulateTouch: false,
         navigation: {
@@ -256,16 +256,25 @@ const initMainBanner = () => {
 const swipeIntroducePurpose = () => {
     var swiper = new Swiper(".introduce__purpose__wrapper .swiper-container", {
         slidesPerView: 3,
-        spaceBetween: 60,
         slidesPerGroup: 1,
         breakpoints: {
             300: {
                 slidesPerView: 1,
                 spaceBetween: 45,
+                loop: true,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
             },
             600: {
                 slidesPerView: 2,
                 spaceBetween: 45,
+                loop: true,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
             },
             1024: {
                 slidesPerView: 3,
@@ -529,7 +538,7 @@ const fakeSwiperPartner = () => {
         images.forEach((item, index) => {
             item.setAttribute("style", `--data-bg:${array[index]}`);
             item.addEventListener("mouseenter", (e) => {
-                item.classList.remove("test")
+                item.classList.remove("simulateclass")
                 images = Array.from(
                     document.querySelectorAll(".partner--logo .img.simulateclass")
                 );
@@ -540,7 +549,7 @@ const fakeSwiperPartner = () => {
 
             });
             item.addEventListener("mouseleave", (e) => {
-                item.classList.add("test");
+                item.classList.add("simulateclass");
                 images = Array.from(
                     document.querySelectorAll(".partner--logo .img.simulateclass")
                 );

@@ -137,7 +137,6 @@ textarea {
         }
     }
     @media (max-width: 768.98px) {
-        flex-direction: column;
         padding-bottom: 10px;
         h2.title {
             font-size: 20px;
@@ -149,6 +148,9 @@ textarea {
                 font-size: 14px;
             }
         }
+    }
+    @media (max-width: 575.98px) {
+        flex-direction: column;
     }
     ;
     // @media (max-width: 575.98px) {
