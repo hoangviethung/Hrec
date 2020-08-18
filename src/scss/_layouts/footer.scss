@@ -55,6 +55,9 @@ footer {
         }
         &.footer__siteMap {
             padding-left: 60px;
+            @media (max-width: 1024.98px) {
+                padding-left: unset;
+            }
             @media (max-width: 575.98px) {
                 padding-left: 30px;
                 margin-bottom: 40px;

@@ -247,46 +247,46 @@ section.News {
         h2 {
             color: map-get($mau, main-2);
         }
-        .img {
-            height: 100%;
-            @media (max-width: 1024.98px) {
-                -ms-flex: 0 0 40%;
-                flex: 0 0 40%;
-                max-width: 40%;
-            }
-            img {
-                height: 100%;
-            }
-        }
-        .item--desc {
-            @media (max-width: 1024.98px) {
-                -ms-flex: 0 0 60%;
-                flex: 0 0 60%;
-                max-width: 60%;
-            }
-            h2 {
-                color: map-get($mau, main-2);
-                display: -webkit-box;
-                text-overflow: ellipsis;
-                -webkit-box-orient: vertical;
-                -webkit-line-clamp: 2;
-                margin-bottom: 8px;
-                @media (max-width: 1440.98px) {
-                    font-size: 18px;
-                }
-            }
-            p {
-                color: map-get($mau, main-2);
-                display: -webkit-box;
-                text-overflow: ellipsis;
-                -webkit-box-orient: vertical;
-                -webkit-line-clamp: 3;
-                font-size: 16px;
-                @media (max-width: 1440.98px) {
-                    font-size: 14px;
-                }
-            }
-        }
+        // .img {
+        //     height: 100%;
+        //     @media (max-width: 1024.98px) {
+        //         -ms-flex: 0 0 40%;
+        //         flex: 0 0 40%;
+        //         max-width: 40%;
+        //     }
+        //     img {
+        //         height: 100%;
+        //     }
+        // }
+        // .item--desc {
+        //     @media (max-width: 1024.98px) {
+        //         -ms-flex: 0 0 60%;
+        //         flex: 0 0 60%;
+        //         max-width: 60%;
+        //     }
+        //     h2 {
+        //         color: map-get($mau, main-2);
+        //         display: -webkit-box;
+        //         text-overflow: ellipsis;
+        //         -webkit-box-orient: vertical;
+        //         -webkit-line-clamp: 2;
+        //         margin-bottom: 8px;
+        //         @media (max-width: 1440.98px) {
+        //             font-size: 18px;
+        //         }
+        //     }
+        //     p {
+        //         color: map-get($mau, main-2);
+        //         display: -webkit-box;
+        //         text-overflow: ellipsis;
+        //         -webkit-box-orient: vertical;
+        //         -webkit-line-clamp: 3;
+        //         font-size: 16px;
+        //         @media (max-width: 1440.98px) {
+        //             font-size: 14px;
+        //         }
+        //     }
+        //     }
     }
     .block__HREC {
         @media (max-width: 768.98px) {
