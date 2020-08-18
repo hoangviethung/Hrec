@@ -254,11 +254,6 @@ const swipeIntroducePurpose = () => {
         slidesPerView: 3,
         spaceBetween: 60,
         slidesPerGroup: 1,
-        loop: true,
-        autoplay: {
-            delay: 2500,
-            disableOnInteraction: false,
-        },
         breakpoints: {
             300: {
                 slidesPerView: 1,
@@ -279,7 +274,7 @@ const sniperEvent = () => {
     const swiper = new Swiper('.eventBottom__HREC .swiper-container', {
         slidesPerView: 2,
         slidesPerColumn: 4,
-        slidesPerColumnFill: 'row',
+        slidesPerColumnFill: 'column',
         speed: 800,
         breakpoints: {
             300: {
@@ -287,7 +282,6 @@ const sniperEvent = () => {
             },
             1024: {
                 slidesPerView: 2,
-                slidesPerColumn: 4,
             },
         },
         navigation: {
@@ -513,7 +507,7 @@ const fakeSwiperPartner = () => {
 			"url(../assets/images/partner/logo-5.png)",
 		];
 		var images = Array.from(
-			document.querySelectorAll(".partner--logo .img.test")
+			document.querySelectorAll(".partner--logo .img.simulateclass")
 		);
 		let arrayLength = 4;
 		let imageslength = 0;
@@ -530,7 +524,7 @@ const fakeSwiperPartner = () => {
 			item.addEventListener("mouseenter", (e) => {
 				item.classList.remove("test")
 				images = Array.from(
-					document.querySelectorAll(".partner--logo .img.test")
+					document.querySelectorAll(".partner--logo .img.simulateclass")
 				);
 				const temp = item.getAttribute("style");
 				const test = temp.substr(10,temp.length);
@@ -541,7 +535,7 @@ const fakeSwiperPartner = () => {
 			item.addEventListener("mouseleave", (e) => {
 				item.classList.add("test");
 				images = Array.from(
-					document.querySelectorAll(".partner--logo .img.test")
+					document.querySelectorAll(".partner--logo .img.simulateclass")
 				);
 				array = [
 					"url(../assets/images/partner/logo-1.png)",

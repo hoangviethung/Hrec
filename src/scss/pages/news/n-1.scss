@@ -82,7 +82,8 @@ section.News {
 					}
 					&::after {
 						background: url("../assets/images/news-events/hover-big.png")
-							no-repeat !important;
+							no-repeat;
+						background-size: 100% 100%;
 						opacity: 0.6 !important;
 					}
 				}
