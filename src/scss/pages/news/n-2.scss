@@ -145,16 +145,20 @@ section.Events {
         position: relative;
         .swiper-button-next {
             right: 32px;
-            top: 90%;
+            top: 90% !important;
             z-index: 10;
+            @media (max-width: 575.98px) {
+                top: 93% !important;
+            }
         }
         .swiper-button-prev {
-            top: 90%;
+            top: 90% !important;
             left: calc(100% - 135px);
             width: 44px;
             height: 44px;
             @media (max-width: 575.98px) {
                 left: calc(100% - 100px);
+                top: 93% !important;
             }
         }
         .swiper-button-prev.swiper-button-disabled {

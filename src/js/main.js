@@ -22,6 +22,7 @@ const scrollBar = () => {
     }
 
 }
+
 const navMobile = () => {
     const btn = $(".navMobile");
     const nav = $(".navBar");
@@ -49,6 +50,7 @@ const navMobile = () => {
         })
     }
 }
+
 const changeHeightFooter = () => {
         const isChange = window.innerWidth < 769;
         const height = $(".footer__inner").height();
@@ -197,11 +199,13 @@ const swiperMemberHome = () => {
         },
     });
 };
+
 const swiperNews = () => {
     const swiper = new Swiper(".block__HREC.right .swiper-container", {
         slidesPerView: 1,
         slidesPerColumn: 4,
         slidesPerColumnFill: 'row',
+        spaceBetween: 10,
         speed: 800,
         navigation: {
             nextEl: ".block__HREC.right .swiper-button-next",
@@ -211,6 +215,7 @@ const swiperNews = () => {
     const swipery = new Swiper(".block__HREC.left .swiper-container", {
         slidesPerView: 1,
         slidesPerColumn: 4,
+        spaceBetween: 10,
         slidesPerColumnFill: 'row',
         speed: 800,
         navigation: {
@@ -269,6 +274,7 @@ const swipeIntroducePurpose = () => {
         },
     });
 };
+
 const sniperEvent = () => {
     const swiper = new Swiper('.eventBottom__HREC .swiper-container', {
         slidesPerView: 2,
@@ -288,6 +294,7 @@ const sniperEvent = () => {
         },
     });
 }
+
 const swiperNewAdc = () => {
     const swiperL = new Swiper(".nSlider__col.left .swiper-container", {
         loop: true,
@@ -302,6 +309,7 @@ const swiperNewAdc = () => {
         simulateTouch: false,
     });
 };
+
 const swiperNewAdcR = () => {
     const swiperR = new Swiper(".nSlider__col.right .swiper-container", {
         loop: true,
@@ -352,6 +360,7 @@ const swiperNewAdcR = () => {
         simulateTouch: false,
     });
 };
+
 const showInputSearch = () => {
     const btn = document.querySelector(".navSearch__btn");
     const navSearch__input = document.querySelector(".navSearch__input");
