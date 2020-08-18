@@ -203,7 +203,7 @@ header {
             &::before {
                 position: absolute;
                 top: 15px;
-                right: -15px;
+                right: -18px;
                 width: 10px;
                 height: 10px;
                 background: url(../assets/icons/ar-b.png);
@@ -426,7 +426,7 @@ header {
         @media (max-width: 1024.98px) {
             justify-content: flex-start;
             position: fixed;
-            width: 70%;
+            width: 50%;
             max-height: 100vh;
             height: 100%;
             overflow-y: scroll;

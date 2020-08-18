@@ -139,7 +139,7 @@ section.Events {
             grid-template-columns: 1fr; // based on slidesPerView
             grid-template-rows: auto auto auto auto; // based on slidesPerColumn
             grid-auto-flow: column;
-          }
+        }
         margin-top: 75px;
         padding-bottom: 117px;
         position: relative;
@@ -170,6 +170,10 @@ section.Events {
             opacity: 1;
         }
         .item--desc {
+            padding-right: 20px;
+            @media (max-width: 575.98px) {
+                padding-right: unset;
+            }
             h2 {
                 color: map-get($mau, main-1);
                 overflow: hidden;
