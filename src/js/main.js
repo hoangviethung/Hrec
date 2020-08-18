@@ -205,6 +205,7 @@ const swiperNews = () => {
         slidesPerView: 1,
         slidesPerColumn: 4,
         slidesPerColumnFill: 'row',
+        spaceBetween: 10,
         speed: 800,
         navigation: {
             nextEl: ".block__HREC.right .swiper-button-next",
@@ -214,6 +215,7 @@ const swiperNews = () => {
     const swipery = new Swiper(".block__HREC.left .swiper-container", {
         slidesPerView: 1,
         slidesPerColumn: 4,
+        spaceBetween: 10,
         slidesPerColumnFill: 'row',
         speed: 800,
         navigation: {
