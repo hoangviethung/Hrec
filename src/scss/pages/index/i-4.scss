@@ -1,6 +1,6 @@
 .home__partner {
 	margin-bottom: 100px;
-	@media (max-width: 767.98px) {
+	@media (max-width: 1024.98px) {
 		margin-bottom: 40px;
 	}
 	.partner.col-6 {
@@ -12,7 +12,7 @@
 	}
 	.block__main--title {
 		margin-bottom: 50px;
-		@media (max-width: 767.98px) {
+		@media (max-width: 1024.98px) {
 			margin-bottom: 20px;
 		}
 	}
@@ -155,6 +155,9 @@
 	margin-bottom: 80px;
 	.block__main--title {
 		margin-bottom: 40px;
+		@media (max-width: 1024.98px) {
+			margin-bottom: 20px;
+		}
 	}
 	.home__member--swiper {
 		position: relative;
