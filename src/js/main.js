@@ -29,12 +29,20 @@ const navMobile = () => {
     if (btn) {
         $(btn).click(function(e) {
             e.preventDefault();
-            $("body").toggleClass("active")
+            $("#overlay").toggleClass("d-b");
             $("body").toggleClass("ov-h");
             $(btn).toggleClass('active');
             $(nav).toggleClass("active");
         });
     }
+    const overlay = $("#overlay");
+    $(overlay).click(function(e) {
+        e.preventDefault();
+        $("#overlay").removeClass("d-b");
+        $("body").removeClass("ov-h");
+        $(btn).removeClass('active');
+        $(nav).removeClass("active");
+    });
     const contentsMobile = document.querySelectorAll('[data_content--mobile]');
     const contentsPc = document.querySelectorAll('[data_content--pc]');
     const isChange = window.innerWidth < 1025;

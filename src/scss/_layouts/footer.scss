@@ -202,6 +202,12 @@ footer {
         }
         .social__item {
             margin-right: 20px;
+            @media (max-width: 840.98px) {
+                margin-right: 5px;
+            }
+            @media (max-width: 768.98px) {
+                margin-right: 20px;
+            }
             &:last-child {
                 margin-right: 0;
             }
