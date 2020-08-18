@@ -274,7 +274,6 @@ const sniperEvent = () => {
     const swiper = new Swiper('.eventBottom__HREC .swiper-container', {
         slidesPerView: 2,
         slidesPerColumn: 4,
-        slidesPerColumnFill: 'column',
         speed: 800,
         breakpoints: {
             300: {
