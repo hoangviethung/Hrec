@@ -134,6 +134,12 @@ section.Events {
         }
     }
     .eventBottom__HREC {
+        .swiper-wrapper {
+            display: grid;
+            grid-template-columns: 1fr; // based on slidesPerView
+            grid-template-rows: auto auto auto auto; // based on slidesPerColumn
+            grid-auto-flow: column;
+          }
         margin-top: 75px;
         padding-bottom: 117px;
         position: relative;

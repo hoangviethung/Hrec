@@ -273,17 +273,15 @@ const sniperEvent = () => {
     const swiper = new Swiper('.eventBottom__HREC .swiper-container', {
         slidesPerView: 2,
         slidesPerColumn: 4,
-        slidesPerColumnFill: 'row',
         speed: 800,
-        direction: "horizontal",
-        // breakpoints: {
-        //     300: {
-        //         slidesPerView: 1,
-        //     },
-        //     1024: {
-        //         slidesPerView: 2,
-        //     },
-        // },
+        breakpoints: {
+            300: {
+                slidesPerView: 1,
+            },
+            1024: {
+                slidesPerView: 2,
+            },
+        },
         navigation: {
             nextEl: '.eventBottom__HREC .swiper-button-next',
             prevEl: '.eventBottom__HREC .swiper-button-prev',
