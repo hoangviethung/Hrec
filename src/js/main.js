@@ -50,12 +50,11 @@ const navMobile = () => {
     }
 }
 const changeHeightFooter = () => {
-        const isChange = window.innerWidth < 768;
+        const isChange = window.innerWidth < 769;
         const height = $(".footer__inner").height();
         if (isChange == true) {
             $(".footer__wrapper").css('height', height + 110);
             $(window).resize(function() {
-                console.log(height);
                 $(".footer__wrapper").css('height', height + 110);
             });
         }
@@ -147,31 +146,31 @@ const swiperNewMember = () => {
 
 //swiper happy birthday
 const swiperHappyBirthday = () => {
-	var swiper = new Swiper(".home__happy-birthday .swiper-container", {
-		slidesPerView: 3,
-		slidesPerGroup: 1,
-		breakpoints: {
-			300: {
-				slidesPerView: 1,
-			},
-			600: {
-				slidesPerView: 2,
-				spaceBetween: 25,
-			},
-			1024: {
-				slidesPerView: 3,
-				spaceBetween: 45,
-			},
-		},
-		autoplay: {
-			delay: 2000,
-		},
-		simulateTouch: false,
-		navigation: {
-			nextEl: ".home__happy-birthday .swiper-button-next",
-			prevEl: ".home__happy-birthday .swiper-button-prev",
-		},
-	});
+    var swiper = new Swiper(".home__happy-birthday .swiper-container", {
+        slidesPerView: 3,
+        slidesPerGroup: 1,
+        breakpoints: {
+            300: {
+                slidesPerView: 1,
+            },
+            600: {
+                slidesPerView: 2,
+                spaceBetween: 25,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 45,
+            },
+        },
+        autoplay: {
+            delay: 2000,
+        },
+        simulateTouch: false,
+        navigation: {
+            nextEl: ".home__happy-birthday .swiper-button-next",
+            prevEl: ".home__happy-birthday .swiper-button-prev",
+        },
+    });
 };
 
 //swiper member homepage
@@ -274,16 +273,17 @@ const sniperEvent = () => {
     const swiper = new Swiper('.eventBottom__HREC .swiper-container', {
         slidesPerView: 2,
         slidesPerColumn: 4,
-        slidesPerColumnFill: 'column',
+        slidesPerColumnFill: 'row',
         speed: 800,
-        breakpoints: {
-            300: {
-                slidesPerView: 1,
-            },
-            1024: {
-                slidesPerView: 2,
-            },
-        },
+        direction: "horizontal",
+        // breakpoints: {
+        //     300: {
+        //         slidesPerView: 1,
+        //     },
+        //     1024: {
+        //         slidesPerView: 2,
+        //     },
+        // },
         navigation: {
             nextEl: '.eventBottom__HREC .swiper-button-next',
             prevEl: '.eventBottom__HREC .swiper-button-prev',
@@ -435,39 +435,39 @@ export const swiperExecutiveCommittee = () => {
 
 //render info in intro page
 const renderInfo = () => {
-   const tabbch =  document
-   .querySelectorAll(
-       ".tab-bch .swiper-slide"
-   )
-        tabbch.forEach((item) => {
-            item.addEventListener("click", () => {
-                const temp = item.querySelector("a");
-                tabbch.forEach(item => {
-                    item.classList.remove('active')
-                })
-                item.classList.add("active")
-                $(".tab-bch .executive-committee-active").html(temp.innerHTML);
-                const tempheight = $(".executive-committee-active").height();
-                // $('html, body').animate({
-                // 	scrollTop: $(".executive-committee-active").offset().top - 200
-                // }, 2000);
-            });
+    const tabbch = document
+        .querySelectorAll(
+            ".tab-bch .swiper-slide"
+        )
+    tabbch.forEach((item) => {
+        item.addEventListener("click", () => {
+            const temp = item.querySelector("a");
+            tabbch.forEach(item => {
+                item.classList.remove('active')
+            })
+            item.classList.add("active")
+            $(".tab-bch .executive-committee-active").html(temp.innerHTML);
+            const tempheight = $(".executive-committee-active").height();
+            // $('html, body').animate({
+            // 	scrollTop: $(".executive-committee-active").offset().top - 200
+            // }, 2000);
         });
+    });
     const tabbkt = document
         .querySelectorAll(
             ".tab-bkt .swiper-slide"
         )
-        tabbkt.forEach((item) => {
-            item.addEventListener("click", () => {
-                const temp = item.querySelector("a");
-                tabbkt.forEach(item => {
-                    item.classList.remove("active")
-                }) 
-                item.classList.add("active")
-                $(".tab-bkt .executive-committee-active").html(temp.innerHTML);
-            });
-
+    tabbkt.forEach((item) => {
+        item.addEventListener("click", () => {
+            const temp = item.querySelector("a");
+            tabbkt.forEach(item => {
+                item.classList.remove("active")
+            })
+            item.classList.add("active")
+            $(".tab-bkt .executive-committee-active").html(temp.innerHTML);
         });
+
+    });
 };
 
 const copyDataByAttr = () => {
@@ -497,56 +497,56 @@ const activeLanguage = () => {
 };
 //fake swiper partner
 const fakeSwiperPartner = () => {
-	if (document.querySelector(".index-page")) {
-		// CODE YOUR JS HERE
-		var array = [
-			"url(../assets/images/partner/logo-1.png)",
-			"url(../assets/images/partner/logo-2.png)",
-			"url(../assets/images/partner/logo-3.png)",
-			"url(../assets/images/partner/logo-4.png)",
-			"url(../assets/images/partner/logo-5.png)",
-		];
-		var images = Array.from(
-			document.querySelectorAll(".partner--logo .img.simulateclass")
-		);
-		let arrayLength = 4;
-		let imageslength = 0;
-		// THAY ĐỔI HÌNH ẢNH THEO THỜI GIAN
-		const autoChange = () => {
-			const imageChange = array[arrayLength++ % array.length];
-			const itemChange = images[imageslength++ % images.length];
-			itemChange.setAttribute("style", `--data-bg:${imageChange}`);
-		};
-		// KHỞI TẠO LIST HÌNH
-		const init = setInterval(autoChange, 1000);
-		images.forEach((item, index) => {
-			item.setAttribute("style", `--data-bg:${array[index]}`);
-			item.addEventListener("mouseenter", (e) => {
-				item.classList.remove("test")
-				images = Array.from(
-					document.querySelectorAll(".partner--logo .img.simulateclass")
-				);
-				const temp = item.getAttribute("style");
-				const test = temp.substr(10,temp.length);
-				const a = array.indexOf(`${test}`)
-				array.splice(a, 1);
-				
-			});
-			item.addEventListener("mouseleave", (e) => {
-				item.classList.add("test");
-				images = Array.from(
-					document.querySelectorAll(".partner--logo .img.simulateclass")
-				);
-				array = [
-					"url(../assets/images/partner/logo-1.png)",
-					"url(../assets/images/partner/logo-2.png)",
-					"url(../assets/images/partner/logo-3.png)",
-					"url(../assets/images/partner/logo-4.png)",
-					"url(../assets/images/partner/logo-5.png)",
-				];
-			});
-		});
-	}
+    if (document.querySelector(".index-page")) {
+        // CODE YOUR JS HERE
+        var array = [
+            "url(../assets/images/partner/logo-1.png)",
+            "url(../assets/images/partner/logo-2.png)",
+            "url(../assets/images/partner/logo-3.png)",
+            "url(../assets/images/partner/logo-4.png)",
+            "url(../assets/images/partner/logo-5.png)",
+        ];
+        var images = Array.from(
+            document.querySelectorAll(".partner--logo .img.simulateclass")
+        );
+        let arrayLength = 4;
+        let imageslength = 0;
+        // THAY ĐỔI HÌNH ẢNH THEO THỜI GIAN
+        const autoChange = () => {
+            const imageChange = array[arrayLength++ % array.length];
+            const itemChange = images[imageslength++ % images.length];
+            itemChange.setAttribute("style", `--data-bg:${imageChange}`);
+        };
+        // KHỞI TẠO LIST HÌNH
+        const init = setInterval(autoChange, 1000);
+        images.forEach((item, index) => {
+            item.setAttribute("style", `--data-bg:${array[index]}`);
+            item.addEventListener("mouseenter", (e) => {
+                item.classList.remove("test")
+                images = Array.from(
+                    document.querySelectorAll(".partner--logo .img.simulateclass")
+                );
+                const temp = item.getAttribute("style");
+                const test = temp.substr(10, temp.length);
+                const a = array.indexOf(`${test}`)
+                array.splice(a, 1);
+
+            });
+            item.addEventListener("mouseleave", (e) => {
+                item.classList.add("test");
+                images = Array.from(
+                    document.querySelectorAll(".partner--logo .img.simulateclass")
+                );
+                array = [
+                    "url(../assets/images/partner/logo-1.png)",
+                    "url(../assets/images/partner/logo-2.png)",
+                    "url(../assets/images/partner/logo-3.png)",
+                    "url(../assets/images/partner/logo-4.png)",
+                    "url(../assets/images/partner/logo-5.png)",
+                ];
+            });
+        });
+    }
 };
 
 const showLoginHome = () => {

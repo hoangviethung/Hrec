@@ -130,6 +130,9 @@ footer {
         // align-items: center;
         &:first-child {
             width: 210px;
+            @media (max-width: 768.98px) {
+                width: 230px;
+            }
             .item__icon {
                 height: 17px;
                 width: 27px;
@@ -153,6 +156,9 @@ footer {
                 color: white;
                 @media (max-width: 1440.98px) {
                     font-size: 12px;
+                }
+                @media (max-width: 768.98px) {
+                    font-size: 14px;
                 }
                 @media (max-width: 575.98px) {
                     font-size: 16px;
