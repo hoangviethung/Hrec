@@ -335,16 +335,26 @@ section.News {
         .swiper-button-prev {
             top: 100%;
             left: calc(100% - 110px);
+            @media (max-width: 575.98px) {
+                left: calc(100% - 90px);
+            }
         }
     }
     .block__HREC.left {
         .swiper-button-next {
             right: 40px;
             top: 100%;
+            @media (max-width: 575.98px) {
+                top: 101%;
+            }
         }
         .swiper-button-prev {
             top: 100%;
             left: calc(100% - 140px);
+            @media (max-width: 575.98px) {
+                top: 101%;
+                left: calc(100% - 120px);
+            }
         }
     }
     .block__HREC.right {
