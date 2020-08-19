@@ -30,12 +30,22 @@
 				max-width: 25%;
 				padding:0 10px;
 				margin-bottom: 10px;
+				
 			}
 			& > div:last-child {
 				-ms-flex: 0 0 50%;
 				flex: 0 0 50%;
 				max-width: 50%;
 				padding:0 10px;
+				width: 100%;
+				.swiper-container {
+					img {
+						width: 100%;
+						@media (max-width: 1439.98px) {
+							width: auto;
+						}
+					}
+				}
 			}
 			@for $i from 1 through 7 {
 				.item-#{$i}{
@@ -92,18 +102,6 @@
 	.partner--logo {
 		width: 325px;
 		height: 275px;
-		// &:nth-child(odd) {
-		// 	padding-right: 10px;
-		// }
-		// &:nth-child(even) {
-		// 	padding-left: 10px;
-		// }
-		// &:nth-child(1) {
-		// 	margin-bottom: 20px;
-		// }
-		// &:nth-child(2) {
-		// 	margin-bottom: 20px;
-		// }
 		.img {
 			background: var(--data-bg) no-repeat;
 			height: 100%;
@@ -144,6 +142,10 @@
 			text-align: center;
 			img {
 				height: 100%;
+				@media (max-width: 830px) {
+					width: 100%;
+					object-fit: unset;
+				}
 				@media (max-width: 575.98px) {
 					max-height: 100%;
 					height: unset;
