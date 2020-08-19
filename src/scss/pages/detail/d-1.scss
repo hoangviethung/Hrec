@@ -55,7 +55,7 @@ section.Detail {
             margin-bottom: 55px;
             text-transform: uppercase;
             @media (max-width: 1440.98px) {
-                font-size: 30px;
+                font-size: 25px;
             }
             @media (max-width: 1024.98px) {
                 font-size: 20px;
@@ -239,7 +239,7 @@ section.Detail {
         .item__img {
             height: 221px;
             overflow: hidden;
-            @media (max-width: 1024.98px) {
+            @media (max-width: 1440.98px) {
                 height: 130px;
             }
             @media (max-width: 768.98px) {

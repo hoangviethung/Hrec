@@ -528,11 +528,11 @@ const fakeSwiperPartner = () => {
     if (document.querySelector(".index-page")) {
         // CODE YOUR JS HERE
         var array = [
-            "url(../assets/images/partner/logo-1.png)",
-            "url(../assets/images/partner/logo-2.png)",
-            "url(../assets/images/partner/logo-3.png)",
-            "url(../assets/images/partner/logo-4.png)",
-            "url(../assets/images/partner/logo-5.png)",
+            "http://web1.web4gsolutions.com/hrec/assets/images/partner/logo-1.png",
+            "http://web1.web4gsolutions.com/hrec/assets/images/partner/logo-2.png",
+            "http://web1.web4gsolutions.com/hrec/assets/images/partner/logo-3.png",
+            "http://web1.web4gsolutions.com/hrec/assets/images/partner/logo-4.png",
+            "http://web1.web4gsolutions.com/hrec/assets/images/partner/logo-5.png",
         ];
         var images = Array.from(
             document.querySelectorAll(".partner--logo .img.simulateclass")
@@ -543,7 +543,7 @@ const fakeSwiperPartner = () => {
         const autoChange = () => {
             const imageChange = array[arrayLength++ % array.length];
             const itemChange = images[imageslength++ % images.length];
-            itemChange.setAttribute("style", `--data-bg:${imageChange}`);
+            itemChange.setAttribute("src", `${imageChange}`);
         };
         // KHỞI TẠO LIST HÌNH
         const init = setInterval(autoChange, 1000);
@@ -554,10 +554,9 @@ const fakeSwiperPartner = () => {
                 images = Array.from(
                     document.querySelectorAll(".partner--logo .img.simulateclass")
                 );
-                const temp = item.getAttribute("style");
-                const test = temp.substr(10, temp.length);
-                const a = array.indexOf(`${test}`)
-                array.splice(a, 1);
+                const background = item.getAttribute("src");
+                const indextocut = array.indexOf(`${background}`)
+                array.splice(indextocut, 1);
 
             });
             item.addEventListener("mouseleave", (e) => {
@@ -566,11 +565,11 @@ const fakeSwiperPartner = () => {
                     document.querySelectorAll(".partner--logo .img.simulateclass")
                 );
                 array = [
-                    "url(../assets/images/partner/logo-1.png)",
-                    "url(../assets/images/partner/logo-2.png)",
-                    "url(../assets/images/partner/logo-3.png)",
-                    "url(../assets/images/partner/logo-4.png)",
-                    "url(../assets/images/partner/logo-5.png)",
+                    "http://web1.web4gsolutions.com/hrec/assets/images/partner/logo-1.png",
+                    "http://web1.web4gsolutions.com/hrec/assets/images/partner/logo-2.png",
+                    "http://web1.web4gsolutions.com/hrec/assets/images/partner/logo-3.png",
+                    "http://web1.web4gsolutions.com/hrec/assets/images/partner/logo-4.png",
+                    "http://web1.web4gsolutions.com/hrec/assets/images/partner/logo-5.png",
                 ];
             });
         });
