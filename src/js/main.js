@@ -121,11 +121,11 @@ const swiperNewMember = () => {
         on: {
             init: function() {
                 setTimeout(() => {
-                    const temp = $(".home__new-member .swiper-slide-active");
+                    const temp = $(".home__new-member .swiper-slide-active img");
                     const width = temp.width();
                     $(".home__new-member--info__wrapper").css(
                         "width",
-                        `${width + 40}`
+                        `${width + 35}`
                     );
                 }, 1000);
             },
@@ -137,8 +137,8 @@ const swiperNewMember = () => {
     });
     swiper.on("slideChange", function() {
         const data = $(".home__new-member .swiper-slide-active");
-        // const width = data.width();
-        // $(".home__new-member--info__wrapper").width(width);
+        const width = data.width();
+        $(".home__new-member--info__wrapper").width(width);
         const temp = data.find(".model--desc");
         $(".home__new-member--info .home__new-member--info__wrapper").html(
             temp.html()
@@ -257,6 +257,10 @@ const swipeIntroducePurpose = () => {
     var swiper = new Swiper(".introduce__purpose__wrapper .swiper-container", {
         slidesPerView: 3,
         slidesPerGroup: 1,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
         breakpoints: {
             300: {
                 slidesPerView: 1,
@@ -271,14 +275,12 @@ const swipeIntroducePurpose = () => {
                 slidesPerView: 2,
                 spaceBetween: 45,
                 loop: true,
-                autoplay: {
-                    delay: 2500,
-                    disableOnInteraction: false,
-                },
+               
             },
             1024: {
                 slidesPerView: 3,
                 spaceBetween: 45,
+                autoplay: false
             },
         },
     });
@@ -456,7 +458,8 @@ const renderInfo = () => {
             ".tab-bch .swiper-slide"
         )
     tabbch.forEach((item) => {
-        item.addEventListener("click", () => {
+        item.addEventListener("click", (e) => {
+            e.preventDefault();
             const temp = item.querySelector("a");
             tabbch.forEach(item => {
                 item.classList.remove('active')
@@ -474,7 +477,8 @@ const renderInfo = () => {
             ".tab-bkt .swiper-slide"
         )
     tabbkt.forEach((item) => {
-        item.addEventListener("click", () => {
+        item.addEventListener("click", (e) => {
+            e.preventDefault();
             const temp = item.querySelector("a");
             tabbkt.forEach(item => {
                 item.classList.remove("active")

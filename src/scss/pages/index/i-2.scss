@@ -14,9 +14,15 @@
 .block__HREC {
 	&:first-child {
 		padding-right: 39px;
+		@media (max-width: 1024.98px) {
+			padding: 0 10px;
+		}
 	}
 	&:last-child {
 		padding-left: 39px;
+		@media (max-width: 1024.98px) {
+			padding:0 10px;
+		}
 	}
 }
 .home__news-event__wrapper--content.row {

@@ -136,10 +136,13 @@ textarea {
             color: white;
         }
     }
-    @media (max-width: 768.98px) {
+    @media (max-width: 1024.98px) {
         padding-bottom: 10px;
         h2.title {
-            font-size: 20px;
+            font-size:  25px;
+            @media (max-width: 575.98px) {
+                font-size: 20px;
+            }
         }
         .btn--readmore {
             height: 30px;
@@ -191,7 +194,7 @@ textarea {
             }
         }
     }
-    @media (max-width: 768.98px) {
+    @media (max-width: 1024.98px) {
         padding-left: 11px;
         padding-right: 11px;
         max-width: 160px;
@@ -433,7 +436,7 @@ textarea {
             padding-left: 0;
         }
     }
-    @media (max-width: 1024.98px) {
+    @media (max-width: 1199.98px) {
         .item--desc {
             padding-bottom: 10px;
             h2.title {
