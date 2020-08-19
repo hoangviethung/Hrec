@@ -170,11 +170,13 @@ section.News {
                             &::before {
                                 transition: 1s all ease-in-out;
                                 opacity: 0;
+                                background-size: 100% 100% !important;
                             }
                             &::after {
                                 opacity: 0.5;
                                 transition: 1s all ease-in-out;
                                 transform: translateY(0%);
+                                background-size: 100% 100% !important;
                             }
                         }
                         .news--desc {
