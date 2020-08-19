@@ -298,14 +298,14 @@ section.News {
     .block__HREC.left {
         .swiper-button-next {
             right: 40px;
-            top: 100%;
+            top: 103%;
             @media (max-width: 575.98px) {
                 top: 102%;
                 right: 10px;
             }
         }
         .swiper-button-prev {
-            top: 100%;
+            top: 103%;
             left: calc(100% - 140px);
             @media (max-width: 575.98px) {
                 top: 102%;

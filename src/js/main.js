@@ -527,13 +527,9 @@ const activeLanguage = () => {
 const fakeSwiperPartner = () => {
     if (document.querySelector(".index-page")) {
         // CODE YOUR JS HERE
-        var array = [
-            "http://web1.web4gsolutions.com/hrec/assets/images/partner/logo-1.png",
-            "http://web1.web4gsolutions.com/hrec/assets/images/partner/logo-2.png",
-            "http://web1.web4gsolutions.com/hrec/assets/images/partner/logo-3.png",
-            "http://web1.web4gsolutions.com/hrec/assets/images/partner/logo-4.png",
-            "http://web1.web4gsolutions.com/hrec/assets/images/partner/logo-5.png",
-        ];
+        const imgfromBE =$("#list-img").val()
+        const listarray = imgfromBE.split(",")
+        var array = listarray
         var images = Array.from(
             document.querySelectorAll(".partner--logo .img.simulateclass")
         );
@@ -564,13 +560,7 @@ const fakeSwiperPartner = () => {
                 images = Array.from(
                     document.querySelectorAll(".partner--logo .img.simulateclass")
                 );
-                array = [
-                    "http://web1.web4gsolutions.com/hrec/assets/images/partner/logo-1.png",
-                    "http://web1.web4gsolutions.com/hrec/assets/images/partner/logo-2.png",
-                    "http://web1.web4gsolutions.com/hrec/assets/images/partner/logo-3.png",
-                    "http://web1.web4gsolutions.com/hrec/assets/images/partner/logo-4.png",
-                    "http://web1.web4gsolutions.com/hrec/assets/images/partner/logo-5.png",
-                ];
+                array = listarray
             });
         });
     }

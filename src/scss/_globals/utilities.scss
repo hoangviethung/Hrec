@@ -179,9 +179,11 @@ textarea {
     @media (max-width: 1024.98px) {
         padding-left: 11px;
         padding-right: 11px;
-        max-width: 160px;
         span {
             font-size: 20px;
+        }
+        svg {
+            width: 18px;
         }
     }
 }
