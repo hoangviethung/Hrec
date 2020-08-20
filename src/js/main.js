@@ -409,7 +409,6 @@ export const swiperExecutiveCommittee = () => {
 			1025: {
 				slidesPerView: 2,
 				slidesPerColumn: 2,
-				slidesPerColumnFill: "row",
 			},
 		},
 		on: {
@@ -468,13 +467,13 @@ const renderInfo = () => {
 	tabbch.forEach((item) => {
 		item.addEventListener("click", (e) => {
 			e.preventDefault();
-			const temp = item.querySelector("a");
+			const content = item.querySelector(".item__wrapper");
 			tabbch.forEach(item => {
 				item.classList.remove('active')
 			})
 			item.classList.add("active")
-			$(".tab-bch .executive-committee-active").html(temp.innerHTML);
-			const tempheight = $(".executive-committee-active").height();
+			$(".tab-bch .executive-committee-active").html(content.innerHTML);
+			// const tempheight = $(".executive-committee-active").height();
 			// $('html, body').animate({
 			// 	scrollTop: $(".executive-committee-active").offset().top - 200
 			// }, 2000);
@@ -553,11 +552,6 @@ const fakeSwiperPartner = () => {
 				const background = item.getAttribute("src");
 				const indextocut = array.indexOf(`${background}`);
 				array.splice(indextocut, 1);
-				arrayLength = 3;
-				imageslength = 0;
-				images.forEach((item, index) => {
-					item.setAttribute("src", `${array[index]}`);
-				});
 			});
 			item.addEventListener("mouseleave", (e) => {
 				item.classList.add("simulateclass");
@@ -578,6 +572,12 @@ const fakeSwiperPartner = () => {
 	}
 };
 
+//get breadcrumb title
+const getBreadcrumbTitle = () => {
+	let title = $('#breadcrumb-wrapper ul li').eq(1).text();
+	$('#breadcrumb-wrapper ul li').last().addClass('active');
+	$('.pagesBanner__title h1').text(title);
+};
 const showLoginHome = () => {
 	$(".login__text").click(function(e) {
 		e.preventDefault();
@@ -657,6 +657,8 @@ document.addEventListener("DOMContentLoaded", () => {
 	ajaxFormLogin();
 	// showLoginHome
 	showLoginHome();
+	//get title breadcum
+	getBreadcrumbTitle();
 	//tab
 	const ExecutiveCommittee = new Tab(".executive-committee .tab-container");
 });

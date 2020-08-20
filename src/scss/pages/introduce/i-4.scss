@@ -35,6 +35,14 @@
 	.swiper-container {
 		padding-bottom: 65px;
 		position: relative;
+		.swiper-wrapper {
+			@media (min-width: 1025px) {
+				display: grid;
+				grid-template-columns: 1fr; // based on slidesPerView
+				grid-template-rows: auto auto; // based on slidesPerColumn
+				grid-auto-flow: column;
+			}
+		}
 		&::after {
 			content: "";
 			position: absolute;
@@ -64,6 +72,7 @@
 		width: 327px;
 		height: 292px;
 		border-bottom: 1px solid map-get($mau, main-3);
+		
 		&::after {
 			position: absolute;
 			content: "";
@@ -85,6 +94,9 @@
 		
 		.model--img {
 			max-height: 230px;
+			img {
+				height: 230px;
+			}
 			&::before {
 				opacity: .3 !important;
 			}
@@ -168,7 +180,7 @@
 		}
 	}
 	@media (max-width: 1024.98px) {
-		margin-top: 10px;
+		margin-top: 20px;
 		max-width: 700px;
 		margin: 0 auto;
 	}

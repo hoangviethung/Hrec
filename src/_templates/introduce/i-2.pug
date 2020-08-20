@@ -8,7 +8,7 @@ section.introduce__purpose
 				.swiper-container
 					.swiper-wrapper
 						-for(var i =0; i < 3; i++)
-							a(href="#").swiper-slide.ov-h
+							div.swiper-slide.ov-h
 								.img.ov-h
 									img.ofcv.lazyload(src="./assets/images/introduce/struct-1.png", alt="something")
 								.desc.ov-h
@@ -17,6 +17,6 @@ section.introduce__purpose
 											img.svg(data-src=`./assets/images/introduce/icons-${i+1}.svg`, alt="something")
 										h2 #{titleRule[i]}
 									p.lcl.lcl-3 Kết nối, hỗ trợ các thành viên trong Câu lạc bộ cũng như Hiệp hội Doanh nghiệp Thành phố…
-									div(href="#").btn.btn--readmore
+									a(href="#").btn.btn--readmore
 										span Xem Thêm
 										img.svg(src="./assets/images/homepage/small-arrow.svg", alt="something")
