@@ -561,6 +561,7 @@ const fakeSwiperPartner = () => {
 			currentChange = indexes.pop();
 			indexes = [currentChange, ...indexes];
 			const currentImage = images.find(image => +image.getAttribute('id') === currentChange);
+			console.log(sourceIndexes.length);
 			const randNum = Math.floor(Math.random() * sourceIndexes.length);
 			const sourceUrl = sourceIndexes[randNum];
 			sourceIndexes[randNum] = currentImage.getAttribute('src');
