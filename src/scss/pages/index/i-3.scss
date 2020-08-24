@@ -302,6 +302,9 @@
 		.model--img {
 			max-height: 396px;
 			position: relative;
+			img {
+				transition: 1s all ease-in-out
+			}
 			&::before {
 				z-index: 10;
 				background: url("../assets/images/homepage/birthday-hover.png") no-repeat !important;
@@ -312,7 +315,7 @@
 				object-position: center;
 				background-size: cover !important;
 				font-family: "object-fit: cover, object-position: center";
-
+				transition: 1s all ease-in-out;
 			}
 		}
 		.model--desc {
@@ -327,6 +330,7 @@
 			left: 50%;
 			transform: translateX(-50%);
 			box-shadow: 2px 3px 10px rgba($color: #000000, $alpha: .1);
+			transition: 1s all ease-in-out;
 		}
 		@media (min-width: 1025px) {
 			&:hover {

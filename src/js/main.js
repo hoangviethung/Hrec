@@ -409,7 +409,6 @@ export const swiperExecutiveCommittee = () => {
 			1025: {
 				slidesPerView: 2,
 				slidesPerColumn: 2,
-				slidesPerColumnFill: "row",
 			},
 		},
 		on: {
@@ -468,13 +467,13 @@ const renderInfo = () => {
 	tabbch.forEach((item) => {
 		item.addEventListener("click", (e) => {
 			e.preventDefault();
-			const temp = item.querySelector("a");
+			const content = item.querySelector(".item__wrapper");
 			tabbch.forEach(item => {
 				item.classList.remove('active')
 			})
 			item.classList.add("active")
-			$(".tab-bch .executive-committee-active").html(temp.innerHTML);
-			const tempheight = $(".executive-committee-active").height();
+			$(".tab-bch .executive-committee-active").html(content.innerHTML);
+			// const tempheight = $(".executive-committee-active").height();
 			// $('html, body').animate({
 			// 	scrollTop: $(".executive-committee-active").offset().top - 200
 			// }, 2000);
@@ -523,61 +522,65 @@ const activeLanguage = () => {
 		}
 	});
 };
+
 //fake swiper partner
 const fakeSwiperPartner = () => {
 	if (document.querySelector(".index-page")) {
 		// CODE YOUR JS HERE
 		const  imgfromBE =$("#list-img").val()
 		const listarray = imgfromBE.split(",")
-		var array = listarray
 		var images = Array.from(
 			document.querySelectorAll(".partner--logo .img.simulateclass")
 		);
-		var arrayLength = 4;
-		var imageslength = 0;
-		// THAY ĐỔI HÌNH ẢNH THEO THỜI GIAN
-		const autoChange = () => {
-			const imageChange = array[arrayLength++ % array.length];
-			const itemChange = images[imageslength++ % images.length];
-			itemChange.setAttribute("src", `${imageChange}`);
-		};
-		// KHỞI TẠO LIST HÌNH
-		const init = setInterval(autoChange, 1000);
-		images.forEach((item, index) => {
-			item.setAttribute("src", `${array[index]}`);
-			item.addEventListener("mouseenter", (e) => {
-				item.classList.remove("simulateclass")
-				images = Array.from(
-					document.querySelectorAll(".partner--logo .img.simulateclass")
-				);
-				const background = item.getAttribute("src");
-				const indextocut = array.indexOf(`${background}`);
-				array.splice(indextocut, 1);
-				arrayLength = 3;
-				imageslength = 0;
-				images.forEach((item, index) => {
-					item.setAttribute("src", `${array[index]}`);
-				});
+		let currentHover = -1;
+		let currentChange = 0;
+		let indexes = [2, 3, 1, 0];
+		let sourceIndexes = listarray.slice(images.length);
+		images.map((image, i) => {
+			image.setAttribute('id', i);
+			image.setAttribute('src', listarray[i]);
+
+			image.addEventListener('mouseenter', event => {
+				currentHover = +event.target.getAttribute('id');
+				indexes = indexes.filter(index => index !== currentHover);
+				console.log("enter" , indexes);
 			});
-			item.addEventListener("mouseleave", (e) => {
-				item.classList.add("simulateclass");
-				images = Array.from(
-					document.querySelectorAll(".partner--logo .img.simulateclass")
-				);
-				
-				const  imgfromBE =$("#list-img").val()
-				const listarray = imgfromBE.split(",")
-				array = listarray;
-				arrayLength = 4;
-				imageslength = 0;
-				images.forEach((item, index) => {
-					item.setAttribute("src", `${array[index]}`);
-				});
+			image.addEventListener('mouseleave', event => {
+				indexes = [2, 3, 1, 0];
+				for (let i = 0; i <= currentChange; i++) {
+					const item = indexes.pop();
+					indexes = [
+						item,
+						...indexes
+					]
+				}
+				currentHover = -1;
 			});
 		});
+		const onchange = () => {
+			currentChange = indexes.pop();
+			indexes = [currentChange, ...indexes];
+			const currentImage = images.find(image => +image.getAttribute('id') === currentChange);
+			console.log(sourceIndexes.length);
+			const randNum = Math.floor(Math.random() * sourceIndexes.length);
+			const sourceUrl = sourceIndexes[randNum];
+			sourceIndexes[randNum] = currentImage.getAttribute('src');
+			currentImage.setAttribute('src', sourceUrl);
+		}
+		if(listarray.length > 4 ) {
+			setInterval(() => {
+				onchange(indexes);
+			}, 1000);
+		}
 	}
 };
 
+//get breadcrumb title
+const getBreadcrumbTitle = () => {
+	let title = $('#breadcrumb-wrapper ul li').eq(1).text();
+	$('#breadcrumb-wrapper ul li').last().addClass('active');
+	$('.pagesBanner__title h1').text(title);
+};
 const showLoginHome = () => {
 	$(".login__text").click(function(e) {
 		e.preventDefault();
@@ -657,6 +660,8 @@ document.addEventListener("DOMContentLoaded", () => {
 	ajaxFormLogin();
 	// showLoginHome
 	showLoginHome();
+	//get title breadcum
+	getBreadcrumbTitle();
 	//tab
 	const ExecutiveCommittee = new Tab(".executive-committee .tab-container");
 });
