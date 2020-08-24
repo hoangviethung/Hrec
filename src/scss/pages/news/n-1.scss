@@ -49,7 +49,7 @@ section.News {
             flex: 0 0 50%;
             margin-bottom: 40px;
             .btn {
-                display: block;
+                display: flex;
             }
             .news--img {
                 height: 450px;
@@ -263,6 +263,12 @@ section.News {
     }
     .block__HREC.right,
     .block__HREC.left {
+        .swiper-wrapper {
+            display: grid;
+            grid-template-columns: 1fr; // based on slidesPerView
+            grid-template-rows: auto auto auto auto; // based on slidesPerColumn
+            grid-auto-flow: column;
+        }
         position: relative;
         margin-bottom: 60px;
         @media (max-width: 1024.98px) {
